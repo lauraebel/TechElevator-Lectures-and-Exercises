@@ -65,15 +65,14 @@ Techs-MacBook-Air-7:module-1 lauraebel$
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
-
+.gitignore
 
 ----
 7.  What are the names of the directories, including any dot-directories, displayed in
     the directory listing in Exercise 4?
 ----
 
-".", "..", gitignore, 01_Introduction_Tools
+".", "..", 01_Introduction_Tools
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later
