@@ -17,7 +17,7 @@ Techs-MacBook-Air-7:module-1 lauraebel$
     refer to?
 ----
 
-<type your response here>
+Home Directory
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on
@@ -50,7 +50,7 @@ $ ls -la
     Exercise 4 represent?
 ----
 
-<type your answer here>
+. = current folder and .. = parent folder 
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
