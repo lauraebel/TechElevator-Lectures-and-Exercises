@@ -26,7 +26,9 @@ Home Directory
 ----
 
 $ pwd
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:module-1 lauraebel$ pwd
+/Users/lauraebel/Development/lauraebel-java-blue-material/module-1
+Techs-MacBook-Air-7:module-1 lauraebel$ 
 
 The present working directory displayed should match the directory you changed
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -42,7 +44,13 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:module-1 lauraebel$ ls -la
+total 8
+drwxr-xr-x  4 lauraebel  staff   128 Jan 13 16:33 .
+drwxr-xr-x  5 lauraebel  staff   160 Jan 13 16:33 ..
+-rw-r--r--  1 lauraebel  staff  1048 Jan 13 16:33 .gitignore
+drwxr-xr-x  5 lauraebel  staff   160 Jan 13 16:33 01_Introduction_Tools
+Techs-MacBook-Air-7:module-1 lauraebel$ 
 
 
 ----
@@ -65,8 +73,7 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
-
+".", "..", gitignore, 01_Introduction_Tools
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later
