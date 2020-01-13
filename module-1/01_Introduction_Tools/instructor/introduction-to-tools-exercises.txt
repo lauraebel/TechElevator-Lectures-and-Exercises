@@ -9,6 +9,8 @@ Note, do not enter the beginning "$" character. It represents the prompt for
 the command line. This convention is commonly used to visually separate the
 actual command from other text in Unix documentation.
 
+Techs-MacBook-Air-95:instructor brianlauvray$ cd ~/Development/java-blue-material/module-1/01_Introduction_Tools/instructor/java-helloworld/
+Techs-MacBook-Air-95:java-helloworld brianlauvray$ 
 
 ----
 2.  What does the ~ (tilde) character in the above command to change directory
