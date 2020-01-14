@@ -120,45 +120,76 @@ System.out.println(totalCentsSpent);
 
         /*
         13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
-        and 10 mini marshmallows.How many marshmallows did she use
+        and 10 mini marshmallows. How many marshmallows did she use
         altogether?
         */
+int largeMarshmallows = 8;
+int miniMarshmallows = 10;
+int totalMarshmallowsUsed = largeMarshmallows + miniMarshmallows;
+System.out.println(totalMarshmallowsUsed);
 
         /*
         14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
-
+int hiltHouseInchesOfSnow = 29;
+int brecknockElementarySchoolInchesOfSnow = 17;
+int inchesMoreOfSnowAtHiltHouseThanSchool = hiltHouseInchesOfSnow - brecknockElementarySchoolInchesOfSnow;
+System.out.println(inchesMoreOfSnowAtHiltHouseThanSchool);
         /*
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
+int beginningAmountOfDollars = 10;
+int dollarsSpentOnToyTruck = 3;
+int dollarsSpentOnPencilCase = 2;
+int dollarsMrsHiltHasLeft = beginningAmountOfDollars - (dollarsSpentOnToyTruck + dollarsSpentOnPencilCase);
+System.out.println(dollarsMrsHiltHasLeft);
 
         /*
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
+int collectionOfMarbles = 16;
+int marblesLost = 7;
+int marblesJoshHasLeft = collectionOfMarbles - marblesLost;
+System.out.println(marblesJoshHasLeft);
 
         /*
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
+int seashellsMeganWants = 25;
+int seashellsMeganHas = 19;
+int seashellsMeganNeeds = seashellsMeganWants - seashellsMeganHas;
+System.out.println(seashellsMeganNeeds);
 
         /*
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
+int totalRedAndGreenBalloonsOfBrad = 17;
+int redBalloonsOfBrad = 8;
+int greenBalloonsOfBrad = totalRedAndGreenBalloonsOfBrad - redBalloonsOfBrad;
+System.out.println(greenBalloonsOfBrad);
 
         /*
         19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
         How many books are on the shelf now?
         */
+int booksOnShelf = 38;
+int booksMartaAddedToShelf = 10;
+int booksOnShelfNow = booksOnShelf + booksMartaAddedToShelf;
+System.out.println(booksOnShelfNow);
 
         /*
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
-
+int legsBeesHave = 6;
+int amountOfBees = 8;
+int legsOfEightBees = legsBeesHave * amountOfBees;
+System.out.println(legsOfEightBees);
         /*
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
