@@ -56,26 +56,46 @@ System.out.println(pigeonsEatingBreadcrumbs);
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
+int owlsOnFence = 3;
+int owlsJoined = 2;
+int owlsNow = owlsOnFence + owlsJoined;
+System.out.println(owlsNow);
 
         /*
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
-
+int beaversWorkingOnHome = 2;
+int beaversWentForSwim = 1;
+int beaversLeft = beaversWorkingOnHome - beaversWentForSwim;
+System.out.println(beaversLeft);
         /*
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
+int toucansOnTreeLimb = 2;
+int toucansJoined = 1;
+int toucansInAll = toucansOnTreeLimb + toucansJoined;
+System.out.println(toucansInAll);
 
         /*
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
+int squirrelsInTree = 4;
+int nutsInTree = 2;
+int moreSquirrelsThanNuts = squirrelsInTree - nutsInTree;
+System.out.println(moreSquirrelsThanNuts);
 
         /*
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
+float quarters = 0.25f;
+float dimes = 0.10f;
+float nickels = 0.05f;
+float moneyFound = quarters + dimes + nickels + nickels;
+System.out.println(moneyFound);
 
         /*
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
@@ -83,11 +103,20 @@ System.out.println(pigeonsEatingBreadcrumbs);
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
+int brierClassMuffinsBaked = 18;
+int macadamsClassMuffinsBaked = 20;
+int flanneryClassMuffinsBaked = 17;
+int hiltTotalFirstGradeClassMuffinsBaked = brierClassMuffinsBaked + macadamsClassMuffinsBaked + flanneryClassMuffinsBaked;
+System.out.println(hiltTotalFirstGradeClassMuffinsBaked);
 
         /*
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
+int centsSpentOnYoyo = 24;
+int centsSpentOnWhistle = 14;
+int totalCentsSpent = centsSpentOnYoyo + centsSpentOnWhistle;
+System.out.println(totalCentsSpent);
 
         /*
         13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
