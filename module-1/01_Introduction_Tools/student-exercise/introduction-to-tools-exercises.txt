@@ -241,15 +241,28 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 Techs-MacBook-Air-7:techelevator lauraebel$ 
-$ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
 
+$ <enter the Git command to "stage" all changes>
+Techs-MacBook-Air-7:techelevator lauraebel$ git add -A
+Techs-MacBook-Air-7:techelevator lauraebel$ 
+ 
 $ <enter the Git command to save all "staged" changes>
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:techelevator lauraebel$ git commit -m "Helloworld copy"
+[master b331fbd] Helloworld copy
+ 2 files changed, 48 insertions(+), 13 deletions(-)
+ create mode 100644 module-1/01_Introduction_Tools/student-exercise/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy
+Techs-MacBook-Air-7:techelevator lauraebel$ 
 
 $ git push origin master
-<type or copy-paste the result here>
-
+Techs-MacBook-Air-7:techelevator lauraebel$ git push origin master
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (18/18), 2.24 KiB | 763.00 KiB/s, done.
+Total 18 (delta 7), reused 0 (delta 0)
+To https://bitbucket.org/te-cbus-cohort-10/lauraebel-java-blue-material.git
+   0170d87..b331fbd  master -> master
+Techs-MacBook-Air-7:techelevator lauraebel$ 
 
 ----
 16. Delete the backup file, "Helloworld.java.copy" using the remove command.
@@ -260,7 +273,9 @@ $ rm Helloworld.java.copy
 The "rm" parameter is the name of the file to be deleted.
 
 $ <enter command to list all files and directories in order to confirm the file deletion>
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:techelevator lauraebel$ rm Helloworld.java.copy
+Techs-MacBook-Air-7:techelevator lauraebel$ ls
+Helloworld.java
 
 
 ----
@@ -282,8 +297,8 @@ command line when that seems natural.
 Regardless of the option you chose, check your new location.
 
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
-
+Techs-MacBook-Air-7:java-helloworld lauraebel$ ls
+database	pom.xml		src
 
 ----
 18. Create a documentation directory named "docs" under java-helloworld, and then
@@ -293,7 +308,9 @@ $ <enter command to display present working directory>
 $ mkdir docs
 $ <enter the command to change directory to "docs" using a relative path>
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+Techs-MacBook-Air-7:docs lauraebel$ pwd
+/Users/lauraebel/Development/lauraebel-java-blue-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld/docs
+Techs-MacBook-Air-7:docs lauraebel$ 
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
@@ -309,8 +326,25 @@ Don't forget to save the file in Visual Studio Code!
 20. As a final exercise, please perform the following commands to save and push your
     work so it can be reviewed by an instructor.
 ----
-
 $ <enter the Git command to display status>
+Techs-MacBook-Air-7:docs lauraebel$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../../introduction-to-tools-exercises.txt
+	deleted:    ../src/main/java/com/techelevator/Helloworld.java.copy
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Techs-MacBook-Air-7:docs lauraebel$ 
 
 $ <enter the Git command to "stage" all changes>
 
