@@ -135,10 +135,14 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Techs-MacBook-Air-7:java-helloworld lauraebel$ 
 
 $ git add -A
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:java-helloworld lauraebel$ git add -A
+Techs-MacBook-Air-7:java-helloworld lauraebel$ 
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:java-helloworld lauraebel$ git commit -m "Good stopping point"
+[master a7124d2] Good stopping point
+ 1 file changed, 17 insertions(+), 3 deletions(-)
+Techs-MacBook-Air-7:java-helloworld lauraebel$ 
 
 Note, you do not need to push this commit up to BitBucket at this time. The
 typical Git workflow is to make many small commits to your local repo while
@@ -147,7 +151,6 @@ working. You push up to BitBucket when you're ready to share.
 You'll be asked to push to BitBucket twice in this exercise, once a bit further
 along, and then at the end.
 
-
 ----
 10.  Change into src/main/java/com/techelevator directory under java-helloworld.
     Show your present working directory after the change.
@@ -155,7 +158,11 @@ along, and then at the end.
 
 $ cd src/main/java/com/techelevator
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+
+Techs-MacBook-Air-7:com lauraebel$ cd techelevator
+Techs-MacBook-Air-7:techelevator lauraebel$ ls
+Helloworld.java
+Techs-MacBook-Air-7:techelevator lauraebel$ 
 
 
 ----
@@ -163,8 +170,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
-
+Relative
 
 ----
 12. List all the files and directories, including any dot-files or dot-directories in
@@ -172,8 +178,12 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and directories including dot-files and dot-directories>
-<type or copy-paste the result here>
-
+Techs-MacBook-Air-7:techelevator lauraebel$ ls -la
+total 8
+drwxr-xr-x  3 lauraebel  staff   96 Jan 13 16:33 .
+drwxr-xr-x  3 lauraebel  staff   96 Jan 13 16:33 ..
+-rw-r--r--  1 lauraebel  staff  141 Jan 13 16:33 Helloworld.java
+Techs-MacBook-Air-7:techelevator lauraebel$
 
 ----
 13. "Helloworld.java" is the sole source code file of the Helloworld application.
@@ -187,8 +197,8 @@ The "cp" parameters are the name of the source file followed by the name of the
 destination file.
 
 $ <enter command to list all files and directories in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
-
+Techs-MacBook-Air-7:techelevator lauraebel$ ls
+Helloworld.java		Helloworld.java.backup
 
 ----
 14. Rename "Helloworld.java.backup" to "Helloworld.java.copy" using the move
@@ -201,8 +211,8 @@ The "mv" parameters are the existing name of the file followed by the new name
 of the file.
 
 $ <enter command to list all files and directories in order to confirm the renaming of the file>
-<type or copy-paste the result here>
-
+Techs-MacBook-Air-7:techelevator lauraebel$ ls
+Helloworld.java		Helloworld.java.copy
 
 ----
 15. Let's call this a "feature complete" point in the exercises, and not only
@@ -213,8 +223,24 @@ $ <enter command to list all files and directories in order to confirm the renam
 ----
 
 $ <enter the Git command to display status>
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:techelevator lauraebel$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../../../../../../introduction-to-tools-exercises.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Helloworld.java.copy
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Techs-MacBook-Air-7:techelevator lauraebel$ 
 $ <enter the Git command to "stage" all changes>
 <type or copy-paste the result here>
 
