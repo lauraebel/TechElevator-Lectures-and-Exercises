@@ -104,8 +104,11 @@ $ less database/pagila.sql
 
 You are encouraged to make "less" part of your standard command line toolkit.
 
-<type or copy-paste the first five lines of either file here>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>com.techelevator</groupId>
+        <artifactId>helloworld</artifactId>
 ----
 9.  This is good time to create a Git snapshot of your progress.  Usually,
     you'll want to check the Git status to review the list of files that
@@ -118,7 +121,18 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+Techs-MacBook-Air-7:java-helloworld lauraebel$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../introduction-to-tools-exercises.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Techs-MacBook-Air-7:java-helloworld lauraebel$ 
 
 $ git add -A
 <type or copy-paste the result here>
