@@ -9,15 +9,16 @@ Note, do not enter the beginning "$" character. It represents the prompt for
 the command line. This convention is commonly used to visually separate the
 actual command from other text in Unix documentation.
 
-Techs-MacBook-Air-7:module-1 lauraebel$ cd ~/Development/lauraebel-java-blue-materials/module-1/01_Introduction_Tools/student-exercise/java/java-helloworld
--bash: cd: /Users/lauraebel/Development/lauraebel-java-blue-materials/module-1/01_Introduction_Tools/student-exercise/java/java-helloworld: No such file or directory
-Techs-MacBook-Air-7:module-1 lauraebel$ 
+Techs-MacBook-Air-7:Development lauraebel$ cd ~/Development/lauraebel-java-blue-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld
+Techs-MacBook-Air-7:java-helloworld lauraebel$ ls
+database	pom.xml		src
+Techs-MacBook-Air-7:java-helloworld lauraebel$
 ----
 2.  What does the ~ (tilde) character in the above command to change directory
     refer to?
 ----
 
-Home Directory
+Home Directory (/Users/lauraebel)
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on
@@ -26,9 +27,9 @@ Home Directory
 ----
 
 $ pwd
-Techs-MacBook-Air-7:module-1 lauraebel$ pwd
-/Users/lauraebel/Development/lauraebel-java-blue-material/module-1
-Techs-MacBook-Air-7:module-1 lauraebel$ 
+Techs-MacBook-Air-7:java-helloworld lauraebel$ pwd
+/Users/lauraebel/Development/lauraebel-java-blue-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld
+Techs-MacBook-Air-7:java-helloworld lauraebel$ 
 
 The present working directory displayed should match the directory you changed
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -44,35 +45,35 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-Techs-MacBook-Air-7:module-1 lauraebel$ ls -la
+Techs-MacBook-Air-7:java-helloworld lauraebel$ ls -la
 total 8
-drwxr-xr-x  4 lauraebel  staff   128 Jan 13 16:33 .
-drwxr-xr-x  5 lauraebel  staff   160 Jan 13 16:33 ..
--rw-r--r--  1 lauraebel  staff  1048 Jan 13 16:33 .gitignore
-drwxr-xr-x  5 lauraebel  staff   160 Jan 13 16:33 01_Introduction_Tools
-Techs-MacBook-Air-7:module-1 lauraebel$ 
-
+drwxr-xr-x  5 lauraebel  staff   160 Jan 13 16:33 .
+drwxr-xr-x  7 lauraebel  staff   224 Jan 13 17:11 ..
+drwxr-xr-x  3 lauraebel  staff    96 Jan 13 16:33 database
+-rw-r--r--  1 lauraebel  staff  1091 Jan 13 16:33 pom.xml
+drwxr-xr-x  4 lauraebel  staff   128 Jan 13 16:33 src
+Techs-MacBook-Air-7:java-helloworld lauraebel$ 
 
 ----
 5.  What do the "." and ".." directories displayed in the directory listing in
     Exercise 4 represent?
 ----
 
-. = current folder and .. = parent folder 
+"." = current folder and ".." = parent folder
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-.gitignore
+pom.xml
 
 ----
 7.  What are the names of the directories, including any dot-directories, displayed in
     the directory listing in Exercise 4?
 ----
 
-".", "..", 01_Introduction_Tools
+".", "..", database, src
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later
