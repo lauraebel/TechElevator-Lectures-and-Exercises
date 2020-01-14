@@ -194,59 +194,103 @@ System.out.println(legsOfEightBees);
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
+double twoIceCreamConesCost = 0.99 * 2;
+System.out.println(twoIceCreamConesCost);
 
         /*
         22. Mrs. Hilt wants to make a border around her garden. She needs 125
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
+int totalRocksNeededForBorder = 125;
+int rocksMrsHiltHas = 64;
+int rocksMrsHiltNeedsToCompleteBorder = totalRocksNeededForBorder - rocksMrsHiltHas;
+System.out.println(rocksMrsHiltNeedsToCompleteBorder);
 
         /*
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
+int marblesMrsHiltHad = 38;
+int marblesMrsHiltLost = 15;
+int marblesMrsHiltHasLeft = marblesMrsHiltHad - marblesMrsHiltLost;
+System.out.println(marblesMrsHiltHasLeft);
 
         /*
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
+int milesToConcert = 78;
+int milesDrivenSoFar = 32;
+int milesLeftToDrive = milesToConcert - milesDrivenSoFar;
+System.out.println(milesLeftToDrive);
 
         /*
         25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time did she spend shoveling snow?
         */
+int minutesSpentShovelingSnowSat = 90;
+int minutesSpentShovelingSnowSun = 45;
+int minutesSpentShovelingSnowTotal = minutesSpentShovelingSnowSat + minutesSpentShovelingSnowSun;
+double hoursSpentShovelingSnowTotal = minutesSpentShovelingSnowTotal / 60.0;
+System.out.println(minutesSpentShovelingSnowTotal);
+System.out.println(hoursSpentShovelingSnowTotal);
 
         /*
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
+int hotDogsPurchased = 6;
+double centsPerHotDog = 0.50;
+double dollarsSpentOnHotDogs = hotDogsPurchased * centsPerHotDog;
+System.out.println(dollarsSpentOnHotDogs);
 
         /*
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+int centsMrsHiltHas = 50;
+int centsForAPencilCase = 7;
+int pencilCasesMrsHiltCanBuy = centsMrsHiltHas / centsForAPencilCase;
+System.out.println(pencilCasesMrsHiltCanBuy);
 
         /*
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
+int totalRedAndOrangeButterflies = 33;
+int totalOrangeButterflies = 20;
+int totalRedButterflies = totalRedAndOrangeButterflies - totalOrangeButterflies;
+System.out.println(totalRedButterflies);
 
         /*
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
+int totalKatePaid = 1;
+float costOfCandy = 0.54f;
+float changeKateIsOwed = totalKatePaid - costOfCandy;
+System.out.println(changeKateIsOwed);
 
         /*
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
+int treesInMarksBackyardBeforePlanting = 13;
+int treesMarkPlants = 12;
+int treesInMarksBackyardNow = treesInMarksBackyardBeforePlanting + treesMarkPlants;
+System.out.println(treesInMarksBackyardNow);
 
         /*
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
+int daysUntilJoySeesGrandma = 2;
+int hoursInOneDay = 24;
+int hoursUntilJoySeesGrandma = daysUntilJoySeesGrandma * hoursInOneDay;
+System.out.println(hoursUntilJoySeesGrandma);
 
         /*
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
