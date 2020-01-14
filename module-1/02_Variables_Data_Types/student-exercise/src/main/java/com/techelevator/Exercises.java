@@ -296,47 +296,82 @@ System.out.println(hoursUntilJoySeesGrandma);
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
+int cousinsKimHas = 4;
+int piecesOfGumPerCousin = 5;
+int totalPiecesOfGumNeeded = cousinsKimHas * piecesOfGumPerCousin;
+System.out.println(totalPiecesOfGumNeeded);
 
         /*
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
+int dollarsDanHas = 3;
+int dollarsDanPaidForACandyBar = 1;
+int dollarsDanHasLeft = dollarsDanHas - dollarsDanPaidForACandyBar;
+System.out.println(dollarsDanHasLeft);
 
         /*
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
+int boatsInTheLake = 5;
+int peoplePerBoat = 3;
+int peopleOnBoatsInTheLake = boatsInTheLake * peoplePerBoat;
+System.out.println(peopleOnBoatsInTheLake);
 
         /*
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
+int legosEllenHad = 380;
+int legosEllenLost = 57;
+int legosEllenHasLeft = legosEllenHad - legosEllenLost;
+System.out.println(legosEllenHasLeft);
 
         /*
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
+int muffinsArthurBaked = 35;
+int muffinsArthurWants = 83;
+int muffinsArthurStillNeedsToBake = muffinsArthurWants - muffinsArthurBaked;
+System.out.println(muffinsArthurStillNeedsToBake);
 
         /*
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
-
+int crayonsWillyHas = 1400;
+int crayonsLucyHas = 290;
+int amountMoreOfCrayonsWillyHasThanLucy = crayonsWillyHas - crayonsLucyHas;
+System.out.println(amountMoreOfCrayonsWillyHasThanLucy);
         /*
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
+int stickersPerPage = 10;
+int pagesOfStickers = 22;
+int totalStickers = stickersPerPage * pagesOfStickers;
+System.out.println(totalStickers);
 
         /*
         39. There are 96 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
+int totalCupcakes = 96;
+int totalChildren = 8;
+int cupcakesPerChild = totalCupcakes / totalChildren;
+System.out.println(cupcakesPerChild);
 
         /*
         40. She made 47 gingerbread cookies which she will distribute equally in
         tiny glass jars. If each jar is to contain six cookies each, how many
         cookies will not be placed in a jar?
         */
+int totalGingerbreadCookies = 47;
+int cookiesPerJar = 6;
+int cookiesNotInAJar = totalGingerbreadCookies % cookiesPerJar;
+System.out.println(cookiesNotInAJar);
 
         /*
         41. She also prepared 59 croissants which she plans to give to her 8
