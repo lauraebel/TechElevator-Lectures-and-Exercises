@@ -266,33 +266,15 @@ public class Exercises {
 	 */
 	public int intMax(int a, int b, int c) {
 		// output is int
-		if ((a > b) && (a > c)) {
+		if ((a >= b) && (a >= c)) {
 			return a;
 		}
-//		if ((b > c) && (b < a)) {
-//			return a;
-//		}
-//		if ((c > b) && (c < a)) {
-//			return a;
-//		}
-		if ((b > a) && (b > c)) {
+		if ((b >= a) && (b >= c)) {
 			return b;
 		}
-//		if ((a > c) && (a < b)) {
-//			return b;
-//		}
-//		if ((c > a) && (c < b)) {
-//			return b;
-//		}
-		if ((c > a) && (c > b)) {
+		if ((c >= a) && (c >= b)) {
 			return c;
 		}
-//		if ((a > b) && (a < c)) {
-//			return c;
-//		}
-//		if ((b > a) && (b < c)) {
-//			return c;
-//		}
 		return 0;
 	}
 
@@ -304,6 +286,14 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+		// If both 30-40, true
+		// If both 40-50, true
+		if ((a >= 30 && a <= 40) && (b >= 30 && b <= 40)) {
+			return true;
+		}
+		if ((a >= 40 && a <= 50) && (b >= 40 && b <= 50)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -315,6 +305,24 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
+		// If a in range and > b in range; return a
+		// If b in range and > a in range; return b
+		// If a in range and b not in range; return a
+		// If b in range and a not in range; return b
+		// If neither in range; return 0
+	
+		if ((a >= 10 && a <= 20) && (b >= 10 && b <= 20) && a >= b) {
+			return a;
+		}
+		if ((b >= 10 && b <= 20) && (a >= 10 && a <= 20) && b >= a) {
+			return b;
+		}
+		if ((a >= 10 && a <= 20) && (b <= 10 || b >= 20)) {
+			return a;
+		}
+		if ((b >= 10 && b <= 20) && (a <= 10 || a >= 20)) {
+			return b;
+		}
 		return 0;
 	}
 
@@ -328,6 +336,14 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
+		// When cigars 40-60; true
+		// Weekend; true
+		if (cigars >= 40 && cigars <= 60) {
+			return true;
+		}
+		if ((cigars >= 40) && (isWeekend == true)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -343,7 +359,22 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		return 0;
+		// Did not get table = 0
+		// Might get table = 1
+		// Did get table = 2
+		// If You or Date >= 8; result is 2
+		// If You or Date <= 2; result is 0
+		// Otherwise; result is 1
+		if ((you >= 8 && date > 2)) {
+			return 2;
+		}
+		if ((date >= 8 && you > 2)) {
+			return 2;
+		}
+		if (you <= 2 || date <= 2) {
+		return 0; 
+		}
+		return 1;
 	}
 
 	/*
