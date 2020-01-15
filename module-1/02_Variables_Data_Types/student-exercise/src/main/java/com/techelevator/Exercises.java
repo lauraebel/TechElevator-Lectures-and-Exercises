@@ -378,42 +378,71 @@ System.out.println(cookiesNotInAJar);
         neighbors. If each neighbor received and equal number of croissants,
         how many will be left with Marian?
         */
+int croissantsPrepared = 59;
+int neighborsToReceiveCroissants = 8;
+int croissantsLeftWithMarian = croissantsPrepared % neighborsToReceiveCroissants;
+System.out.println(croissantsLeftWithMarian);
 
         /*
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
+int cookiesPerTray = 12;
+int amountOfCookiesMarianWants = 276;
+int traysNeeded = amountOfCookiesMarianWants / cookiesPerTray;
+System.out.println(traysNeeded);
 
         /*
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
+int pretzelsMade = 480;
+int servingOfPretzels = 12;
+int totalServingsPrepared = pretzelsMade / servingOfPretzels;
+System.out.println(totalServingsPrepared);
 
         /*
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
+int totalLemonCupcakesBaked = 53;
+int lemonCupcakesLeftAtHome = 2;
+int lemonCupcakesPerBoxToBeGivenAway = 3;
+int boxesOfCupcakesGivenAwayAtOrphanage = (totalLemonCupcakesBaked - lemonCupcakesLeftAtHome) / lemonCupcakesPerBoxToBeGivenAway;
+System.out.println(boxesOfCupcakesGivenAwayAtOrphanage);
 
         /*
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
+int carrotSticksPrepared = 74;
+int amountOfPeopleServedCarrotSticksEqually = 12;
+int carrotSticksLeftUneaten = carrotSticksPrepared % amountOfPeopleServedCarrotSticksEqually;
+System.out.println(carrotSticksLeftUneaten);
 
         /*
         46. Susie and her sister gathered all 98 of their teddy bears and placed
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
+int totalTeddyBears = 98;
+int teddyBearsPerShelf = 7;
+int amountOfShelvesFilledWithTeddyBears = totalTeddyBears / teddyBearsPerShelf;
+System.out.println(amountOfShelvesFilledWithTeddyBears);
 
         /*
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
+int totalFamilyPictures = 480;
+int amountOfFamilyPicturesInAnAlbum = 20;
+int amountOfAlbumsNeeded = totalFamilyPictures / amountOfFamilyPicturesInAnAlbum;
+System.out.println(amountOfAlbumsNeeded);
 
         /*
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
@@ -421,17 +450,33 @@ System.out.println(cookiesNotInAJar);
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
+int totalTradingCardsInJoesRoom = 94;
+int amountOfTradingCardsAFullBoxCanHold = 8;
+int totalFullBoxes = totalTradingCardsInJoesRoom / amountOfTradingCardsAFullBoxCanHold;
+int amountOfCardsInTheUnfilledBox = totalTradingCardsInJoesRoom % amountOfTradingCardsAFullBoxCanHold;
+System.out.println(totalFullBoxes);
+System.out.println(amountOfCardsInTheUnfilledBox);
 
         /*
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
+int booksToBeDistributedEquallyOnShelves = 210;
+int amountOfShelvesRepaired = 10;
+int amountOfBooksOnEachRepairedShelf = booksToBeDistributedEquallyOnShelves / amountOfShelvesRepaired;
+System.out.println(amountOfBooksOnEachRepairedShelf);
 
         /*
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
+int totalCroissantsBaked = 17;
+int totalGuestsToReceiveEqualAmountOfCroissants = 7;
+int amountOfCroissantsPerGuest = totalCroissantsBaked / totalGuestsToReceiveEqualAmountOfCroissants;
+int croissantsLeftUneaten = totalCroissantsBaked % totalGuestsToReceiveEqualAmountOfCroissants;
+System.out.println(amountOfCroissantsPerGuest);
+System.out.println(croissantsLeftUneaten);
 
         /*
             CHALLENGE PROBLEMS
