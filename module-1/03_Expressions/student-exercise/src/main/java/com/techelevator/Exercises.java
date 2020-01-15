@@ -10,9 +10,26 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
+		//if NOT weekday sleep in
+		if (weekday == false) {
+			return true;
+		}
+		//if vacation sleep in
+		if (vacation == true) {
+			return true;
+		}
 		return false;
-	}
+	}	
 
+// OR if (!weekday || vacation) {
+	// return true;
+	// }
+    // {
+	// return false;
+	// }
+
+// OR return !weekday || vacation;
+	
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
 	 We are in trouble if they are both smiling or if neither of them is smiling. Return true if we
@@ -22,9 +39,33 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+		// If a smiling and b smiling then trouble
+		if (aSmile == true && bSmile == true) {
+			return true;
+		}
+		// If a not smiling and b not smiling then trouble
+		if (aSmile == false && bSmile == false) {
+			return true;
+		}
+		// Otherwise no trouble
 		return false;
 	}
 
+// OR if (aSmile && bSmile) {
+	// return true;
+	// }
+	// if (!aSmile && !bSmile) {
+	// return true;
+	// }
+	
+// OR if ( (aSmile && bSmile) || (!aSmile && !bSmile) ) {
+	// return true;
+	// }
+	
+// OR return ( (aSmile && bSmile) || (!aSmile && !bSmile) );
+	
+// OR return aSmile == bSmile; (Are they the same? both smiling or both not smiling)
+	
 	/*
 	 3. Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 	 sumDouble(1, 2) → 3
@@ -216,6 +257,30 @@ public class Exercises {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
+		
+		// Not birthday
+		// if speed <= 60 then 0
+		// if speed [61-80] then 1
+		// if speed >= 81 then 2
+		
+		// ** 5 difference in speed **
+		
+		// Birthday
+		// if speed <= 65 then 0
+		// if speed [66-85] then 1
+		// if speed >= 86 then 2
+		
+		// IF birthday, then subtract 5 from speed so non-bday calculations will work 
+		// going 65 is like going 60, that's why you subtract and don't add
+		
+		speed = isBirthday ? speed - 5 : speed;
+		
+		if (speed > 80) {
+			return 2;
+		}
+		if (speed > 60) {
+			return 1;
+		}
 		return 0;
 	}
 

@@ -69,6 +69,7 @@ int beaversWorkingOnHome = 2;
 int beaversWentForSwim = 1;
 int beaversLeft = beaversWorkingOnHome - beaversWentForSwim;
 System.out.println(beaversLeft);
+
         /*
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
@@ -137,6 +138,7 @@ int hiltHouseInchesOfSnow = 29;
 int brecknockElementarySchoolInchesOfSnow = 17;
 int inchesMoreOfSnowAtHiltHouseThanSchool = hiltHouseInchesOfSnow - brecknockElementarySchoolInchesOfSnow;
 System.out.println(inchesMoreOfSnowAtHiltHouseThanSchool);
+
         /*
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
@@ -190,6 +192,7 @@ int legsBeesHave = 6;
 int amountOfBees = 8;
 int legsOfEightBees = legsBeesHave * amountOfBees;
 System.out.println(legsOfEightBees);
+
         /*
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
@@ -520,7 +523,6 @@ String lastName = "Ebel,";
 String middleInitial = "E.";
 String fullName = lastName + firstName + middleInitial;
 System.out.println(fullName);
-
 
         /*
         The distance between New York and Chicago is 800 miles, and the train has already traveled 537 miles.
