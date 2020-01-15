@@ -73,6 +73,14 @@ public class Exercises {
 	 sumDouble(2, 2) → 8
 	 */
 	public int sumDouble(int a, int b) {
+		// If values different, return sum
+		// If values same, return double the sum
+		if (a == b) {
+			return (a + b);
+		}
+		else if (a != b) {
+			return ((a + b) * 2);
+		}
 		return 0;
 	}
 
@@ -86,6 +94,14 @@ public class Exercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
+		// return 21 - n
+		// unless n > 21, then return n - 21 * 2
+		if (n <= 21) {
+			return (21 - n);
+		}
+		else if (n > 21) {
+			return ((n - 21) * 2);
+		}
 		return 0;
 	}
 
@@ -97,7 +113,18 @@ public class Exercises {
 	 parrotTrouble(true, 7) → false
 	 parrotTrouble(false, 6) → false
 	 */
+	// parrot talking and hour before 7 = trouble
+	// parrot talking and hour after 20 = trouble
+	// parrot not talking at all = no trouble
+	// parrot talking and hour between 7 and 20 = no trouble
+	
 	public boolean parrotTrouble(boolean talking, int hour) {
+		if (talking == true && hour < 7) {
+			return true;
+		}
+		else if (talking == true && hour > 20) {
+			return true;
+		}
 		return false;
 	}
 
