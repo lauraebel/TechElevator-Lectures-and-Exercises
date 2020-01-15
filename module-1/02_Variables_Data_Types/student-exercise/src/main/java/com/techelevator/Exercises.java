@@ -515,10 +515,17 @@ System.out.println(hoursLeftOutsideFullDaysOfPainting);
         Example: "Hopper, Grace B."
         */
 
+String firstName = " Laura ";
+String lastName = "Ebel,";
+String middleInitial = "E.";
+String fullName = lastName + firstName + middleInitial;
+System.out.println(fullName);
+
+
         /*
-        The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
+        The distance between New York and Chicago is 800 miles, and the train has already traveled 537 miles.
         What percentage of the trip has been completed?
-        Hint: The percent completed is the miles already travelled divided by the total miles.
+        Hint: The percent completed is the miles already traveled divided by the total miles.
         Challenge: Display as an integer value between 0 and 100 using casts.
         */
 
