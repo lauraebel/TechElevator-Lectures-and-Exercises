@@ -76,10 +76,10 @@ public class Exercises {
 		// If values different, return sum
 		// If values same, return double the sum
 		if (a == b) {
-			return (a + b);
-		}
-		else if (a != b) {
 			return ((a + b) * 2);
+		}
+		if (a != b) {
+			return (a + b);
 		}
 		return 0;
 	}
@@ -135,6 +135,15 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
+		// output needs to be boolean
+		// inputs are int
+		// If a is 10 = true
+		// If b is 10 = true
+		// If a+b is 10 = true
+		
+		if (a == 10 || b == 10 || a + b == 10) {
+			return true;
+		}
 		return false;
 	}
 
@@ -146,7 +155,26 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		return false;
+		// output = boolean
+		// If a < 1 AND b >=1 = true
+		// If a >=1 AND b <1 = true
+		// BUT if boolean negative is true, a >= 1 and b < 1 = false
+		// If boolean negative is true, a < 1 and b >= 1 = false
+		// If boolean negative is true, a < 1 and b < 1 = true
+		
+		if (a < 1 && b >= 1 && negative != true) {
+			return true;
+		}
+		else if (a >= 1 && b < 1 && negative != true) {
+			return true;
+		}
+		else if ((a >= 1 || b >= 1) && negative == true) {
+			return false;
+		}
+		else if (a < 1 && b < 1 && negative == true) {
+			return true;
+		}
+		else return false;
 	}
 
 	/*
@@ -157,6 +185,11 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
+		//output = boolean
+		//n % 3 = true
+		//n % 5 = true
+		
+		
 		return false;
 	}
 
@@ -167,6 +200,14 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
+		//If temp1 < 0 and temp2 > 100 = true
+		//If temp1 > 100 and temp2 < 1 = true
+		if (temp1 < 0 && temp2 > 100) {
+			return true;
+		}
+		if (temp1 > 100 && temp2 < 0) {
+			return true;
+		}
 		return false;
 	}
 
@@ -177,6 +218,11 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+		// If a >= 10 and <= 20, true
+		// If b >=10 and <= 20, true
+		if ((a >= 10 && a <= 20) || (b >=10 && b <= 20)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -188,6 +234,11 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+		// Teen = 13-19
+		// If a, b, or c is 13-19 -> true
+		if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -199,6 +250,11 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
+		// Teen = 13-19
+		// true IF a is Teen OR b is Teen NOT BOTH
+		if ((a >= 13 && a <= 19) ^ (b >= 13 && b <= 19)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -209,6 +265,34 @@ public class Exercises {
 	 intMax(3, 2, 1) → 3
 	 */
 	public int intMax(int a, int b, int c) {
+		// output is int
+		if ((a > b) && (a > c)) {
+			return a;
+		}
+//		if ((b > c) && (b < a)) {
+//			return a;
+//		}
+//		if ((c > b) && (c < a)) {
+//			return a;
+//		}
+		if ((b > a) && (b > c)) {
+			return b;
+		}
+//		if ((a > c) && (a < b)) {
+//			return b;
+//		}
+//		if ((c > a) && (c < b)) {
+//			return b;
+//		}
+		if ((c > a) && (c > b)) {
+			return c;
+		}
+//		if ((a > b) && (a < c)) {
+//			return c;
+//		}
+//		if ((b > a) && (b < c)) {
+//			return c;
+//		}
 		return 0;
 	}
 
