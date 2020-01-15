@@ -484,10 +484,28 @@ System.out.println(croissantsLeftUneaten);
 
         /*
         Bill and Jill are house painters. Bill can paint a 12 x 14 room in 2.15 hours, while Jill averages
-        1.90 hours. How long will it take the two painter working together to paint 5 12 x 14 rooms?
+        1.90 hours. How long will it take the two painters working together to paint 5 12 x 14 rooms?
         Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
         Challenge: How many days will it take the pair to paint 623 rooms assuming they work 8 hours a day?.
         */
+int roomSizeInFeet = 52;
+int amountOfRoomsToBePainted = 5;
+float hourlyRateOfBill = 2.15f;
+float hourlyRateOfJill = 1.90f;
+float totalHourlyRate = hourlyRateOfBill + hourlyRateOfJill;
+int totalFeetNeedingPainted = roomSizeInFeet * amountOfRoomsToBePainted;
+double amountOfTimeToPaintAllRooms = totalFeetNeedingPainted / totalHourlyRate;
+System.out.println(totalHourlyRate);
+System.out.println(totalFeetNeedingPainted);
+System.out.println(amountOfTimeToPaintAllRooms);
+int secondAmountOfRoomsToBePainted = 623;
+int hoursWorkedPerDay = 8;
+int secondAmountOfFeetToBePainted = secondAmountOfRoomsToBePainted * roomSizeInFeet;
+int fullDaysToPaintSecondAmountOfRooms = secondAmountOfFeetToBePainted / hoursWorkedPerDay;
+int hoursLeftOutsideFullDaysOfPainting = secondAmountOfFeetToBePainted % hoursWorkedPerDay;
+System.out.println(secondAmountOfFeetToBePainted);
+System.out.println(fullDaysToPaintSecondAmountOfRooms);
+System.out.println(hoursLeftOutsideFullDaysOfPainting);
 
         /*
         Create and assign variables to hold your first name, last name, and middle initial. Using concatenation,
