@@ -530,6 +530,12 @@ System.out.println(fullName);
         Hint: The percent completed is the miles already traveled divided by the total miles.
         Challenge: Display as an integer value between 0 and 100 using casts.
         */
+float milesBetweenNewYorkAndChicagoByTrain = 800.0f;
+float milesTrainHasTraveledSoFar = 537.0f;
+float percentageOfTripCompleted = milesTrainHasTraveledSoFar / milesBetweenNewYorkAndChicagoByTrain;
+float nowPercentageOfTripCompleted = 0.67125f;
+int intPercentageOfTripCompleted = (int) nowPercentageOfTripCompleted;
+System.out.println(intPercentageOfTripCompleted);
 
 
 	}
