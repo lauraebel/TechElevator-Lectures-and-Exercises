@@ -21,6 +21,9 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
+		if (nums[0] == nums[nums.length - 1]) {
+			return true;
+		}
 		return false;
 	}
 
@@ -72,7 +75,7 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
-		return new int[] {};
+		return new int[] {nums[2], nums[1], nums [0]};
 	}
 
 	/*

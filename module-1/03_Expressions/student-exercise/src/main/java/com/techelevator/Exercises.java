@@ -442,16 +442,14 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		// Add a + b if they are less than 10 or greater than 19
-		// If between 10 and 19, return 20
-		if ((a < 10 || a > 19) && (b < 10 || b > 19)) {
-			return a + b;
-		}
-		if ((a >=10 && a <= 19) || (b >=10 && b <= 19)) {
-			return 20;
-		}
-		return 0;
+		// Add a + b 
+		// If a + b = 10-19, return 20
+	if (a + b < 10 || a + b > 19) {
+		return (a + b);
 	}
+		return 20;
+	}
+	
 
 	/*
 	 21. Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are
@@ -669,6 +667,7 @@ public class Exercises {
 	 inOrderEqual(5, 7, 6, false) → false
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
+	
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
 		return false;
 	}
