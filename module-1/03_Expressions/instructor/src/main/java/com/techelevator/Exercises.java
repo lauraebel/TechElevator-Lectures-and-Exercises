@@ -10,7 +10,25 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		return false;
+		// Solution 1
+		// If NOT weekday then sleep in
+//		if ( weekday == false ) {
+//			return true;
+//		}
+		// If vacation then sleep in 
+//		if ( vacation == true ) {
+//			return true;
+//		}
+//		return false;
+		
+		// Solution 2
+//		if ( !weekday || vacation ) {
+//			return true;
+//		}
+//		return false;
+		
+		// Solution 3
+		return !weekday || vacation;
 	}
 
 	/*
@@ -22,7 +40,44 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-		return false;
+		
+		// Original Solution
+		// If a smiling and b smiling then in trouble
+//		if ( aSmile == true && bSmile == true ) {
+//			return true;
+//		}
+//		// If a not smiling and b not smiling then in trouble
+//		if ( aSmile == false && bSmile == false) {
+//			return true;
+//		}
+//		// otherwise not in trouble
+//		return false;
+		
+		// Refactor 1
+//		if ( aSmile && bSmile  ) {
+//			return true;
+//		}
+//		// If a not smiling and b not smiling then in trouble
+//		if ( !aSmile  && !bSmile ) {
+//			return true;
+//		}
+//		// otherwise not in trouble
+//		return false;	
+	
+		// Refactor 2
+//		if ( (aSmile && bSmile) || (!aSmile  && !bSmile) ) {
+//			return true;
+//		}
+//		return false;
+		
+		// Refactor 3
+		//return (aSmile && bSmile) || (!aSmile  && !bSmile);
+		
+		// Refactor 4
+		//return !(aSmile ^ bSmile);
+		
+		// Rafactor 5
+		return aSmile == bSmile;
 	}
 
 	/*
@@ -216,6 +271,29 @@ public class Exercises {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
+		
+		// Not Birthday
+		// if speed <= 60 then 0
+		// if speed [61-80] then 1
+		// if 81+ then 2
+		
+		// Birthday
+		// if speed <= 65 then 0
+		// if speed [66-85] then 1
+		// if speed [86+ then 2
+		
+		// IF birthday, then subtract 5 from speed so non-birthday calculations will work
+		speed = isBirthday ? speed - 5 : speed;
+		
+		if (speed > 80) {
+			return 2;
+		}
+		
+		if (speed > 60) {
+			return 1;
+		}
+		
+		
 		return 0;
 	}
 

@@ -13,6 +13,7 @@ public class Exercises {
 		int initialNumberOfBirds = 4;
 		int birdsThatFlewAway = 1;
 		int remainingNumberOfBirds = initialNumberOfBirds - birdsThatFlewAway;
+	
 
         /*
         2. There are 6 birds and 3 nests. How many more birds are there than
@@ -23,6 +24,7 @@ public class Exercises {
 		int numberOfBirds = 6;
 		int numberOfNests = 3;
 		int numberOfExtraBirds = numberOfBirds - numberOfNests;
+		
 
         /*
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
