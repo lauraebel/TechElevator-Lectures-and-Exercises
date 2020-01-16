@@ -71,7 +71,7 @@ public class LectureLoops {
 		/*
 		 * FOR LOOP WITH ARRAYS
 		 */
-		/* The instructors Array will be used to for the following problems */
+		/* The instructors Array will be used for the following problems */
 		String[] instructors = new String[6];
 		instructors[0] = "Steve";
 		instructors[1] = "Rachelle";

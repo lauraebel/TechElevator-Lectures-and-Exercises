@@ -47,7 +47,15 @@ public class Exercises {
 	 commonEnd([1, 2, 3], [7, 3, 2]) → false
 	 commonEnd([1, 2, 3], [1, 3]) → true
 	 */
+	// a[0] == b[0] 
+	// a[a.length -1] == b[b.length - 1]
 	public boolean commonEnd(int[] a, int[] b) {
+		if (a[0] == b[0]) {
+			return true;
+		}
+		if (a[a.length - 1] == b[b.length - 1]) {
+			return true;
+		}
 		return false;
 	}
 
@@ -58,7 +66,7 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-
+		
 		return 0;
 	}
 
@@ -92,6 +100,14 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
+		if (nums[0] > nums[nums.length - 1]) {
+			nums[1] = nums[0];
+			nums[2] = nums[0];
+		}
+		if (nums[0] < nums[nums.length - 1]) {
+			nums[0] = nums[nums.length - 1];
+			nums[1] = nums[nums.length - 1];
+		}
 		return new int[] {};
 	}
 
@@ -103,6 +119,8 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
+		
+
 		return 0;
 	}
 
@@ -157,6 +175,9 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
+		if (nums[0] != 1 && nums[0] != 3 && nums[1] != 1 && nums[1] != 3 && nums[2] != 1 && nums[2] != 3) {
+			return true;
+		}
 		return false;
 	}
 
