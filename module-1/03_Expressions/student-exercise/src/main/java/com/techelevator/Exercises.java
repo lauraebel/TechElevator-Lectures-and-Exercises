@@ -566,8 +566,13 @@ public class Exercises {
 	 teenSum(10, 13) → 19
 	 teenSum(13, 2) → 19
 	 */
+	// a+b
+	// teen= 13-19 so return 19 if a or b are 13-19
 	public int teenSum(int a, int b) {
-		return 0;
+		if ((a < 13 || a > 19) && (b < 13 || b > 19)) {
+			return a + b;
+		}
+		return 19;
 	}
 
 	/*
@@ -667,8 +672,15 @@ public class Exercises {
 	 inOrderEqual(5, 7, 6, false) → false
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
-	
+	// a > b > c if equalOk != true
+	// a >= b >= c if equalOk == true
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+		if ((a < b) && (b < c) && equalOk != true) {
+			return true;
+		}
+		if ((a <= b) && (b <= c) && equalOk == true) {
+			return true;
+		}
 		return false;
 	}
 
@@ -679,7 +691,23 @@ public class Exercises {
 	 loneSum(3, 2, 3) → 2
 	 loneSum(3, 3, 3) → 0
 	 */
+	// a+b+c
+	// if a=b do not add a
+	// if b=c do not add b
+	// if c=a do not add c
 	public int loneSum(int a, int b, int c) {
+		if ((a != b) && (b != c) && (c != a)) {
+			return a + b + c;
+		}
+	if ((a == b) && (b != c) && (c != a)) {
+		return c;
+	}
+	if ((a != b) && (b == c) && (c != a)) {
+		return a;
+	}
+	if ((a != b) && (b != c) && (c == a)) {
+		return b;
+	}
 		return 0;
 	}
 
@@ -693,7 +721,21 @@ public class Exercises {
 	 luckySum(13, 1, 3) → 3
 	 luckySum(13, 13, 3) → 0
 	 */
+	// a+b+c
+	// a,b,c is 13; it does not count and right number does not count
 	public int luckySum(int a, int b, int c) {
+		if ((a != 13) && (b != 13) && (c != 13)) {
+			return a + b + c;
+		}
+		if ((a == 13) && (b != 13) && (c != 13)) {
+			return c;
+		}
+		if ((a != 13) && (b == 13) && (c != 13)) {
+			return a;
+		}
+		if ((a != 13) && (b != 13) && (c == 13)) {
+			return a + b;
+		}
 		return 0;
 	}
 
