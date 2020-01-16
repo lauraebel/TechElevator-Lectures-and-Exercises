@@ -33,7 +33,7 @@ public class Exercises {
 
 	/*
 	 3. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
-	 makePi() → [3, 1, 4]
+	 makePi() → [3, 1, 4] f
 	 */
 	public int[] makePi() {
 		return new int[] {};
