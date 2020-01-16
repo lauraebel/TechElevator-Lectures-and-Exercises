@@ -75,7 +75,7 @@ public class Lecture {
        return it? There are a couple of different ways of doing this, what can you come up with?
     */
     public int returnVariableFromBlock(int number) {
-int result; //declare it here
+    	int result; //declare it here
         { // A new block with scoped variables
            result = number * 5;
 
