@@ -58,6 +58,7 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
+
 		return 0;
 	}
 
@@ -69,7 +70,7 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		return new int[] {};
+		return new int[] {nums[1], nums[2], nums[0]};
 	}
 
 	/*
