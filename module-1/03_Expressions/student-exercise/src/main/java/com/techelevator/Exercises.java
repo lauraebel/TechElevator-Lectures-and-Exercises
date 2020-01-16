@@ -188,8 +188,10 @@ public class Exercises {
 		//output = boolean
 		//n % 3 = true
 		//n % 5 = true
-		
-		
+		if (n%3) {
+			return true;
+		}
+	
 		return false;
 	}
 
