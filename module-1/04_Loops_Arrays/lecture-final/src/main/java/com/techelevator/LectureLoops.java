@@ -9,8 +9,12 @@ public class LectureLoops {
 		 */
 		
 		// Sum all the numbers between 1 and 10
-
-		System.out.println("Sum of numbers [0-10]: " + 0);
+		int sum = 0;
+		for ( int i = 1 ; i <= 10 ; i++ ) {
+			sum += i;
+		}
+		
+		System.out.println("Sum of numbers [0-10]: " + sum);
 
 		
 		// Sum all Even numbers in the range [0-100] using 3 different methods
@@ -19,19 +23,34 @@ public class LectureLoops {
 		
 		// Sum All Even numbers using modulus
 		int sumEvenOne = 0;
-
+		
+		for (int i = 0 ; i <= 100 ; i++) {
+			if ( i % 2 == 0 ) {
+				sumEvenOne += i;
+			}
+		}
+		
 		System.out.println("Sum of Even (first way)= " + sumEvenOne);
 		
 		
 		// Sum All Even numbers by counting by 2s
 		int sumEvenTwo = 0;
+		
+		for (int i = 2 ; i <= 100 ; i += 2) {
+			sumEvenTwo += i;
+		}
 
 		System.out.println("Sum of Even (second way)= " + sumEvenTwo);
 		
 		
 		// Sum All Even numbers by continuing on odds
 		int sumEvenThree = 0;
-
+		for (int i = 0; i < 101; i++) {
+			if (i % 2 != 0) {
+				continue;
+			}
+			sumEvenThree += i;
+		}
 		System.out.println("Sum of Even (third way)= " + sumEvenThree);
 		
 		
@@ -39,6 +58,18 @@ public class LectureLoops {
 		System.out.println();
 		System.out.println("The numbers [0-100] printed in reverse");
 
+		for ( int i = 100 ; i >= 0 ; i--) {
+			if ( i < 50 ) {
+				break;
+			}
+			System.out.print(i + " ");
+		}
+		
+		System.out.println();
+		
+		for ( int i = 100 ; i >= 50; i--) {
+			System.out.print(i + " ");
+		}
 		
 		
 		/*
@@ -57,24 +88,49 @@ public class LectureLoops {
 		System.out.println();
 		System.out.println("\nPrint all the instructors");
 		
+		for ( int i = 0 ; i < instructors.length; i++) {
+			System.out.println(instructors[i]);
+		}
 
 		
 		// Print all the odd instructors
 		System.out.println();
 		System.out.println("All the odd instructors");
 		
+		for (int i = 0; i < instructors.length; i++) {
+			if ( i % 2 == 1) {
+				System.out.println( instructors[i] );
+			}
+		}
 
 		
 		// Mark all the instructors in the Array as ODD or NOT ODD and print them in reverse
 		System.out.println();
 		System.out.println("The instructors marked as ODD or NOT ODD and Printed in Reverse");
 
+		for (int i = 0; i < instructors.length; i++) {
+			if (i % 2 == 0) {
+				instructors[i] = instructors[i] + " NOT ODD";
+			} else {
+				instructors[i] = instructors[i] + " ODD";
+			}
+		}
+		
+		for ( int i = 0 ; i < instructors.length; i++) {
+			System.out.println(instructors[i]);
+		}
 		
 		
 		// Print all the first odd instructor
 		System.out.println();
 		System.out.println("The oddest instructor is ");
 		
+		for (int i = 0; i < instructors.length; i++) {
+			if ( i % 2 == 1) {
+				System.out.println( instructors[i] );
+				break;
+			}
+		}
 
 		
 		
@@ -82,24 +138,44 @@ public class LectureLoops {
 		int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 , 10 };
 		
 		
+		// Double values and Put them in a new Array
+		int[] doubleNumbers = new int[ numbers.length ];
+		for (int i = 0; i < numbers.length; i++) {
+			doubleNumbers[i] = numbers[i] * 2;
+		}
+		
+		
+		
 		// Double every number in the Array
 		System.out.println();
 		System.out.println("The doubled numbers in the array are:");
 		
-
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = numbers[i] * 2;
+			System.out.println(numbers[i]);
+		}
+		
+		
+		
 		
 		// Print just the first half of the Array
 		System.out.println();
 		System.out.println();
 		System.out.println("The first half of the array is:");
 
+		for (int i = 0; i < numbers.length / 2; i++) {
+			System.out.print(numbers[i] + "  ");
+		}
+		
 		
 		// Print the Second half of numbers in the Array
 		System.out.println();
 		System.out.println();
 		System.out.println("The second half of the array is:");
 
-		
+		for (int i = numbers.length / 2 ; i < numbers.length; i++) {
+			System.out.print(numbers[i] + "  ");
+		}
 		
 		
 		
@@ -112,6 +188,13 @@ public class LectureLoops {
 		System.out.println();
 		int sumOfGreaterThan20 = 0; 
 
+		
+		for (int i = 0; i < nums2.length; i++) {
+			if ( nums2[i] >= 20 ) {
+				sumOfGreaterThan20 += nums2[i];
+			}
+		}
+		
 		System.out.println("Sum of numbers 20 or greater in nums2: " + sumOfGreaterThan20);
 		
 		
@@ -119,11 +202,26 @@ public class LectureLoops {
 		System.out.println();
 		System.out.println("Nums2 without the numbers after numbers 20 or greater");
 
+		for (int i = 0; i < nums2.length; i++) {
+			System.out.print(nums2[i] + " ");
+			if (nums2[i] >= 20) {
+				i++;
+			}
+		}
+		
 		
 		// CHALLENGE: Triple every number that is divisible by 3 and print them
 		System.out.println();
 		System.out.println();
 		System.out.println("Nums2 with every number divisible by 3 trippled");
+		
+		for (int i = 0; i < nums2.length; i++) {
+			if (nums2[i] % 3 == 0) {
+				System.out.print(nums2[i] * 3 + " ");
+			} else {
+				System.out.print(nums2[i] + " ");
+			}
+		}
 		
 
 		
@@ -134,7 +232,14 @@ public class LectureLoops {
 		System.out.println();
 		System.out.println("All the instructors printing using a break");
 		
-
+		int i = 0;
+		for ( ; true ; ) {
+			System.out.println(instructors[i]);
+			i++;
+			if (i >= instructors.length) {
+				break;
+			}
+		}
 		
 	}
 
