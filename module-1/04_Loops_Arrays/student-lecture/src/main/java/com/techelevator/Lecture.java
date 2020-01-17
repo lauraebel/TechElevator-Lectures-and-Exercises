@@ -57,7 +57,8 @@ public class Lecture {
     public int returnLastElementOfParam(int[] passedInArray) {
         return passedInArray[passedInArray.length - 1];
     }
-
+    
+// in-class example below
     public void arrayExample() {
     	double[] numbers = new double[5];
     	
