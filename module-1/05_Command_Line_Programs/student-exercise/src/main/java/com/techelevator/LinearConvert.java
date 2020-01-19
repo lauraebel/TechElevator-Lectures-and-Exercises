@@ -1,5 +1,4 @@
 package com.techelevator;
-
 import java.util.Scanner;
 
 // m = f * 0.3048
@@ -16,11 +15,11 @@ public class LinearConvert {
 		double feetConversion = 3.2808399;
 
 		Scanner in = new Scanner(System.in);
+		
 		System.out.print("Enter a length: " );
 		String userLength = in.nextLine();
 		
 		double yourChosenLength = Double.parseDouble(userLength);
-		
 		
 		System.out.print("Is it in meters (m) or feet (f)? ");
 		String userMOrF = in.nextLine();
@@ -28,20 +27,18 @@ public class LinearConvert {
 		if (userMOrF.equalsIgnoreCase("F")) {
 		
 		double convertedToMeters = yourChosenLength * meterConversion;
-		System.out.println("Your chosen length of feet converts to " + convertedToMeters + " meters");
+		System.out.println("You chose " + yourChosenLength + " feet and this converts to " + convertedToMeters + " meters");
 
-		} else {
-		
+		} else if  (userMOrF.equalsIgnoreCase("M")) {
+			
 		double convertedToFeet = yourChosenLength * feetConversion;
-		System.out.println("Your chosen length of meters converts to " + convertedToFeet + " feet");
+		System.out.println("You chose " + yourChosenLength + " meters and this converts to " + convertedToFeet + " feet");
 
 		}
-		
-		
-		// System.out.print("Is the measurement in Meters (m), or Feet (f)?: ");
+		else { 
+				System.out.println("Error, please enter (m) or (f)");
 	}
-
 }
-//		String userInput = in.nextLine();
+}
 
 
