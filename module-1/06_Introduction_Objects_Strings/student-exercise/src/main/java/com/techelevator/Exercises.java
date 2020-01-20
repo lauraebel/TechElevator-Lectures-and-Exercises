@@ -1,6 +1,8 @@
 package com.techelevator;
 
 public class Exercises {
+	
+	// if you get a null Pointer Exception, it means you are trying to call a string that has nothing to reference
 
 	/*
 	 Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
@@ -9,7 +11,7 @@ public class Exercises {
 	 helloName("X") → "Hello X!"
 	 */
 	public String helloName(String name) {
-		return null;
+		return "Hello " + name + "!";
 	}
 
 	/*
@@ -20,7 +22,7 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
-		return null;
+		return a + b + b + a;
 	}
 
 	/*
@@ -31,8 +33,10 @@ public class Exercises {
 	 makeTags("i", "Hello") → "<i>Hello</i>"
 	 makeTags("cite", "Yay") → "<cite>Yay</cite>"
 	 */
+	
+	// arguments are String tag and String word
 	public String makeTags(String tag, String word) {
-		return null;
+		return "<" + tag + ">" + word + "</" + tag + ">";
 	}
 
 	/*
@@ -43,8 +47,13 @@ public class Exercises {
 	 makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
+	
+	// out 0-3
+	// word
 	public String makeOutWord(String out, String word) {
-		return null;
+		String firstTwo = out.substring(0, 2);
+		String lastTwo = out.substring(2);
+		return firstTwo + word + lastTwo;
 	}
 
 	/*
@@ -54,8 +63,19 @@ public class Exercises {
 	 extraEnd("ab") → "ababab"
 	 extraEnd("Hi") → "HiHiHi"
 	 */
+	// 3 copies of last 2 char
+	
 	public String extraEnd(String str) {
-		return null;
+		
+		int nameLength = str.length();
+		
+		return str.substring(nameLength - 2) + str.substring(nameLength - 2) + str.substring(nameLength - 2);
+
+//		char last = str.charAt(nameLength - 1);
+//		char secondToLast = str.charAt(nameLength - 2);
+		
+		
+//		return last + secondToLast;
 	}
 
 	/*
@@ -67,7 +87,18 @@ public class Exercises {
 	 firstTwo("ab") → "ab"
 	 */
 	public String firstTwo(String str) {
-		return null;
+		// str is null, return str
+		// str length < 2, return str
+		// str length == 2, return str
+		// use == to check for null because it compares the stack
+		
+		if (str == null || str.length() <= 2) {
+			return str;
+		}
+		
+		// str length > 2, return first 2 letters
+		
+		return str.substring(0, 2);
 	}
 
 	/*
