@@ -103,7 +103,7 @@ public class Lecture {
 		/* Other commonly used methods:
 		 * 
 		 * endsWith() // these are booleans
-		 * startsWith()
+		 * startsWith() // these are booleans
 		 */
 		System.out.println("Hello starts with Hello:" + hello.startsWith("Hello")); 
 		
