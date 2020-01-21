@@ -141,6 +141,21 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
+		
+		boolean foundTwo = false;
+		
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 2) {
+				if (foundTwo) {
+					return true;
+				} else {
+					foundTwo = true;
+				}
+			} else {
+				foundTwo = false;
+			}
+		}
+		
 		return false;
 	}
 	

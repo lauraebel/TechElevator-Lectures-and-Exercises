@@ -32,7 +32,7 @@ public class Exercises {
 	 makeTags("cite", "Yay") → "<cite>Yay</cite>"
 	 */
 	public String makeTags(String tag, String word) {
-		return null;
+		return "<" + tag + ">" + word + "</" + tag + ">";
 	}
 
 	/*
@@ -67,7 +67,16 @@ public class Exercises {
 	 firstTwo("ab") → "ab"
 	 */
 	public String firstTwo(String str) {
-		return null;
+		
+		// str is null, return str
+		// str length < 2, return str
+		// str length == 2, return str
+		if ( str == null || str.length() <= 2) {
+			return str;
+		}
+		// str length > 2 return first 2 letters
+		
+		return str.substring(0, 2);
 	}
 
 	/*

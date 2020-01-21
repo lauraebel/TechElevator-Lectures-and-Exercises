@@ -6,19 +6,43 @@ public class Lecture {
 	public static void main(String[] args) {
 
 		/* Object Instantiation */
-
+		House houseAt443WinstonSt = new House(1800, "443 Winston St", "Cornflower Blue");
+		House houseTwo = new House(2000, "123 Way St", "Orange");
+		House houseFour = new House(2000, "123 Way St", "Orange");
+		
+		houseAt443WinstonSt.setNumberOfRooms(5);
 		
 		/* Value Type */
 		int x = 10;
+		double amount = 2.56d;
 
+		
+		int y = x;
+		x = 20;
 		
 		/* Reference Type */
 		int[] numbers = { 10, 20, 30 , 40 };
-	
+		int[] otherNumbers = numbers;
+		numbers[1] = 99;
+		otherNumbers[3] = 42;
+		
+		
+		House houseThree = houseTwo;
+		houseThree.setNumberOfRooms(10);
+		houseTwo.setNumberOfRooms(20);
+		
+		if (houseTwo == houseFour) {
+			System.out.println("They are equal");
+		};
+		
 		
 		
 		String firstName = "joe";
-		firstName.toUpperCase();
+		String upperCaseFirstName = firstName.toUpperCase();
+		
+		String anotherFirstName = "sally";
+		anotherFirstName = anotherFirstName.toUpperCase();
+	
 
 		
 		System.out.println("************************************");
@@ -51,15 +75,15 @@ public class Lecture {
 		System.out.println(fourth);
 		
 		/* length */
-		int nameLength = 0;
+		int nameLength = name.length();
 		System.out.println("The length of the String "  + name + " is " + nameLength);
 		
 		/* SubString */
 		String s = "Tech Elevator";
-		String subStringOfs = "";
+		String subStringOfs = s.substring(5, 11);
 		System.out.println(subStringOfs);
 		
-		String subStringToEnd = "";
+		String subStringToEnd = s.substring(5);
 		System.out.println(subStringToEnd);
 		
 		/* Contains */
@@ -75,17 +99,51 @@ public class Lecture {
 		 * 
 		 * endsWith()
 		 * startsWith()
+		 */
+		System.out.println( "Hello starts with Hello: " + hello.startsWith("Hello") );
+		System.out.println( "Hello ends with Hello: " + hello.endsWith("Hello") );
+		
+		/*
 		 * indexOf()
 		 * lastIndexOf()
+		 */
+		int index = hello.indexOf("l");
+		System.out.println("Index of l in Hello World is: " + index);
+		
+		int lastIndex = hello.lastIndexOf("l");
+		System.out.println("Last Index of l " + lastIndex);
+		
+		
+		/*
 		 * replace()
+		 */
+		
+		String q = "abcdef";
+		q = q.replace("d", "T");
+		
+		/*
 		 * toLowerCase()
 		 * toUpperCase()
 		 * equals and equalsIgnoreCase()
+		 */
+		
+		/*
 		 * split()
+		*/
+		String countDown = "one two three four five";
+		String[] splitCountDown = countDown.split(" ");
+		
+		
+		/*
 		 * trim()
+		 * Removes whitespace from the end
+		 */
+		
+		/*
 		 * String.join()  <-- available only on the String class and not the string object
 		 */
-
+		String joinedString = String.join(" --> ", "Five", "Four", "Three", "Two", "One");
+		System.out.println( joinedString );
 		
 		
 		System.out.println();
