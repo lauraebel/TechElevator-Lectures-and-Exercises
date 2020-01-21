@@ -14,7 +14,9 @@ public class Exercises {
 	/*
 	 Note, for-each is preferred, and should be used when possible.
 	 */
-
+ 
+	// Most will be List with one or two Stack
+	
 	/*
 	 Given an array of Strings, return an ArrayList containing the same Strings in the same order
 	 array2List( {"Apple", "Orange", "Banana"} )  ->  ["Apple", "Orange", "Banana"]
@@ -22,7 +24,19 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		// convert an array of strings into a list of strings
+		// first thing to do is create a list of strings
+		// then use a for each loop to return the strings in order
+		
+		List<String> stringList = new ArrayList<String>();
+		
+		for(String s : stringArray) {
+			stringList.add(s);
+		}
+		
+		return stringList;
+		
+		// Second Solution: return Arrays.asList(stringArray);
 	}
 
 	/*
@@ -43,7 +57,20 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		// Argument = stringArray
+		// Need to make a list of strings
+		// First build a new list of strings
+		// Then go through every item in the list and find which ones are 4 letters
+		// Needs to go beginning to end and not change so a for-each loop works
+		
+		List<String> no4LetterWords = new ArrayList<String>();
+		
+		for(String word : stringArray) {
+			if(word.length() != 4) {
+			no4LetterWords.add(word);
+		}
+		}
+		return no4LetterWords;
 	}
 
 	/*

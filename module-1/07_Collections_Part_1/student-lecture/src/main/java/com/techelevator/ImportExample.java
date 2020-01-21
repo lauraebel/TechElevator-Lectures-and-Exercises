@@ -1,21 +1,27 @@
 package com.techelevator;
 
+import java.util.Scanner;
+import com.techelevator.data.NumberCruncher;
+
+import java.util.*;
 
 public class ImportExample {
 	
 	public static void main(String[] args) {
 		
-		java.util.Scanner in = new java.util.Scanner(java.lang.System.in);
+		//Now we can just say Scanner from here on out since we put the fully qualified name above
+		Scanner in = new Scanner(System.in);
 		
-		java.lang.System.out.println("Pick a whole number?");
+		System.out.println("Pick a whole number:");
 		
-		java.lang.String userChoice = in.nextLine();
-		int number = java.lang.Integer.parseInt(userChoice);
+		String userChoice = in.nextLine();
+		int number = Integer.parseInt(userChoice);
 		
-		com.techelevator.data.NumberCruncher numberCruncher = new com.techelevator.data.NumberCruncher();
-		java.lang.Integer newNumber = numberCruncher.multiplyNumberBy10(number);
+		//Now we can just say NumberCruncher from here on out since we put the fully qualified name above
+		NumberCruncher numberCruncher = new NumberCruncher();
+		Integer newNumber = numberCruncher.multiplyNumberBy10(number);
 		
-		java.lang.System.out.println("Your number multiplied by 10 is " + newNumber);
+		System.out.println("Your number multiplied by 10 is " + newNumber);
 
 	}
 
