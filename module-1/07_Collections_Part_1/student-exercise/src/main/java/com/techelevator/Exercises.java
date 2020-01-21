@@ -46,8 +46,11 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		return stringList.toArray(new String [stringList.size()]);
 	}
+
+//
+//	}
 
 	/*
 	 Given an array of Strings, return an ArrayList containing the same Strings in the same order
@@ -81,7 +84,31 @@ public class Exercises {
 	 reverseList( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"} )
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
+	// new list in reverse order
+	// Use Stack
+	
+//	Stack<Integer> numStack = new Stack<Integer>();
+//	
+//	for (int n: nums) {
+//		numStack.push(n);
+//	}
+//	int i = 0;
+//	while(!numStack.isEmpty()) {
+//		int num = numStack.pop();
+//		nums[i] = num;
+//		i++;
+//		System.out.println(num);
+//	}
+	
 	public List<String> reverseList(List<String> stringList) {
+		
+		Stack<String> lifoStack = new Stack<String>();
+		List<String> lifoList = new ArrayList<String>();
+
+		for (String stuff: stringList) {
+			lifoStack.push(stuff);
+		}
+	
 		return null;
 	}
 

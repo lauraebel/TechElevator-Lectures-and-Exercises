@@ -298,7 +298,13 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
+		// if contains bad (0,1)
+		// indexOf
+		int index = str.indexOf("bad");
 		
+		if (str.contains("bad") && (index == 0 || index == 1)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -309,7 +315,11 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
-		return null;
+		String string = "";
+		for (int i = 0; i < n; i ++) {
+			string = string.concat(str);
+		}
+		return string;
 	}
 
 	/*
@@ -320,8 +330,21 @@ public class Exercises {
 	 frontTimes("Abc", 3) → "AbcAbcAbc"
 	 */
 	public String frontTimes(String str, int n) {
-		return null;
-	}
+		
+		String string = "";
+		int length = str.length();
+		
+		if (length <= 3) {
+			for (int i = 0; i < n; i++) {
+			string = string.concat(str);
+			}
+			return string;
+		} for (int i = 0; i < n; i++) {
+			string = string.concat(str.substring(0, 3));
+		}
+		return string;
+		}
+	
 
 	/*
 	 Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
@@ -385,9 +408,15 @@ public class Exercises {
 	 stringSplosion("abc") → "aababc"
 	 stringSplosion("ab") → "aab"
 	 */
+	
 	public String stringSplosion(String str) {
+		String string = "";
+		int length = str.length();
 		
-		return null;
+		for(int i = 0; i < length; i++) {
+		   string = string + (str.substring(0, i));
+		}
+		return string + str;
 	}
 
 	/*
@@ -397,7 +426,10 @@ public class Exercises {
 	 last2("xaxxaxaxx") → 1
 	 last2("axxxaaxx") → 2
 	 */
+	// substring length 2 appears in string
+	// substring length 2 is the last 2 chars
 	public int last2(String str) {
+		
 		return 0;
 	}
 
@@ -408,8 +440,18 @@ public class Exercises {
 	 stringX("abxxxcd") → "abcd"
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
+	
 	public String stringX(String str) {
-		return null;
+		int length = str.length();
+		 
+		if (length <= 2) {
+			return str;
+		}
+		String string = str.substring(1, length - 1);
+		
+		string = string.replace("x", ""); 
+				
+		return str.charAt(0) + string + str.charAt(length - 1);
 	}
 
 	/*
@@ -430,7 +472,7 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		return str.replace("yak", "");
 	}
 
 }

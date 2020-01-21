@@ -31,7 +31,7 @@ public class Lecture {
 
 		// Lists maintain order of insertion
 		for (int i = 0; i < instructors.size(); i++) {
-			System.out.println(instructors.get(i)); //prints all instrcutors we added
+			System.out.println(instructors.get(i)); //prints all instructors we added
 		}
 		
 		System.out.println("####################");
@@ -113,8 +113,8 @@ public class Lecture {
 		// Assigns an int (10) to the wrapper class of Integer - autoboxes and then can solve the problem
 		
 		
-//		Double accountBalance = null; // no reference in the stack
-//		double newBalance = accountBalance + 10;
+		// Double accountBalance = null; // no reference in the stack
+		// double newBalance = accountBalance + 10;
 		// Won't autobox because of the null- there is nothing to reference and box (null pointer exception)
 		
 		
@@ -155,9 +155,9 @@ public class Lecture {
 		tasks.offer("Wipe Counters");
 		tasks.offer("Mop");
 		
-/////////////////////
-// PROCESSING ITEMS IN A QUEUE
-/////////////////////
+		/////////////////////
+		// PROCESSING ITEMS IN A QUEUE
+		/////////////////////
 		
 //		for( ; tasks.isEmpty() != true ; ) {
 //			
