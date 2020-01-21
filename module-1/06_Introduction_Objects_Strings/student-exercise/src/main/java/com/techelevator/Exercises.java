@@ -249,8 +249,11 @@ public class Exercises {
 	 nTwice("Chocolate", 1) → "Ce"
 	 */
 	public String nTwice(String str, int n) {
-		
-		return null;
+		int length = str.length();
+		if (n == 1) {
+			return (str.substring(0, 1) + str.substring(length - 1, length));
+		} else {
+		return (str.substring(0, n) + str.substring(length - n)); }
 	}
 
 	/*
@@ -262,8 +265,15 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int index) {
+		int length = str.length();
 		
-		return null;
+		if (index + 2 > length) {
+			return str.substring(0, 2);
+		}
+		if (index < 0) {
+			return str.substring(0, 2);
+		}
+		return str.substring(index, index + 2);
 	}
 
 	/*
@@ -275,6 +285,7 @@ public class Exercises {
 	 */
 	public String middleThree(String str) {
 		int halfLength = str.length()/2;
+		
 		return str.substring(halfLength -1, halfLength +2); 
 	}
 
@@ -319,9 +330,17 @@ public class Exercises {
 	 countXX("xxxx") →
 	 */
 	public int countXX(String str) {
-		return 0;
+		
+		int whereIsX = str.indexOf("x");
+		int i = 0;
+		
+		for (i = whereIsX; i >= 0; i++) {
+			if(str.substring(whereIsX, whereIsX + 2).equals("xx"));
+			return i++; }
+		{ 
+			return 0;}
 	}
-
+		    
 	/*
 	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
 	 doubleX("axxbb") → true
@@ -329,10 +348,17 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
-		if (str.contains("xx")) {
-		return true;
+		
+		int whereIsX = str.indexOf("x");
+		int length = str.length();
+		
+		if (whereIsX < 0) {
+			return false;
 		}
-		return false;
+		if (whereIsX == length - 1) {
+			return false;
+		}
+		return str.substring(whereIsX, whereIsX + 2).equals("xx");
 	}
 
 
@@ -343,11 +369,14 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
-//		int length = str.length();
-//		for (int i = 0; i <= length; i++) {
-//			return i++
+		int length = str.length();
+		String everyOther = "";
+		
+		for (int i = 0; i < length; i++) {
+			return everyOther = everyOther + str.substring(i, i + 1);
+		}
+		return everyOther;
 //		}
-		return null;
 	}
 
 	/*
