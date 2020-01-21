@@ -206,10 +206,11 @@ public class Exercises {
 	public String withoutEnd2(String str) {
 		int length = str.length();
 		
-		if (length > 0) {
+		if (length >= 3) {
 		return str.substring(1, length - 1);
-	} else {
-		return null; }
+		} else {
+		return ""; 
+		}
 	}
 
 	/*
@@ -219,11 +220,13 @@ public class Exercises {
 	 middleTwo("code") → "od"
 	 middleTwo("Practice") → "ct"
 	 */
-//	public String middleTwo(String str) {
-//		int length = str.length();
-//		int lengthInHalf = length/2;
-////		return (lengthInHalf -1, lengthInHalf +2);
-//	}
+	
+	public String middleTwo(String str) {
+		
+		int halfLength = (str.length()/2)-1;
+		return str.substring(halfLength, halfLength + 2);
+	}
+
 
 	/*
 	 Given a string, return true if it ends in "ly".
@@ -271,7 +274,8 @@ public class Exercises {
 	 middleThree("solving") → "lvi"
 	 */
 	public String middleThree(String str) {
-		return null;
+		int halfLength = str.length()/2;
+		return str.substring(halfLength -1, halfLength +2); 
 	}
 
 	/*
@@ -283,6 +287,7 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
+		
 		return false;
 	}
 
@@ -324,8 +329,12 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
+		if (str.contains("xx")) {
+		return true;
+		}
 		return false;
 	}
+
 
 	/*
 	 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
@@ -334,6 +343,10 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
+//		int length = str.length();
+//		for (int i = 0; i <= length; i++) {
+//			return i++
+//		}
 		return null;
 	}
 
@@ -344,6 +357,7 @@ public class Exercises {
 	 stringSplosion("ab") → "aab"
 	 */
 	public String stringSplosion(String str) {
+		
 		return null;
 	}
 

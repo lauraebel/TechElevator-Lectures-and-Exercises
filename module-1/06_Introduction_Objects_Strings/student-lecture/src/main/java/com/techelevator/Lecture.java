@@ -91,14 +91,15 @@ public class Lecture {
 		
 		/* Contains */
 		System.out.println("***** contains *****");
+		
 		String hello = "Hello World!";
 		System.out.println("hello : " + hello);
 		
 		boolean containsHello = hello.contains("Hello"); //case sensitive 
-		System.out.println("containsHello : " + containsHello); //returns true
+		System.out.println("containsHello: " + containsHello); //returns true
 		
 		boolean containsBogus = hello.contains("bogus");
-		System.out.println("containsBogus : " + containsBogus); //returns false because the string does not have this word
+		System.out.println("containsBogus: " + containsBogus); //returns false because the string does not have this word
 		
 		/* Other commonly used methods:
 		 * 
