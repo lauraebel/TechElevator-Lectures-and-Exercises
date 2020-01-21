@@ -87,18 +87,6 @@ public class Exercises {
 	// new list in reverse order
 	// Use Stack
 	
-//	Stack<Integer> numStack = new Stack<Integer>();
-//	
-//	for (int n: nums) {
-//		numStack.push(n);
-//	}
-//	int i = 0;
-//	while(!numStack.isEmpty()) {
-//		int num = numStack.pop();
-//		nums[i] = num;
-//		i++;
-//		System.out.println(num);
-//	}
 	
 	public List<String> reverseList(List<String> stringList) {
 		
@@ -107,9 +95,11 @@ public class Exercises {
 
 		for (String stuff: stringList) {
 			lifoStack.push(stuff);
-		}
-	
-		return null;
+			
+		} while (!lifoStack.isEmpty()) {
+			lifoList.add(lifoStack.pop());
+	}
+		return lifoList;
 	}
 
 	/*
@@ -119,6 +109,8 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
+		List<Integer> numbers = new ArrayList<Integer>();
+
 		return null;
 	}
 

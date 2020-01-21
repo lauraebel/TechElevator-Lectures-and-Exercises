@@ -85,7 +85,7 @@ public class Lecture {
 		// Can also convert an array into a list (more common)
 		
 		List<String> instructorsListFromArray = Arrays.asList(instructorsArray);
-		// Array is capital since it is a wrapper class
+		// Array is capital since it is a wrapper class?????
 		
 		
 		System.out.println("####################");
@@ -164,7 +164,7 @@ public class Lecture {
 //		}
 		// This is unnecessary
 		
-		while (tasks.isEmpty() != true) {
+		while (!tasks.isEmpty()) { //means while tasks IS NOT empty
 		
 			String nextTask = tasks.poll();
 			System.out.println("Next Task Is: " + nextTask);
