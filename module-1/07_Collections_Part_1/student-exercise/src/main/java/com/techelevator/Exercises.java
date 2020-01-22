@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -121,6 +122,7 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
+		
 		return null;
 	}
 
@@ -130,6 +132,8 @@ public class Exercises {
 	 oddOnly( {1143, 555, 7, 1772, 9953, 643} ) -> [1143, 555, 7, 9953, 643]
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
+	// return if int%2 == 1 -> means odd
+	
 	public List<Integer> oddOnly(Integer[] integerArray) {
 		return null;
 	}
@@ -158,8 +162,30 @@ public class Exercises {
 	 HINT: To convert an integer x to a string you can call x.toString() in your code (e.g. if x = 1 then x.ToString()
 	 equals "1")
 	 */
+	// if Integer%3 == 0, return Fizz
+	// if Integer%5 == 0, return Buzz
+	// if Integer%3 == 0 && Integer%5 == 0, return FizzBuzz
+	
+
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		
+		List<Integer> fizzBuzzList = new ArrayList<Integer>();
+		
+		String string = "";
+		
+		for (String stuff : integerArray) {
+			
+		}
+			if (stuff%3 == 0) {
+			return string.replace(stuff, "Fizz");
+				
+		} if (stuff%5 == 0) {
+			return string.replace(stuff, "Buzz");
+			
+		} if (stuff%3 == 0 && stuff%5 == 0) {
+			return string.replace(stuff, "FizzBuzz");
+	}
+			return string;
 	}
 
 	/*
@@ -182,6 +208,8 @@ public class Exercises {
 	 boardingGate( [29, 19, 9, 21, 11, 1, 0, 25, 15, 5, 31] ) -> [9, 1, 5, 19, 11, 15, 29, 21, 25]
 	 boardingGate( [0, -1, 44, 31, 17, 7, 27, 16, 26, 6] ) -> [7, 6, 17, 16, 27, 26]
 	 */
+	//seat num < 1 || > 30; ignore
+	
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
 		return null;
 	}

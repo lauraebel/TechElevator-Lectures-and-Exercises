@@ -85,7 +85,6 @@ public class Lecture {
 		// Can also convert an array into a list (more common)
 		
 		List<String> instructorsListFromArray = Arrays.asList(instructorsArray);
-		// Array is capital since it is a wrapper class?????
 		
 		
 		System.out.println("####################");
