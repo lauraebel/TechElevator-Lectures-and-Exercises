@@ -75,7 +75,6 @@ public class Exercises {
 			return str;
 		}
 		// str length > 2 return first 2 letters
-		
 		return str.substring(0, 2);
 	}
 

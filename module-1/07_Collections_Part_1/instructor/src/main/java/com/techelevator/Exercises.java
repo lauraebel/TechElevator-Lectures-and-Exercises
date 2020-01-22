@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,7 +23,18 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		
+		List<String> stringList = new ArrayList<String>();
+		
+		for (String s : stringArray) {
+			stringList.add(s);
+		}
+		
+		
+		return stringList;
+		
+		// Solution 2
+		//return Arrays.asList(stringArray);
 	}
 
 	/*
@@ -43,7 +55,16 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		
+		List<String> listWithout4LetterWords = new ArrayList<String>();
+		
+		for ( String word : stringArray) {
+			if (word.length() != 4) {
+				listWithout4LetterWords.add(word);
+			}
+		}
+		
+		return listWithout4LetterWords;
 	}
 
 	/*
