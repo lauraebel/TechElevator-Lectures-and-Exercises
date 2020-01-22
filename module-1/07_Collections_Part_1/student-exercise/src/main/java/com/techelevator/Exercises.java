@@ -160,7 +160,14 @@ public class Exercises {
 	// if int%2 == 1 -> means odd
 
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> oddInts = new ArrayList<Integer>();
+//		for (int i = 0; i < integerArray.length; i++) {
+		for (Integer iAmOdd : integerArray) {
+			if (iAmOdd % 2 == 1) {
+				oddInts.add(iAmOdd);
+			}
+		}
+		return oddInts;
 	}
 
 	/*
