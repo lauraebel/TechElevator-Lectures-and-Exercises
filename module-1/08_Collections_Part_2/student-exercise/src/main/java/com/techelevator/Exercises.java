@@ -145,8 +145,7 @@ public class Exercises {
 
 		Map<String, Integer> counts = new HashMap<String, Integer>();
 		for (String word : words) {
-			// How do I know if this word was already found -> if it's already in the map
-			// (contains)
+			// How do I know if this word was already found -> if it's already in the map (contains)
 
 			if (counts.containsKey(word)) {
 				// If in the map, +1 to the counter
