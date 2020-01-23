@@ -48,7 +48,7 @@ public class Exercises {
 		animalGroups.put("dog", "Pack");
 		animalGroups.put("crocodile", "Float");
 					
-		if (animalName == null || !animalGroups.containsKey(animalName.toLowerCase())) {
+		if (!animalGroups.containsKey(animalName.toLowerCase())) {
 			return "unknown";
 		} else {
 			return animalGroups.get(animalName.toLowerCase()); 
@@ -98,13 +98,8 @@ public class Exercises {
 		housewareDiscounts.put("BEDROOM3434", 0.60);
 		housewareDiscounts.put("BATH0073", 0.15);
 
-//		if (animalName == null || !animalGroups.containsKey(animalName.toLowerCase())) {
-//			return "unknown";
-//		} else {
-//			return animalGroups.get(animalName.toLowerCase()); 
-//		}
-//	}
-		if (itemNumber == null || !housewareDiscounts.containsKey(itemNumber.toUpperCase())) {
+
+		if (!housewareDiscounts.containsKey(itemNumber.toUpperCase())) {
 			return 0.00;
 		} else {
 		return housewareDiscounts.get(itemNumber.toUpperCase());
@@ -136,7 +131,7 @@ public class Exercises {
 			
 			//If I do
 				//How do I remove money from Peter 
-			peterAmount -= halfOfPeter;
+			peterAmount -= halfOfPeter; 
 				//How do I add money to Paul
 			paulAmount += halfOfPeter;
 			
@@ -160,8 +155,28 @@ public class Exercises {
 	 * peterPaulPartnership({"Peter": 3333, "Paul": 1234567890}) → {"Peter": 3333, "Paul": 1234567890}
 	 *
 	 */
+	//if peter >=5000 
+	//if paul >=10000
+	//then peterpaulpartnership is a quarter of each person's worth
+	
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		Integer peterAmount = peterPaul.get("Peter");
+
+		Integer paulAmount = peterPaul.get("Paul");
+
+		if(peterAmount >= 5000 && paulAmount >= 10000) {
+			int quarterOfPeter = peterAmount/4;
+			int quarterOfPaul = paulAmount/4;
+			
+		peterAmount -= quarterOfPeter;
+		paulAmount -= quarterOfPaul;
+		int quarterOfBoth = quarterOfPeter + quarterOfPaul;
+		
+		peterPaul.put("Peter", peterAmount);
+		peterPaul.put("Paul", paulAmount);	
+		peterPaul.put("PeterPaulPartnership", quarterOfBoth);
+		}
+		return peterPaul;
 	}
 
 	/*
@@ -172,8 +187,19 @@ public class Exercises {
 	 * beginningAndEnding(["man", "moon", "main"]) → {"m": "n"}
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
+	
+	//Map<String, String>
+	//first char = key
+	//last char = value
+	
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String, String> middle = new HashMap<String, String>();
+		 for (String word : words) {
+			 middle.put(word.substring(0, 1), word.substring(word.length() - 1));
+		 }
+
+
+		return middle;
 	}
 
 	/*
@@ -222,8 +248,24 @@ public class Exercises {
 	 * integerCount([]) → {}
 	 *
 	 */
+	
+	// return Map<Integer, Integer> 
+	//key = int
+	//value = number of times int appears
+	
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer, Integer> intCount = new HashMap<Integer, Integer>();
+		
+		for (Integer nums : ints) {
+			if (intCount.containsKey(nums)) {
+				Integer newCount = intCount.get(nums);
+				newCount += 1;
+				intCount.put(nums, newCount);
+			} else {
+				intCount.put(nums, 1);
+			}
+		}
+		return intCount;
 	}
 
 	/*
@@ -236,7 +278,17 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String, Boolean> multTimes = new HashMap<String, Boolean>();
+		
+		for (String letter : words) {
+			if (multTimes.containsKey(letter)) {
+				multTimes.put(letter, true);
+			} else {
+				multTimes.put(letter, false);
+			}
+		}
+		
+		return multTimes;
 	}
 
 	/*
@@ -249,8 +301,11 @@ public class Exercises {
 	 * 	 → {"SKU1": 100, "SKU2": 64, "SKU3": 44, "SKU4": 5}
 	 *
 	 */
+	
 	//move everything and see what you need to update
+	
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
+
 		return null;
 	}
 
