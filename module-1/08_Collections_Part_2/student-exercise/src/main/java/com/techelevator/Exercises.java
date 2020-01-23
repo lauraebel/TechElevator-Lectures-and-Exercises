@@ -79,8 +79,36 @@ public class Exercises {
 	 * isItOnSale("dungeon9999") → 0.00
 	 *
 	 */
+	
+	//SKU = string
+	//discount percentage
+	//if on sale
+	//if not on sale or "" = 0.00
+	//if null = 0.00
+	//contains? isItOnSale
+	//toUpperCase
+	
 	public Double isItOnSale(String itemNumber) {
-		return null;
+		Map<String, Double> housewareDiscounts = new HashMap<String, Double>();
+		
+		housewareDiscounts.put("KITCHEN4001", 0.20);
+		housewareDiscounts.put("GARAGE1070", 0.15);
+		housewareDiscounts.put("LIVINGROOM", 0.10);
+		housewareDiscounts.put("KITCHEN6073", 0.40);
+		housewareDiscounts.put("BEDROOM3434", 0.60);
+		housewareDiscounts.put("BATH0073", 0.15);
+
+//		if (animalName == null || !animalGroups.containsKey(animalName.toLowerCase())) {
+//			return "unknown";
+//		} else {
+//			return animalGroups.get(animalName.toLowerCase()); 
+//		}
+//	}
+		if (itemNumber == null || !housewareDiscounts.containsKey(itemNumber.toUpperCase())) {
+			return 0.00;
+		} else {
+		return housewareDiscounts.get(itemNumber.toUpperCase());
+	}
 	}
 
 	/*
