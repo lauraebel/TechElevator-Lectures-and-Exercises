@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -19,28 +20,51 @@ public class Lecture {
 		System.out.println();
 		
 		/* DECLARING AND INSTANTIATING A MAP */
-
+		Map<String, String> animalNoises = new HashMap<String, String>();
 		
 		/* ADDING ITEMS TO A MAP */
-
+		animalNoises.put( "Cow", "Moo" );
+		animalNoises.put( "Chicken", "Cluck" );
+		animalNoises.put( "Dog", "Bark" );
+		animalNoises.put( "Cat", "Meow" );
+		// Keys must be unique, but the values do not
+		animalNoises.put( "Lion", "Roar" );
+		animalNoises.put( "Duck", "Roar" );
 		
 		/* UPDATING AN ITEM IN A MAP */
-
+		// Can update an existing value by using the same key
+		animalNoises.put( "Duck", "Quack" );
 
 		/* RETRIEVING AN ITEM FROM A MAP */
+		// Retrieve values from the map using the key and the get() method
+		// When the key is a String, CASE is important
+		String catNoise = animalNoises.get( "Cat" );
+		
+		System.out.println(catNoise);
 
+		System.out.println( animalNoises.get("Duck") );
+		
+		// If key does not exist in the map, then get() returns null
+		String owlNoise = animalNoises.get( "Owl" );
+		System.out.println( owlNoise );
 			
 		/* REMOVING AN ITEM FROM A MAP */
+		// When an item is removed using the key, .remove( key ), if the key 
+		// exists the value is returned
+		String lionNoise = animalNoises.remove( "Lion" );
+		System.out.println(lionNoise);
+		
+		animalNoises.remove( "Duck" );
 		
 		// If the key does not exists, the null returned
-
+		System.out.println( "Lion afer remove: " + animalNoises.remove( "Lion") );
 		
 		
 		/* CHECK IF AN ITEM EXISTS */
 		// containsKey(key) returns TRUE if the KEY exists in the Map
-
+		System.out.println( "Does Cat Exist: " + animalNoises.containsKey( "Cat" ) );
 		// containsValue(value) returns TRUE if the VALUE exists in the Map
-
+		System.out.println( "Does Meow Exist: " + animalNoises.containsValue( "Meow" ) );
 		
 		System.out.println();
 		
@@ -48,13 +72,19 @@ public class Lecture {
 		/* LOOPING OVER A MAP */
 		// Loop through a map by looping through the Keys
 		// Then using the keys to get the value
+		for (String animal : animalNoises.keySet()) {
+			String noise = animalNoises.get( animal );
+			System.out.println("The " + animal + " says " + noise);
+		}
 
-
+		
 		System.out.println();
 		
 		/* THE MAP KEY AND VALUE DATA TYPES */
 		// Key and Value do not need to be the same type, but both must be Reference Types
-
+		for( Entry<String, String> entry : animalNoises.entrySet() ) {
+			System.out.println("The " + entry.getKey() + " says " + entry.getValue() );
+		}
 		
 		
 		System.out.println();
@@ -146,18 +176,45 @@ public class Lecture {
 		System.out.println();
 
 		/* DECLARE AND INSTANTIATE A SET */
-
+			// HashSet - No order, no duplicates, allows null
+		//Set<Integer> setOfNumbers = new HashSet<Integer>();
+		
+			// LinkedHashSet - Order of insertion, no duplications, allows null
+		//Set<Integer> setOfNumbers = new LinkedHashSet<Integer>();
+		
+			// TreeSet - Natural Order of Data Type, no duplicates, does not allow null
+		Set<Integer> setOfNumbers = new TreeSet<Integer>();
+		
+		
 		
 		/* ADD ITEMS TO THE SET */
+		// Elements are added with add()
+		setOfNumbers.add(1);
+		setOfNumbers.add(10);
+		setOfNumbers.add(301);
+		// Duplicates will be ignored
+		setOfNumbers.add(301);
+		setOfNumbers.add(42);
+		setOfNumbers.add(5708);
 
 		
 		/* LOOP OVER A SET */
-
+		for (Integer number : setOfNumbers) {
+			System.out.println(number);
+		}
 
 		
 		/*USE CASE:  USE A SET TO REMOVE DUPLICATES AND ORDER THE ARRAY */
 		String[] instructors = {"Rachelle", "John", "Andrew", "John", "Stephanie", "Rachelle", "Steve", "John", "Steve" };
 		
+		Set<String> instructorSet = new TreeSet<String>();
+		for (String instructor : instructors) {
+			instructorSet.add(instructor);
+		}
+		
+		for (String instructor: instructorSet) {
+			System.out.println(instructor);
+		}
 
 
 		

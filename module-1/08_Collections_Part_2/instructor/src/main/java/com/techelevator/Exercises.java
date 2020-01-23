@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -75,7 +76,35 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		
+		// If Peter has >0 money AND Paul < $10 then transfer half of Peter's money to Paul
+		
+		// How to tell how much money Peter has?
+		Integer peterAmount = peterPaul.get( "Peter" );
+		
+		// How to tell how much money Paul has?
+		Integer paulAmount = peterPaul.get( "Paul" );
+		
+		// How do I determine if I need to move money
+		if (peterAmount > 0 && paulAmount < 1000) {
+			int halfOfPetersMoney = peterAmount / 2;
+			
+			// If I do How do I remove money from Peter
+			peterAmount -= halfOfPetersMoney;
+			
+			// and How to I add money to Paul
+			paulAmount += halfOfPetersMoney;
+			
+			// How to update Peters money in the map
+			peterPaul.put( "Peter", peterAmount );
+			
+			// How to update Paul's money in the map
+			peterPaul.put( "Paul", paulAmount);
+			
+		}
+		
+		
+		return peterPaul;
 	}
 
     /*
@@ -115,7 +144,30 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		
+		Map<String, Integer> counts = new HashMap<String, Integer>();
+		
+		for (String word : words) {
+			// How do I know if this word was already found
+			if (counts.containsKey( word )) {
+				// If it was, how do I increment the counter
+				Integer newCount = counts.get( word );
+				newCount += 1;
+				counts.put( word, newCount );
+				
+				//counts.put( word,  counts.get( word ) + 1);
+				
+			} else {
+				counts.put( word, 1);
+			}
+			
+			
+			// If it was not, then how to I add it to found words
+		}
+		
+		
+		
+		return counts;
 	}
 
 	/*
