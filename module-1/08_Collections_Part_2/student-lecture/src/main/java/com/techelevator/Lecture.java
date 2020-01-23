@@ -53,7 +53,7 @@ public class Lecture {
 				
 		
 		/* REMOVING AN ITEM FROM A MAP */
-		// when an itm is removed using the key, .remoeve(key), if the key esists, the value is returned		
+		// when an item is removed using the key, .remove(key), if the key exists, the value is returned		
 		String lionNoise = animalNoises.remove("Lion");
 		System.out.println(lionNoise);
 		
