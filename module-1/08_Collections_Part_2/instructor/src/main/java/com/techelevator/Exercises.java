@@ -3,6 +3,7 @@ package com.techelevator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Exercises {
 
@@ -36,7 +37,23 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		
+		Map<String, String> test = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
+		
+		 test.put("Rhino", "Crash");
+		 test.put("Giraffe", "Tower" );
+		 test.put("Elephant", "Herd");
+		 test.put("Lion", "Pride");
+		 test.put("Crow", "Murder");
+		 test.put("Pigeon", "Kit");
+		 test.put("Flamingo", "Pat");
+		 test.put("Deer", "Herd");
+		 test.put("Dog", "Pack");
+		 test.put("Crocodile", "Float");
+		
+		String herd = test.get(animalName);
+	
+		return  herd == null ? "unknown" : herd;
 	}
 
 	/*
