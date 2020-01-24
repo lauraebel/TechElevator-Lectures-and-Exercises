@@ -1,10 +1,8 @@
-package com.techelevator;
+package com.techelevator.cards;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import com.techelevator.cards.Card;
 
 public class Deck {
 
@@ -54,7 +52,4 @@ public class Deck {
 			card.flip();
 		}
 	}
-
-	
 }
-
