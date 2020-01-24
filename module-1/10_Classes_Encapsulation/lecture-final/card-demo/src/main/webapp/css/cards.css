@@ -11,6 +11,10 @@ section#pageHeader {
 	font-size: 130%;
 }
 
+section {
+	margin-top: 50px;
+}
+
 #spacer {
 	height: 20px;
 }
@@ -28,4 +32,22 @@ img.card {
 
 #formDiv {
 	margin-top: 20px;
+}
+
+#gameMenu form {
+	display: inline-block;
+	padding: 10px;
+}
+
+#gameMenu form input {
+	width: 150px;
+	height: 40px;
+	font-size: 1.5rem;
+}
+
+#pageHeader a{
+	text-decoration: none;
+	padding: 5px;
+	border-left: 1px black solid;
+	border-right: 1px black solid;
 }

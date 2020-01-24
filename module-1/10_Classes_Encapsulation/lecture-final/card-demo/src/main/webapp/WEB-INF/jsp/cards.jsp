@@ -2,7 +2,6 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-
 <h2>Player One's Hand</h2>
 <div id="cards" class="cardTile">
 	
