@@ -1,0 +1,31 @@
+body {
+	background-color: green;
+}
+
+
+section#pageHeader {
+	background-color: brown;
+	height: 40px;
+	color: black;
+	text-align: center;
+	font-size: 130%;
+}
+
+#spacer {
+	height: 20px;
+}
+
+img.card {
+	width: 150px;
+}
+
+.cardTile {
+	border: 1px solid black;
+	padding: 5px;
+	width: 930px;
+	height: 230px;
+}
+
+#formDiv {
+	margin-top: 20px;
+}
