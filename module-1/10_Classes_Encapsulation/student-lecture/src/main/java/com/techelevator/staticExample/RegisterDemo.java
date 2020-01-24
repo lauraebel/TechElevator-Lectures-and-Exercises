@@ -30,13 +30,8 @@ public class RegisterDemo {
 				continue;
 			}
 			printBalance(registerOne, registerTwo);
-	
 		}
-		
-
 	}
-	
-	
 	private static void printBalance(CashRegister one, CashRegister two) {
 		
 		System.out.println();
