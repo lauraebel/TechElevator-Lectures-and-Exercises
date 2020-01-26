@@ -1,7 +1,6 @@
-package com.techelevator;
+package com.techelevator.cards;
 
 public class Card {
-
 
 	private String suit;
 	private String rank;

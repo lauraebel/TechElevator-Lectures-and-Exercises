@@ -22,7 +22,7 @@ public class ShoppingCart {
 	
 	public void empty() {
 		totalNumberOfItems = 0;
-		totalAmountOwed = 0.0;
+		totalAmountOwed = 0.0; 
 	}
 	
 	public void addItems(int numberOfItems, double pricePerItem) {
