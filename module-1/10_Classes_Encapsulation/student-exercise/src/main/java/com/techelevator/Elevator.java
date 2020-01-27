@@ -23,32 +23,20 @@ public class Elevator {
 	//^^^^ totalNumberOfFloors is how many floors are available to the elevator
 	
 	public void goUp(int desiredFloor) {
-		if (doorOpen) {
-			// if (desiredFloor <= numberOfFloors && desiredFloor > currentFloor) {
-			for (int i = currentFloor; i <= numberOfFloors; i++) {
-				if (currentFloor != desiredFloor) {
-					continue;
-				} else if (currentFloor == desiredFloor) {
-					break;
-				}
-			}
-		} else
-			return;
-	}
+		if (!doorOpen) {
+			 if (desiredFloor <= numberOfFloors && desiredFloor > currentFloor) {
+					currentFloor = desiredFloor;
+				} 
+			 }
+			}	
 
 	public void goDown(int desiredFloor) {
-		if (doorOpen) {
-			for (int i = currentFloor; i >= 1; i--) {
-				if (currentFloor != desiredFloor) {
-					continue;
-				}
-				if (currentFloor == desiredFloor) {
-					break;
-				} else
-					return;
+		if (!doorOpen) {
+			 if (desiredFloor >= 1 && desiredFloor < currentFloor) {
+					currentFloor = desiredFloor;
+				} 
+			 }
 			}
-		}
-	}
 	
 	public int getCurrentFloor() {
 		return currentFloor;
