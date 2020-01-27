@@ -18,38 +18,52 @@ public class Television {
 	public void changeChannel(int newChannel) {
 		if (isOn) {
 			if (newChannel >=3 && newChannel <= 18) {
-				
-			}
-			
-		} else return;
-		//if on between >=3 and <= 18
+				currentChannel = newChannel;
+			} 
+		}
 	}
 	
 	public void channelUp() {
 		if (isOn) {
+			if (currentChannel + 1 <= 18) {
 			currentChannel ++;
+			} else {
+				currentChannel = 3;
 		} 
-		//if on += 1
-		//if >18 set to 3
+		}
 	}
 	
 	public void channelDown() {
 		if (isOn) {
-			currentChannel--;
+			if (currentChannel - 1 >= 3) {
+			currentChannel --;
+			} else {
+				currentChannel = 18;
+		} 
 		}
-		//if on -= 1
-		//if <3 (currentChannel) set to 18
 	}
 	
+	
 	public void raiseVolume() {
-		//if on += 1
-		//<= 10
+		if (isOn) {
+			if (currentVolume + 1 <= 10) {
+				currentVolume ++;
+			} else {
+				return;
+			}
+		}
 	}
 	
 	public void lowerVolume() {
-		//if on -= 1
-		//<=10
+		if (isOn) {
+			if (currentVolume - 1 >= 0) {
+				currentVolume --;
+			} else {
+				return;
+			}
+		}
 	}
+	
 
 	public int getCurrentChannel() {
 		return currentChannel;
