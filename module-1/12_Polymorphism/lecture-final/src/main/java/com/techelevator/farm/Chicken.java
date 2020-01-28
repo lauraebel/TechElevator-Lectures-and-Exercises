@@ -3,7 +3,7 @@ package com.techelevator.farm;
 public class Chicken extends FarmAnimal {
 
 	public Chicken() {
-		super("Chicken", "cluck!");
+		super("Chicken", "cluck!", 10);
 	}
 
 	public void layEgg() {
