@@ -29,9 +29,10 @@ public class TollCalculator {
 		String heading2 = "Distance Traveled";
 		String heading3 = "Toll $";
 					
-		System.out.printf("%-30s    %-30s      %-3s%n", heading1, heading2, heading3);
+		System.out.printf("%-25s    %-27s      %-3s%n", heading1, heading2, heading3);
 		System.out.println("------------------------------------------------------------------------------");
 		
+		String dollar = "$";
 		int milesTraveled = 0;
 		double totalToll = 0;
 		
@@ -40,8 +41,8 @@ public class TollCalculator {
 
 			double toll = vehicle.calculateToll(randomDistance);
 			
-			System.out.printf("%-30s      %-30s      %-3.2f%n", vehicle.getName(), 
-					randomDistance, toll);
+			System.out.printf("%-30s      %-20s   %-1s   %-3.2f%n", vehicle.getName(), 
+					randomDistance, dollar, toll);
 			
 			milesTraveled += randomDistance;
 			totalToll += toll;
@@ -50,8 +51,7 @@ public class TollCalculator {
 		
 		System.out.println();
 		System.out.println("Total Miles Traveled: " + milesTraveled);
-		System.out.println();
-		System.out.printf("Total Tollbooth Revenue: %.2f", totalToll);
+		System.out.printf("Total Tollbooth Revenue: $ %.2f", totalToll);
 
 		
 	}
