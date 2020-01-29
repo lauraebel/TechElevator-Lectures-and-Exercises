@@ -56,14 +56,14 @@ public class PostageCalculator {
 		System.out.printf("%-37s      %-3s%n", heading1, heading2);
 		System.out.println("=======================================================");
 		
-		String dollar = "$";
+		String dolla = "$";
 		int totalDistance = 0;
 		double totalCost = 0;
 		
 		for(DeliveryDriver delivery : deliveryMethod) {
 			double cost = delivery.calculateRate(distance, weight);
 						
-			System.out.printf("%-40s   %1s   %-3.2f%n", delivery.getName(), dollar, cost);
+			System.out.printf("%-40s   %1s   %-3.2f%n", delivery.getName(), dolla, cost);
 			
 		}		
 		
