@@ -3,9 +3,16 @@ package com.techelevator.farm;
 public class OldMacdonald {
 	public static void main(String[] args) {
 
-		Singable[] singers = new Singable[] { new MusicBox(), new Tractor(), new Sheep(), new Cow(), new Chicken(), new Dog() };
+		Singable[] singers = new Singable[] {new Pig(), new MusicBox(), new Tractor(), new Sheep(), new Cow(), new Chicken(), new Dog() };
 
 		for (Singable singer : singers) {
+			
+			if (singer instanceof FarmAnimal) {
+				FarmAnimal animalSinger = (FarmAnimal) singer;
+			//	animalSinger.sleep();
+			}
+			
+			
 			String name = singer.getName();
 			String sound = singer.getSound();
 			System.out.println("Old MacDonald had a farm, ee, ay, ee, ay, oh!");

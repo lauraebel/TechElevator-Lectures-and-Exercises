@@ -8,8 +8,12 @@ public class Cow extends FarmAnimal implements Milkable {
 
 	@Override
 	public int milk() {
-		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public String eat() {
+		return "Cow eating";
 	}
 
 }

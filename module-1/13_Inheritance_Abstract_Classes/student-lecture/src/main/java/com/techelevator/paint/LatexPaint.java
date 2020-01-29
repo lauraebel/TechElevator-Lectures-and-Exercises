@@ -1,6 +1,6 @@
 package com.techelevator.paint;
 
-public class LatexPaint implements Paint {
+public class LatexPaint extends Paint {
 
 	private int costPerBucket = 20;
 	
@@ -11,8 +11,8 @@ public class LatexPaint implements Paint {
 
 	@Override
 	public double calculateCost(int area) {
-		return (area / 600) * costPerBucket;
-	}
+		return getCostOfPaintForArea(area, costPerBucket);
+}
 
 	
 	

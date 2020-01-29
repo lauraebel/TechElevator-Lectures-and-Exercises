@@ -2,27 +2,30 @@ package com.techelevator.delivery;
 
 public class PostalService1stClass implements DeliveryDriver {
 
-	double perMile;
+	double rate;
 	
-	PostalService1stClass(double perMile) {
-		this.perMile = perMile;
+	@Override
+	public double calculateRate(int distance, double weight) {
+	if (weight >= 0 && weight <= 2) {
+		rate = 0.035 * distance;
+		return rate;
+	} else if (weight >= 3 && weight <= 8) {
+		rate = 0.040 * distance;
+		return rate;
+	} else if (weight >= 9 && weight <= 15) {
+		rate = 0.047 * distance;
+		return rate;
+	} else if (weight >= 16 && weight <= 48) {
+		rate = 0.195 * distance;
+		return rate;
+	} else if (weight >= 64 && weight <= 128) {
+		rate = 0.450 * distance;
+		return rate;
+	} else if (weight >= 144) {
+		rate = 0.500 * distance;
+		return rate;
 	}
-	
-	public double perMile(double weightInOunces) {
-	if (weightInOunces >= 0 && weightInOunces <= 2) {
-		perMile = 0.035;
-	} else if (weightInOunces >= 3 && weightInOunces <= 8) {
-		perMile = 0.040;
-	} else if (weightInOunces >= 9 && weightInOunces <= 15) {
-		perMile = 0.047;
-	} else if (weightInOunces >= 16 && weightInOunces <= 48) {
-		perMile = 0.195;
-	} else if (weightInOunces >= 64 && weightInOunces <= 128) {
-		perMile = 0.450;
-	} else if (weightInOunces >= 144) {
-		perMile = 0.500;
-	}
-	return perMile;
+	return rate;
 }
 	
 //	| 0 - 2      |   0.035   |   0.0035  |   0.0020  |
@@ -38,10 +41,6 @@ public class PostalService1stClass implements DeliveryDriver {
 		return "Postal Service - 1st Class";
 	}
 
-	@Override
-	public double calculateRate(int distance, double weight) {
-		int rate = (int) (perMile * distance);
-		return rate;
-	}
+
 }
 

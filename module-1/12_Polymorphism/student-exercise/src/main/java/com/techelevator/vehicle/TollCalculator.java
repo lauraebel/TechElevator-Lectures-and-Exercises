@@ -40,7 +40,8 @@ public class TollCalculator {
 
 			double toll = vehicle.calculateToll(randomDistance);
 			
-			System.out.printf("%-30s      %-30s      %-3.2f%n", vehicle.getName(), randomDistance, toll);
+			System.out.printf("%-30s      %-30s      %-3.2f%n", vehicle.getName(), 
+					randomDistance, toll);
 			
 			milesTraveled += randomDistance;
 			totalToll += toll;

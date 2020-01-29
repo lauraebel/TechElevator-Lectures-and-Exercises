@@ -8,8 +8,9 @@ public class SPU4DayGround implements DeliveryDriver {
 	}
 
 	@Override
-	public double calculateRate(int distance, double weightInPounds) {
-		return (weightInPounds * 0.0050) * distance;
+	public double calculateRate(int distance, double weight) {
+		weight = weight/16;
+		return (weight * 0.0050) * distance;
 	}
 
 }

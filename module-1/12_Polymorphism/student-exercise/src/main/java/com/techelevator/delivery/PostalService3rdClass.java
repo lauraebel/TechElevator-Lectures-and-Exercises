@@ -2,28 +2,31 @@ package com.techelevator.delivery;
 
 public class PostalService3rdClass implements DeliveryDriver {
 
-	double perMile;
+	double rate;
 	
-	PostalService3rdClass(double perMile) {
-		this.perMile = perMile;
+	@Override
+	public double calculateRate(int distance, double weight) {
+	if (weight >= 0 && weight <= 2) {
+		rate = 0.0020 * distance;
+		return rate;
+	} else if (weight >= 3 && weight <= 8) {
+		rate = 0.0022 * distance;
+		return rate;
+	} else if (weight >= 9 && weight <= 15) {
+		rate = 0.0024 * distance;
+		return rate;
+	} else if (weight >= 16 && weight <= 48) {
+		rate = 0.0150 * distance;
+	} else if (weight >= 64 && weight <= 128) {
+		rate = 0.0160 * distance;
+		return rate;
+	} else if (weight >= 144) {
+		rate = 0.0170 * distance;
+		return rate;
 	}
-	
-	public double perMile(double weightInOunces) {
-	if (weightInOunces >= 0 && weightInOunces <= 2) {
-		perMile = 0.0020;
-	} else if (weightInOunces >= 3 && weightInOunces <= 8) {
-		perMile = 0.0022;
-	} else if (weightInOunces >= 9 && weightInOunces <= 15) {
-		perMile = 0.0024;
-	} else if (weightInOunces >= 16 && weightInOunces <= 48) {
-		perMile = 0.0150;
-	} else if (weightInOunces >= 64 && weightInOunces <= 128) {
-		perMile = 0.0160;
-	} else if (weightInOunces >= 144) {
-		perMile = 0.0170;
+	return rate;
 	}
-	return perMile;
-}
+
 	
 //	| 0 - 2      |   0.035   |   0.0035  |   0.0020  |
 //	| 3 - 8      |   0.040   |   0.0040  |   0.0022  |
@@ -37,12 +40,6 @@ public class PostalService3rdClass implements DeliveryDriver {
 		return "Postal Service - 3rd Class";
 				}
 
-	@Override
-	public double calculateRate(int distance, double weight) {
-		int rate = (int) (perMile * distance);
-		return rate;
-	}
-	
 
 
 	
