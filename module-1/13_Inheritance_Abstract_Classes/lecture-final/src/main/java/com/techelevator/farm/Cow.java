@@ -12,4 +12,10 @@ public class Cow extends FarmAnimal implements Milkable {
 		return 0;
 	}
 
+	@Override
+	public String eat() {
+		// TODO Auto-generated method stub
+		return "Cow eating";
+	}
+
 }

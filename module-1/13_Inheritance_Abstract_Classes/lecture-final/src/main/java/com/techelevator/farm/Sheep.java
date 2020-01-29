@@ -6,4 +6,10 @@ public class Sheep extends FarmAnimal {
 		super("Sheep", "Baa!", 150);
 	}
 
+	@Override
+	public String eat() {
+		// TODO Auto-generated method stub
+		return "Sheep eating";
+	}
+
 }
