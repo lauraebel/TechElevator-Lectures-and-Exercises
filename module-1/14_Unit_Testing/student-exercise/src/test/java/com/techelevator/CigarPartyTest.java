@@ -74,7 +74,11 @@ public class CigarPartyTest {
 		boolean result = cigar.haveParty(60, true);
 		Assert.assertTrue(result);
 	}
-	
+	@Test
+	public void weekend_party_with_200_cigars_is_successful() {
+		boolean result = cigar.haveParty(200, true);
+		Assert.assertTrue(result);
+	}
 	
 	
 	
