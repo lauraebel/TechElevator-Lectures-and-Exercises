@@ -1,6 +1,6 @@
 package com.techelevator.paint;
 
-public class OilPaint implements Paint {
+public class OilPaint extends Paint {
 
 	private boolean interior;
 	
@@ -20,9 +20,9 @@ public class OilPaint implements Paint {
 	@Override
 	public double calculateCost(int area) {
 		if (interior) {
-			return (area / 600) * 30;
+			return getCostOfPaintForArea(area, 30);
 		}
-		return (area / 600) * 50;
+		return getCostOfPaintForArea(area, 50);
 	}
 	
 	
