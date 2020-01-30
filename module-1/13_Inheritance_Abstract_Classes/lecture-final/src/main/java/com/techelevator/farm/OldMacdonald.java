@@ -3,9 +3,21 @@ package com.techelevator.farm;
 public class OldMacdonald {
 	public static void main(String[] args) {
 
-		Singable[] singers = new Singable[] { new MusicBox(), new Tractor(), new Sheep(), new Cow(), new Chicken(), new Dog() };
+		Pig pig = new Pig();
+		//pig.sleep();
+		
+		// Can't instantiate an Abstract  class
+		//FarmAnimal farmAnimal = new FarmAnimal("some animal", "what!", 1000);
+		
+		Singable[] singers = new Singable[] { pig, new MusicBox(), new Tractor(), new Sheep(), new Cow(), new Chicken(), new Dog() };
 
 		for (Singable singer : singers) {
+			
+			if (singer instanceof FarmAnimal) {
+				FarmAnimal animalSinger = (FarmAnimal) singer;
+				//animalSinger.sleep();
+			}
+			
 			String name = singer.getName();
 			String sound = singer.getSound();
 			System.out.println("Old MacDonald had a farm, ee, ay, ee, ay, oh!");

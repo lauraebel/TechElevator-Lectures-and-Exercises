@@ -1,8 +1,12 @@
-package com.techelevator.paint;
+package com.techelevator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import com.techelevator.paint.LatexPaint;
+import com.techelevator.paint.OilPaint;
+import com.techelevator.paint.Paint;
 
 public class PaintStore {
 
@@ -19,6 +23,7 @@ public class PaintStore {
 		
 		Paint interiorOil = new OilPaint(true);
 		Paint exteriorOil = new OilPaint(false);
+		
 		paints.add(interiorOil);
 		paints.add(exteriorOil);
 		
