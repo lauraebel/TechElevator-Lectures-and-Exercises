@@ -8,6 +8,12 @@ public class TriangleClassifier {
 			return "equilateral";
 		}
 		
+		if (sideOne != sideTwo 
+				&& sideOne != sideThree 
+				&& sideTwo != sideThree) {
+			return "scalene";
+		}
+		
 		return null;
 	}
 	
