@@ -26,6 +26,11 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals("Fizz", katafb);
 		
 	}
+	@Test
+	public void num_divisible_by_5_and_not_3_returns_fizz() {
+		String katafb = fizzbuzz.getKata(5);
+		Assert.assertEquals("Buzz", katafb);
+	}
 	
 	
 	
