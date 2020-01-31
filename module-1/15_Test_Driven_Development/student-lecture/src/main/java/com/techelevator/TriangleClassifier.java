@@ -3,7 +3,7 @@ package com.techelevator;
 public class TriangleClassifier {
 	
 	public String classify(int sideOne, int sideTwo, int sideThree) {
-		if(sideOne + sideTwo <= sideThree) {
+		if((sideOne + sideTwo <= sideThree) || (sideTwo + sideThree <= sideOne) ){
 			return "invalid";
 		}
 		
