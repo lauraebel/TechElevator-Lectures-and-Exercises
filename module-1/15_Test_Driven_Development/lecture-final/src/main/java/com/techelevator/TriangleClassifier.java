@@ -10,7 +10,7 @@ public class TriangleClassifier {
 			return "invalid";
 		}
 		
-		if (sideOne == sideTwo && sideOne == sideThree) {
+		if ( isEquilateralTriangle(sideOne, sideTwo, sideThree )) {
 			return "equilateral";
 		}
 		
@@ -30,13 +30,19 @@ public class TriangleClassifier {
 		return null;
 	}
 	
-	public boolean isValidTriangle(int sideOne, int sideTwo, int sideThree) {
+	
+	
+	private boolean isValidTriangle(int sideOne, int sideTwo, int sideThree) {
 		if ( (sideOne + sideTwo <= sideThree) ||
 				(sideTwo + sideThree <= sideOne) ||
 				(sideOne + sideThree <= sideTwo) ) {
 			return false;
 		}
 		return true;
+	}
+	
+	private boolean isEquilateralTriangle(int sideOne, int sideTwo, int sideThree) {
+		return ( sideOne == sideTwo && sideOne == sideThree );
 	}
 	
 	
