@@ -15,13 +15,11 @@ public class TriangleClassifier {
 		}
 		
 		if ( (sideOne == sideTwo && sideOne != sideThree) ||
-				(sideOne == sideThree && sideOne != sideTwo) ) {
+				(sideOne == sideThree && sideOne != sideTwo) ||
+				( sideTwo == sideThree && sideTwo != sideOne)) {
 			return "isosceles";
 		}
 		
-		if ( sideTwo == sideThree && sideTwo != sideOne) {
-			return "isosceles";
-		}
 		
 		return null;
 	}
