@@ -13,7 +13,7 @@ public class KataFizzBuzz {
 	//convert the number to the string, "FizzBuzz"
 	
 	public String getKata(int num) {
-		if(num%3 == 0) {
+		if((num%3 == 0) && (num%5 != 5)) {
 			return "Fizz";
 		}
 		return null;
