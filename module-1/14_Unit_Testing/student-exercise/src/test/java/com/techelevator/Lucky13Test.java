@@ -9,6 +9,10 @@ GetLucky([1, 2, 3]) → false
 GetLucky([1, 2, 4]) → false
 */
 
+//if it contains 1 it's true
+//if it contains 3 it's true
+//if it does not contain 1 or 3 it's false
+
 public class Lucky13Test {
 	
 	private Lucky13 lucky13;
@@ -17,4 +21,8 @@ public class Lucky13Test {
 	public void setup() {
 		lucky13 = new Lucky13();
 	}
+
+	
+	
+	
 }
