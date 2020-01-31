@@ -13,7 +13,9 @@ public class TriangleClassifier {
 			return "isosceles";
 		
 		}
-		
+		if(sideTwo == sideThree && sideTwo != sideOne) {
+			return "isosceles";
+		}
 		
 		return null;
 	}
