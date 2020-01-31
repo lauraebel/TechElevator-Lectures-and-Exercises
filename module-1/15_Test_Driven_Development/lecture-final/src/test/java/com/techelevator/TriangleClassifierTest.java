@@ -50,4 +50,11 @@ public class TriangleClassifierTest {
 		
 	}
 	
+	@Test
+	public void identify_invalid_triangle_with_invalid_side() {
+		
+		String type = classifier.classify(0, 0, 0);
+		Assert.assertEquals("side 1=0", "invalid", type);
+	}
+	
 }
