@@ -12,7 +12,7 @@ public class KataFizzBuzz {
 	//If the number is divisible by 3 AND 5, OR contains a 3 AND 5, 
 	//convert the number to the string, "FizzBuzz"
 	
-	public String kata(int num) {
+	public String getKata(int num) {
 		return null;
 	}
 
