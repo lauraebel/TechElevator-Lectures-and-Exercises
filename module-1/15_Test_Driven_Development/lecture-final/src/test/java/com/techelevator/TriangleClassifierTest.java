@@ -35,6 +35,8 @@ public class TriangleClassifierTest {
 		type = classifier.classify(2,  3,  2);
 		Assert.assertEquals("sides 1 and 3 equal", "isosceles", type);
 		
+		type = classifier.classify(3,  2,  2);
+		Assert.assertEquals("sides 2 and 3 are equal", "isosceles", type);
 	}
 	
 }
