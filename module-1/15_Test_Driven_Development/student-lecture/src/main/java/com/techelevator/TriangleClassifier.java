@@ -9,13 +9,10 @@ public class TriangleClassifier {
 		if(sideOne != sideTwo && sideTwo != sideThree && sideOne != sideThree) {
 			return "scalene";
 		}
-		if ((sideOne == sideTwo && sideOne != sideThree) || (sideOne == sideThree && sideOne != sideTwo) ) {
-			return "isosceles";
-		
-		}
-		if(sideTwo == sideThree && sideTwo != sideOne) {
+		if((sideOne == sideTwo && sideOne != sideThree) || (sideOne == sideThree && sideOne != sideTwo) || (sideTwo == sideThree && sideTwo != sideOne)) {
 			return "isosceles";
 		}
+	
 		
 		return null;
 	}
