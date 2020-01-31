@@ -49,6 +49,10 @@ public class TriangleClassifierTest {
 		
 		type = classifier.classify(5, 2, 2);
 		Assert.assertEquals("sides 2+3<1", "invalid", type);
+	
+		type = classifier.classify(2, 5, 2);
+		Assert.assertEquals("sides 1+3<2", "invalid", type);
+	
 	}
 	
 	
