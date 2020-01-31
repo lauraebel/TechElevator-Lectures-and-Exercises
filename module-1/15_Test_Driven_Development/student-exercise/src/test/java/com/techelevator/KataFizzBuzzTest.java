@@ -21,9 +21,11 @@ public class KataFizzBuzzTest {
 		fizzbuzz = new KataFizzBuzz();
 	}
 	@Test
-	public void three_is_divisible_by_3_and_returns_fizz() {
+	public void if_divisible_by_3_and_returns_fizz() {
 		String katafb = fizzbuzz.getKata(3);
 		Assert.assertEquals("Fizz", katafb);
+		
+		
 	}
 	
 	
