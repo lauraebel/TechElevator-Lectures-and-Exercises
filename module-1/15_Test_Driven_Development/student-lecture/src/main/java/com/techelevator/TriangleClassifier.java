@@ -1,11 +1,27 @@
 package com.techelevator;
 
+/**
+ * Classifies Triangles
+ * 
+ * @author lauraebel
+ *
+ */
+
 public class TriangleClassifier {
 	
 	private final static String TYPE_INVALID = "invalid";
 	private final static String TYPE_EQUILATERAL = "equilateral";
 	private final static String TYPE_ISOSCELES = "isosceles";
 	private final static String TYPE_SCALENE = "scalene";
+	
+	/**
+	 * Classifies a triangle by Equilateral, Scalene, Isosceles, or Invalid.
+	 * 
+	 * @param sideOne - length of first side of triangle
+	 * @param sideTwo - length of second side of triangle
+	 * @param sideThree -length of third side of triangle
+	 * @return [String] - returns triangle type
+	 */
 	
 	public String classify(int sideOne, int sideTwo, int sideThree) {
 		if(!isValidTriangle(sideOne, sideTwo, sideThree)) {
