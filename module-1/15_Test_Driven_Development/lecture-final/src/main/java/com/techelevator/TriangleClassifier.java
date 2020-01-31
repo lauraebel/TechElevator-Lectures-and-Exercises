@@ -18,9 +18,7 @@ public class TriangleClassifier {
 			return "scalene";
 		}
 		
-		if ( (sideOne == sideTwo && sideOne != sideThree) ||
-				(sideOne == sideThree && sideOne != sideTwo) ||
-				( sideTwo == sideThree && sideTwo != sideOne)) {
+		if ( isIsoscelesTriangle(sideOne, sideTwo, sideThree) ) {
 			return "isosceles";
 		}
 		
@@ -29,6 +27,15 @@ public class TriangleClassifier {
 	}
 	
 	
+	
+	private boolean isIsoscelesTriangle(int sideOne, int sideTwo, int sideThree) {
+		if ( (sideOne == sideTwo && sideOne != sideThree) ||
+				(sideOne == sideThree && sideOne != sideTwo) ||
+				( sideTwo == sideThree && sideTwo != sideOne)) {
+			return true;
+		}
+		return false;
+	}
 	
 	private boolean isValidTriangle(int sideOne, int sideTwo, int sideThree) {
 		if ( (sideOne + sideTwo <= sideThree) ||
