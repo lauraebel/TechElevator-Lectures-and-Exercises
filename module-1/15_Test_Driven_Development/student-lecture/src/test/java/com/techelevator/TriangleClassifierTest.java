@@ -30,13 +30,23 @@ public class TriangleClassifierTest {
 		// 2 == 3, but not 1
 		
 		String type = classifier.classify(2, 2, 3);
-		Assert.assertEquals("sides 1 and 2 equal",  "isosceles", type);
+		Assert.assertEquals("sides 1 and 2 equal", "isosceles", type);
 		
 		type = classifier.classify(2, 3, 2);
 		Assert.assertEquals("sides 1 and 3 equal", "isosceles", type);
 	
 		type = classifier.classify(3, 2, 2);
 		Assert.assertEquals("sides 2 and 3 equal", "isosceles", type);
+	}
+	@Test
+	public void identify_invalid_triangle_with_valid_sides() {
+		//1+2<3
+		//2+3<1
+		//1+3<2
+		
+		String type = classifier.classify(2, 2, 5);
+		Assert.assertEquals("sides 1+2<3", "invalid", type);
+		
 	}
 	
 	
