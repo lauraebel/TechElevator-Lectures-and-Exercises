@@ -12,6 +12,9 @@ public class TriangleClassifier {
 		if (sideOne == sideTwo && sideOne != sideThree) {
 			return "isoceles";
 		}
+		if (sideOne == sideThree && sideOne != sideTwo) {
+			return "isoceles";
+		}
 		
 		
 		return null;
