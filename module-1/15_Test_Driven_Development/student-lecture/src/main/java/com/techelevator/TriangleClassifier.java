@@ -9,11 +9,9 @@ public class TriangleClassifier {
 		if(sideOne != sideTwo && sideTwo != sideThree && sideOne != sideThree) {
 			return "scalene";
 		}
-		if (sideOne == sideTwo && sideOne != sideThree) {
+		if ((sideOne == sideTwo && sideOne != sideThree) || (sideOne == sideThree && sideOne != sideTwo) ) {
 			return "isoceles";
-		}
-		if (sideOne == sideThree && sideOne != sideTwo) {
-			return "isoceles";
+		
 		}
 		
 		
