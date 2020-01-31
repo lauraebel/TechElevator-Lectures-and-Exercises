@@ -10,7 +10,7 @@ public class TriangleClassifier {
 			return "scalene";
 		}
 		if ((sideOne == sideTwo && sideOne != sideThree) || (sideOne == sideThree && sideOne != sideTwo) ) {
-			return "isoceles";
+			return "isosceles";
 		
 		}
 		

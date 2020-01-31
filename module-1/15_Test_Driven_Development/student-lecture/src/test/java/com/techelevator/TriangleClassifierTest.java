@@ -24,18 +24,19 @@ public class TriangleClassifierTest {
 	}
 	
 	@Test
-	public void identify_isoceles_triangle() {
+	public void identify_isosceles_triangle() {
 		// 1 == 2, but not 3
 		// 1 == 3, but not 2
 		// 2 == 3, but not 1
 		
 		String type = classifier.classify(2, 2, 3);
-		Assert.assertEquals("sides 1 and 2 equal",  "isoceles", type);
+		Assert.assertEquals("sides 1 and 2 equal",  "isosceles", type);
 		
 		type = classifier.classify(2, 3, 2);
-		Assert.assertEquals("sides 1 and 3 equal", "isoceles", type);
+		Assert.assertEquals("sides 1 and 3 equal", "isosceles", type);
 	
-		
+		type = classifier.classify(3, 2, 2);
+		Assert.assertEquals("sides 2 and 3 equal", "isosceles", type);
 	}
 	
 	
