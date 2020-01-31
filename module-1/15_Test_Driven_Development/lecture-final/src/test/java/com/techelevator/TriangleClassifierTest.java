@@ -23,6 +23,15 @@ public class TriangleClassifierTest {
 		Assert.assertEquals("scalene", type);
 	}
 	
-	
+	@Test
+	public void identify_isoceles_triange() {
+		// Side 1 = 2, 1 != 3
+		// Side 1 = 3, but not 2
+		// Side 2 = 3, but not 1
+		
+		String type = classifier.classify(2, 2, 3);
+		Assert.assertEquals("sides 1 and 2 equal", "isosceles", type);
+		
+	}
 	
 }
