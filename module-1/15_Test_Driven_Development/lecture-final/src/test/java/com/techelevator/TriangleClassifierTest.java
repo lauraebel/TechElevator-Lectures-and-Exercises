@@ -24,7 +24,7 @@ public class TriangleClassifierTest {
 	}
 	
 	@Test
-	public void identify_isoceles_triange() {
+	public void identify_isosceles_triangle() {
 		// Side 1 = 2, 1 != 3
 		// Side 1 = 3, but not 2
 		// Side 2 = 3, but not 1
