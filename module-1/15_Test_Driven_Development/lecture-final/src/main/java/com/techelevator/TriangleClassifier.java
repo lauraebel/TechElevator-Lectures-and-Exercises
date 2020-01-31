@@ -6,9 +6,7 @@ public class TriangleClassifier {
 		
 		
 		
-		if ( (sideOne + sideTwo <= sideThree) ||
-				(sideTwo + sideThree <= sideOne) ||
-				(sideOne + sideThree <= sideTwo) ) {
+		if ( !isValidTriangle(sideOne, sideTwo, sideThree) ) {
 			return "invalid";
 		}
 		
@@ -30,6 +28,15 @@ public class TriangleClassifier {
 		
 		
 		return null;
+	}
+	
+	public boolean isValidTriangle(int sideOne, int sideTwo, int sideThree) {
+		if ( (sideOne + sideTwo <= sideThree) ||
+				(sideTwo + sideThree <= sideOne) ||
+				(sideOne + sideThree <= sideTwo) ) {
+			return false;
+		}
+		return true;
 	}
 	
 	
