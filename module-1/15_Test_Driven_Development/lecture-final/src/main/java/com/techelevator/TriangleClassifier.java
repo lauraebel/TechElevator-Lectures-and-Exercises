@@ -4,6 +4,11 @@ public class TriangleClassifier {
 
 	public String classify( int sideOne, int sideTwo, int sideThree ) {
 		
+		
+		if (sideOne + sideTwo <= sideThree) {
+			return "invalid";
+		}
+		
 		if (sideOne == sideTwo && sideOne == sideThree) {
 			return "equilateral";
 		}
