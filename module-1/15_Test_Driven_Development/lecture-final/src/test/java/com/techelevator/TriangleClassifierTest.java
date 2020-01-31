@@ -58,6 +58,9 @@ public class TriangleClassifierTest {
 		
 		type = classifier.classify(-1, 1, 1);
 		Assert.assertEquals("side 1=-1", "invalid", type);
+		
+		type = classifier.classify(-1, -1, -1);
+		Assert.assertEquals("all negatives", "invalid", type);
 	}
 	
 }
