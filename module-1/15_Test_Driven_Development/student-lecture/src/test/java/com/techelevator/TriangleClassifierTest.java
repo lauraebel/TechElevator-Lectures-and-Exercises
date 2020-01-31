@@ -16,5 +16,11 @@ public class TriangleClassifierTest {
 		String type = classifier.classify(4, 4, 4);
 		Assert.assertEquals("equilateral", type);
 	}
+	
+	@Test
+	public void identify_scalene_triangle() {
+		String type = classifier.classify(2, 3, 4);
+		Assert.assertEquals("scalene", type);
+	}
 
 }
