@@ -14,9 +14,7 @@ public class TriangleClassifier {
 			return "equilateral";
 		}
 		
-		if (sideOne != sideTwo 
-				&& sideOne != sideThree 
-				&& sideTwo != sideThree) {
+		if ( isSclaneTriangle(sideOne, sideTwo, sideThree) ) {
 			return "scalene";
 		}
 		
@@ -43,6 +41,15 @@ public class TriangleClassifier {
 	
 	private boolean isEquilateralTriangle(int sideOne, int sideTwo, int sideThree) {
 		return ( sideOne == sideTwo && sideOne == sideThree );
+	}
+	
+	private boolean isSclaneTriangle(int sideOne, int sideTwo, int sideThree) {
+		if (sideOne != sideTwo 
+				&& sideOne != sideThree 
+				&& sideTwo != sideThree) {
+			return true;
+		}
+		return false;
 	}
 	
 	
