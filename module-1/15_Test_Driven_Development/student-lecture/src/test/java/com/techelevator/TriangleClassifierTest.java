@@ -22,5 +22,25 @@ public class TriangleClassifierTest {
 		String type = classifier.classify(2, 3, 4);
 		Assert.assertEquals("scalene", type);
 	}
+	
+	@Test
+	public void identify_isoceles_triangle() {
+		// 1 == 2, but not 3
+		// 1 == 3, but not 2
+		// 2 == 3, but not 1
+		
+		String type = classifier.classify(2, 2, 3);
+		Assert.assertEquals("sides 1 and 2 equal",  "isoceles", type);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
