@@ -6,7 +6,8 @@ public class TriangleClassifier {
 		
 		
 		if ( (sideOne + sideTwo <= sideThree) ||
-				(sideTwo + sideThree <= sideOne) ) {
+				(sideTwo + sideThree <= sideOne) ||
+				(sideOne + sideThree <= sideTwo) ) {
 			return "invalid";
 		}
 		

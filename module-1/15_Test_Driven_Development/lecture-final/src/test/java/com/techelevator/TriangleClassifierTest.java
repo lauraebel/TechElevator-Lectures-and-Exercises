@@ -38,9 +38,7 @@ public class TriangleClassifierTest {
 	
 	@Test
 	public void identify_invalid_triangle_with_valid_sides() {
-		// 1 + 2 < 3
-		// 2 + 3 < 1
-		// 1 + 3 < 2
+
 		String type = classifier.classify(2, 2, 5);
 		Assert.assertEquals("sides 1+2<3", "invalid", type);
 		
@@ -49,6 +47,7 @@ public class TriangleClassifierTest {
 		
 		type = classifier.classify(2,  5,  2);
 		Assert.assertEquals("sides 1+3<2", "invalid", type);
+		
 	}
 	
 }
