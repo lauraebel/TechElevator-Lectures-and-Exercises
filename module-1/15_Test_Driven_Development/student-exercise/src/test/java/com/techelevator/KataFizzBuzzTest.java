@@ -61,7 +61,11 @@ public class KataFizzBuzzTest {
 		String katafb = fizzbuzz.getKata(51);
 		Assert.assertEquals("Buzz", katafb);
 	}
-	
+	@Test
+	public void num_not_divisible_by_3_or_5_but_contains_3_and_5_returns_fizzbuzz() {
+		String katafb = fizzbuzz.getKata(53);
+		Assert.assertEquals("FizzBuzz", katafb);
+	}
 	
 	
 	
