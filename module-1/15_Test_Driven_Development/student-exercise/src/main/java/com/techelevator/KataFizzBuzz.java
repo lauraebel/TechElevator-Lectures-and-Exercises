@@ -13,12 +13,12 @@ public class KataFizzBuzz {
 	//convert the number to the string, "FizzBuzz"
 	
 	public String getKata(int num) {
-		if(((num%3 == 0) && (num%5 != 0) && ((!String.valueOf(num).contains("5"))) || ((String.valueOf(num).contains("3"))))) {
+		if ((num%3 == 0) && (num%5 == 0)) {
+		return "FizzBuzz";
+		} else if(((num%3 == 0) && (num%5 != 0) && ((!String.valueOf(num).contains("5"))) || ((String.valueOf(num).contains("3"))))) {
 			return "Fizz";
 		} else if (((num%5 == 0) && (num%3 != 0)) && ((!String.valueOf(num).contains("3"))) || ((String.valueOf(num).contains("5")))) {
 			return "Buzz";
-		} else if ((num%3 == 0) && (num%5 == 0)) {
-			return "FizzBuzz";
 		} else if ((num%3 != 0) && (num%5 != 0) && (num >= 1) && (num <= 100)) {
 			return String.valueOf(num);
 		} else if ((num%3 != 0) && (num%5 != 0) && (num > 100)) {
