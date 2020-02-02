@@ -37,9 +37,9 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals("FizzBuzz", katafb);
 	}
 	@Test
-	public void num_not_divisible_by_3_or_5_returns_that_num() {
+	public void num_not_divisible_by_3_or_5_but_between_1_and_100_returns_that_num_as_string() {
 		String katafb = fizzbuzz.getKata(14);
-		Assert.assertEquals(14, katafb);
+		Assert.assertEquals("14", katafb);
 	}
 	
 	

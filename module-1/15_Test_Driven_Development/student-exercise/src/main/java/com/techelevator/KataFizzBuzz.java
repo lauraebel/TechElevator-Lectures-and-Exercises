@@ -19,6 +19,8 @@ public class KataFizzBuzz {
 			return "Buzz";
 		} else if ((num%3 == 0) && (num%5 == 0)) {
 			return "FizzBuzz";
+		} else if ((num%3 != 0) && (num%5 != 0) && (num >= 1) && (num <= 100)) {
+			return String.valueOf(num);
 		}
 		return null;
 	}
