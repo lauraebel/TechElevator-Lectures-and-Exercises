@@ -41,6 +41,11 @@ public class KataFizzBuzzTest {
 		String katafb = fizzbuzz.getKata(14);
 		Assert.assertEquals("14", katafb);
 	}
+	@Test
+	public void num_not_divisible_by_3_or_5_but_above_100_returns_empty_string() {
+		String katafb = fizzbuzz.getKata(164);
+		Assert.assertEquals("", katafb);
+	}
 	
 	
 	
