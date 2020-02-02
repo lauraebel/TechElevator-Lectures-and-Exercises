@@ -23,6 +23,8 @@ public class KataFizzBuzz {
 			return String.valueOf(num);
 		} else if ((num%3 != 0) && (num%5 != 0) && (num > 100)) {
 			return "";
+		} else if ((num%3 != 0) && (num%5 != 0) && (num < 1)) {
+			return "";
 		}
 		return null;
 	}
