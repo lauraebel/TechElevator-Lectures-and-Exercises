@@ -11,7 +11,7 @@ public class KataFizzBuzz {
 	//If the number is divisible by 5, OR contains a 5, convert the number to the string, "Buzz".
 	//If the number is divisible by 3 AND 5, OR contains a 3 AND 5, 
 	//convert the number to the string, "FizzBuzz"
-	
+		
 	public String getKata(int num) {
 		if ((num%3 == 0) && (num%5 == 0) || ((String.valueOf(num).contains("3")) && ((String.valueOf(num).contains("5"))))) {
 		return "FizzBuzz";
@@ -21,10 +21,10 @@ public class KataFizzBuzz {
 			return "Buzz";
 		} else if ((num%3 != 0) && (num%5 != 0) && (num >= 1) && (num <= 100)) {
 			return String.valueOf(num);
-		} else if ((num%3 != 0) && (num%5 != 0) && (num > 100)) {
+		} else if ((num%3 != 0) && (num%5 != 0) && ((num > 100) || (num < 1)))  {
 			return "";
-		} else if ((num%3 != 0) && (num%5 != 0) && (num < 1)) {
-			return "";
+//		} else if ((num%3 != 0) && (num%5 != 0) && (num < 1)) {
+//			return "";
 		}
 		return null;
 	}
