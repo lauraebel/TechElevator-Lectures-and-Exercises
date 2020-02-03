@@ -14,10 +14,16 @@ public class MainStringCalc {
 		
 		List<String> values = menu.getValuesFromUser();
 
-		List<String> results = strCalc.calculate(values);	
-		
-		for (String result : results) {
-			menu.displayUserMessage(result);
+		try {
+			List<String> results = strCalc.calculate(values);	
+			
+			for (String result : results) {
+				menu.displayUserMessage(result);
+			}
+		} catch (NullPointerException ex) {
+			System.out.println("The list was null");
+		} catch (InvalidStringException e) {
+			System.out.println(e.getMessage());
 		}
 
 
