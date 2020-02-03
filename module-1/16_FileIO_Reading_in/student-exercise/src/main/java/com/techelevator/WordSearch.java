@@ -12,34 +12,23 @@ public class WordSearch {
 		System.out.print("Path to file -> ");
 		String filename = in.nextLine();
 		
-
-//		System.out.print("number of lines >>>");
-//		int lineCount = in.nextInt();
-//		in.nextLine();
-//		
-		
 		File file = new File(filename);
 		
 		System.out.print("What word are you searching for? ");
 		String word = in.nextLine();
 		
-		try(Scanner fileScanner = new Scanner(filename)) {
+		try(Scanner fileScanner = new Scanner(file)) {
 			
-			String line = fileScanner.nextLine();
 				
 			while(fileScanner.hasNextLine()) {
+				String line = fileScanner.nextLine();
 				if(line.contains(word)) {
 				System.out.println(word + line);
 
 				}
-
 				
 			}
 		}
-
-//				} catch ( FileNotFoundException e) {
-//					System.out.println("File " + file.getAbsolutePath() + " not found");
-
 
 }
 }
