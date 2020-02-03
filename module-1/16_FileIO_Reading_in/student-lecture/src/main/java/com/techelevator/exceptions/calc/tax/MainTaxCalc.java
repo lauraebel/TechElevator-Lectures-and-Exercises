@@ -1,5 +1,6 @@
 package com.techelevator.exceptions.calc.tax;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.techelevator.exceptions.calc.Calculator;
@@ -14,13 +15,26 @@ public class MainTaxCalc {
 			Calculator salesTax = new FranklinCountyTaxCalculator();
 			
 			List<String> values = menu.getValuesFromUser();
-
-			List<String> results = salesTax.calculate(values);	
-		
-			for (String result : results) {
+			
+			List<String> results = new ArrayList<String>();
+			
+			try {
+				
+			results = salesTax.calculate(values);	
+			
+			} catch (NumberFormatException e) {
+				System.out.print("Number not in list");
+				
+			} catch (NullPointerException e) {
+				System.out.println("Null value in list");
+				
+			} catch (Exception e) {
+				System.out.println("unknown error" + e.getMessage());
+			}
+			
+			for(String result :results) {
 				menu.displayUserMessage(result);
 			}
-	
 	}
 
 }

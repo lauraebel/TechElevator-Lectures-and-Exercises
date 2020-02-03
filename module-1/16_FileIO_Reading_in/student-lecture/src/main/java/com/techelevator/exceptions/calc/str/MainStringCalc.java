@@ -13,13 +13,19 @@ public class MainStringCalc {
 		Calculator strCalc = new StringCalculator();
 		
 		List<String> values = menu.getValuesFromUser();
-
+		try {
+			
+		
 		List<String> results = strCalc.calculate(values);	
 		
 		for (String result : results) {
 			menu.displayUserMessage(result);
 		}
-
+		} catch (NullPointerException ex) {
+			System.out.println("the list was null");
+		} catch (InvalidStringException e) {
+			System.out.println(e.getMessage());
+		}
 
 	}
 
