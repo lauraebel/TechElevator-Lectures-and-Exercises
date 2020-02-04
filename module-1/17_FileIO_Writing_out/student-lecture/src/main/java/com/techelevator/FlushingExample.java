@@ -19,13 +19,14 @@ public class FlushingExample {
 		try ( PrintWriter printWriter = new PrintWriter (file );
 				BufferedWriter bufferedWriter = new BufferedWriter( printWriter ) ) {
 			
-//				while (true) {
+				while (true) {
 					bufferedWriter.write( message );
-//					Thread.sleep(500);
-//					bufferedWriter.flush();
-//				}
+					Thread.sleep(500); //can only write 2x per second but will not push into the file yet 
+					//unless we flush the stream
+					bufferedWriter.flush();
 		}
 
 	}
 
+}
 }
