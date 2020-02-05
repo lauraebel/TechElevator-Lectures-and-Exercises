@@ -12,18 +12,18 @@ public class FlushingExample {
 		
 		String message = "Test Line\n";
 		
-		String filePath = "flushExample";
+		String filePath = "flushExample2";
 		
 		File file = new File(filePath);
 		
 		try ( PrintWriter printWriter = new PrintWriter (file );
 				BufferedWriter bufferedWriter = new BufferedWriter( printWriter ) ) {
 			
-//				while (true) {
+				while (true) {
 					bufferedWriter.write( message );
-//					Thread.sleep(500);
-//					bufferedWriter.flush();
-//				}
+					Thread.sleep(500);
+					bufferedWriter.flush();
+				}
 		}
 
 	}

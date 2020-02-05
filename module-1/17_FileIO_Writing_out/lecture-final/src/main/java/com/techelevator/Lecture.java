@@ -46,6 +46,8 @@ public class Lecture {
 			System.out.println(f.getAbsolutePath() + " does not exist.");
 		}
 
+
+		
 		/*
 		 * The File class also allows us to manipulate file system objects
 		 * */
