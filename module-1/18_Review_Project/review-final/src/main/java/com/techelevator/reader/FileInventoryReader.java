@@ -4,10 +4,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.techelevator.inventory.Candy;
+import com.techelevator.inventory.Chips;
+import com.techelevator.inventory.Drink;
+import com.techelevator.inventory.Gum;
 import com.techelevator.inventory.Item;
 import com.techelevator.inventory.Slot;
 
@@ -37,14 +42,64 @@ public class FileInventoryReader implements InventoryReader {
 	}
 	
 	private Map<String, Slot> createInventoryMapFromLines(List<String> lines) {
-		Map<String, Slot> inventoryMap = new HashMap<String, Slot>();
+		Map<String, Slot> inventoryMap = new LinkedHashMap<String, Slot>();
 		
 		for (String line : lines) {
-			Slot slot = new Slot( new Item("", 0d, ""));
-			inventoryMap.put(line, slot);
+			
+			// Break each line into parts
+			String[] parts = line.split("\\|");
+			
+			// Call the method to create the Slot from the parts
+			Slot slot = createSlotFromParts(parts);
+			
+			// Add the Slot to the map as the value with the key 
+			// of part[0] from the line ('A1', 'B2', etc.)
+			inventoryMap.put(parts[0], slot);
 		}
 		
 		return inventoryMap;
+	}
+	
+	private Slot createSlotFromParts(String[] parts) {
+		// Create a new slot 
+		Slot newSlot = null;
+		
+		// Get the name from the line parts
+		String name = parts[1];
+		
+		// Get the price as a double form the line pats
+		double price = Double.parseDouble(parts[2]);
+		
+		// Get the type (Drink, Chip, etc.) from the line parts
+		String type = parts[3];
+		
+		Item item = null;
+		
+		// Create an item of the subtype based on the type from the file
+		if (type.equalsIgnoreCase("Chip")) {
+			// If type is Chip, create new Item of type Chips
+			item = new Chips(name, price);
+		}
+		
+		if ( type.equalsIgnoreCase( "Candy")) {
+			item = new Candy(name, price);
+		}
+		
+		if ( type.equalsIgnoreCase( "Gum")) {
+			item = new Gum(name, price);
+		}
+		
+		if ( type.equalsIgnoreCase( "Drink")) {
+			item = new Drink(name, price);
+		}
+		
+
+		//Create the new Slot with the item
+		newSlot = new Slot( item );
+		
+		// return the newly created slot
+		return newSlot;
+		
 	}
 	
 	

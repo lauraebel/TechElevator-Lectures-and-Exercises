@@ -20,7 +20,7 @@ public class FileInventoryReaderTest {
 	
 	
 	@Test
-	public void inventory_has_correct_count_of_items() {
+	public void inventory_has_correct_items() {
 		
 		int expectedItemCount = 16;
 		
@@ -34,6 +34,9 @@ public class FileInventoryReaderTest {
 		Assert.assertNotNull(inventory);
 		Assert.assertEquals(expectedItemCount, inventory.size());
 		
+		
+		Assert.assertEquals("Potato Crisps", inventory.get("A1").getItem().getName());
+		Assert.assertEquals("Triplemint", inventory.get("D4").getItem().getName());
 	}
 	
 }
