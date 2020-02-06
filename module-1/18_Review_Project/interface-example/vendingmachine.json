@@ -1,0 +1,66 @@
+[
+    {
+        "item": {
+            "key": "A1",
+            "name": "Potato Crisps",
+            "price": "3.05",
+            "type": "Chip"
+        }
+    },
+    {
+        "item": {
+            "key": "A2",
+            "name": "Stackers",
+            "price": "1.45",
+            "type": "Chip"
+        }
+    },
+    {
+        "item": {
+            "key": "B1",
+            "name": "Moonpie",
+            "price": "1.80",
+            "type": "Candy"
+        }
+    },
+    {
+        "item": {
+            "key": "B2",
+            "name": "Cowtales",
+            "price": "1.50",
+            "type": "Candy"
+        }
+    },
+    {
+        "item": {
+            "key": "C1",
+            "name": "Cola",
+            "price": "1.25",
+            "type": "Drink"
+        }
+    },
+    {
+        "item": {
+            "key": "C2",
+            "name": "Dr. Salt",
+            "price": "1.50",
+            "type": "Drink"
+        }
+    },
+    {
+        "item": {
+            "key": "D1",
+            "name": "U-Chews",
+            "price": "0.85",
+            "type": "Gum"
+        }
+    },
+    {
+        "item": {
+            "key": "D2",
+            "name": "Little League Chew",
+            "price": "0.95",
+            "type": "Gum"
+        }
+    }
+]
