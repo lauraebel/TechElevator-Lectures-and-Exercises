@@ -2,6 +2,8 @@ package com.techelevator;
 
 import java.io.FileNotFoundException;
 
+import com.techelevator.reader.FileInventoryReader;
+import com.techelevator.reader.InventoryReader;
 import com.techelevator.view.Menu;
 
 public class VendingMachineCLI {
@@ -18,20 +20,12 @@ public class VendingMachineCLI {
 	private Menu menu;
 	private VendingMachine vendingMachine;
 	
-	public VendingMachineCLI(Menu menu) {
+	public VendingMachineCLI(Menu menu, VendingMachine vendingMachine) {
 		this.menu = menu;
+		this.vendingMachine = vendingMachine;
 	}
 
 	public void run() {
-		
-		
-		String inventoryFile = menu.getInventoryFileFromUser();
-		try {
-			vendingMachine = new VendingMachine(inventoryFile);
-		} catch (FileNotFoundException e) {
-			menu.showErrorMessage( inventoryFile + " not found!");
-			return;
-		}
 		
 		
 		while (true) {
@@ -80,7 +74,17 @@ public class VendingMachineCLI {
 	
 	public static void main(String[] args) {
 		Menu menu = new Menu(System.in, System.out);
-		VendingMachineCLI cli = new VendingMachineCLI(menu);
+		String inventoryFile = menu.getInventoryFileFromUser();
+		VendingMachine vendingMachine = null;
+		try {
+			InventoryReader reader = new FileInventoryReader(inventoryFile);
+			vendingMachine = new VendingMachine(reader);
+		} catch (FileNotFoundException e) {
+			menu.showErrorMessage( inventoryFile + " not found!");
+			System.exit(1);;
+		}
+		
+		VendingMachineCLI cli = new VendingMachineCLI(menu, vendingMachine);
 		cli.run();
 	}
 }
