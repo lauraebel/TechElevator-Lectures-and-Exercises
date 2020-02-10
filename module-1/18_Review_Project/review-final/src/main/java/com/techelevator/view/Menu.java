@@ -24,7 +24,6 @@ public class Menu {
 //		out.flush();
 //		return in.nextLine();
 		
-		//TODO remove hardcoded inventory file
 		return "vendingmachine.csv";
 	}
 	
