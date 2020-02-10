@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 
 import com.techelevator.reader.FileInventoryReader;
 import com.techelevator.reader.InventoryReader;
+import com.techelevator.reader.JsonInventoryReader;
 import com.techelevator.view.Menu;
 
 public class VendingMachineCLI {
@@ -77,7 +78,7 @@ public class VendingMachineCLI {
 		String inventoryFile = menu.getInventoryFileFromUser();
 		VendingMachine vendingMachine = null;
 		try {
-			InventoryReader reader = new FileInventoryReader(inventoryFile);
+			InventoryReader reader = new JsonInventoryReader("vendingmachine.json"); //new FileInventoryReader(inventoryFile);
 			vendingMachine = new VendingMachine(reader);
 		} catch (FileNotFoundException e) {
 			menu.showErrorMessage( inventoryFile + " not found!");
