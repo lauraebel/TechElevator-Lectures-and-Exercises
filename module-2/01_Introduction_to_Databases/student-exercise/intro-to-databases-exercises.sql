@@ -80,16 +80,36 @@ FROM country
 WHERE gnp > 1000000 AND population < 100000000;
 
 -- 16. The name and population of all cities in Texas that have a population of greater than 1 million people (3 rows)
-
+SELECT name, population
+FROM city
+WHERE district = 'Texas' and population > 1000000;
 
 -- 17. The name and average life expectancy of all countries on the continent of Oceania (28 rows)
+SELECT name, lifeexpectancy
+FROM country
+WHERE continent = 'Oceania';
 
 -- 18. The name and average life expectancy of all countries on the continent of Oceania for which an average life expectancy has been provided (i.e. not equal to null) (20 rows)
+SELECT name, lifeexpectancy
+FROM country
+WHERE continent = 'Oceania' AND lifeexpectancy IS NOT NULL;
 
 -- 19. The name of all countries on the continent of Oceania for which an average life expectancy has not been provided (i.e. equal to null) (8 rows)
+SELECT name
+FROM country
+WHERE continent = 'Oceania' AND lifeexpectancy IS NULL;
 
 -- 20. The name, continent, GNP, and average life expectancy of all countries that have an average life expectancy of at least 70 years and a GNP between $1 million and $100 million dollars (3 rows)
+SELECT name, continent, gnp, lifeexpectancy
+FROM country
+WHERE lifeexpectancy >= 70 AND (gnp >= 1 AND gnp <= 100);
 
 -- 21. The per capita GNP (i.e. GNP divided by population) in US Dollars of all countries in Europe (46 rows)
+SELECT (gnp/population) AS percapitagnp
+FROM country
+WHERE continent = 'Europe';
 
 -- 22. The number of years since independence for all countries that have a year of independence (192 rows)
+SELECT (2020 - indepyear) AS yearssinceindependence
+FROM country
+WHERE indepyear IS NOT NULL;
