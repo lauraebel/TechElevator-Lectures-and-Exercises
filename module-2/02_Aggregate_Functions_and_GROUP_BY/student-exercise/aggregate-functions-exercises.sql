@@ -71,7 +71,10 @@ FROM city
 WHERE countrycode = 'CHN';
 
 -- 13. The surface area of each continent ordered from highest to lowest. (largest continental surface area: 31881000, "Asia")
- 
+SELECT round(SUM(surfacearea)::decimal, 0) AS sum, continent
+FROM country
+GROUP BY continent
+ORDER BY sum DESC; 
 
 -- 14. The highest population density (population divided by surface area) of all countries in the world. (highest population density in world: 26277.7777)
 SELECT trunc(MAX(population/surfacearea)::decimal, 4) AS populationdensity
