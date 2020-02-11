@@ -121,7 +121,7 @@ GROUP BY city.countrycode
 ORDER BY countofcities DESC;
 	
 -- 21. The population of the largest city in each country ordered from highest to lowest. (largest city population in world: 10500000, "IND")
-SELECT countrycode, MAX(population) AS maxpop
+SELECT MAX(population) AS maxpop, countrycode
 FROM city
 GROUP BY city.countrycode
 ORDER BY maxpop DESC;
