@@ -71,10 +71,7 @@ FROM city
 WHERE countrycode = 'CHN';
 
 -- 13. The surface area of each continent ordered from highest to lowest. (largest continental surface area: 31881000, "Asia")
---SELECT SUM(surfacearea), continent
---FROM country
---GROUP BY DISTINCT continent
---ORDER BY surfacearea DESC; 
+ 
 
 -- 14. The highest population density (population divided by surface area) of all countries in the world. (highest population density in world: 26277.7777)
 SELECT trunc(MAX(population/surfacearea)::decimal, 4) AS populationdensity
@@ -96,20 +93,40 @@ WHERE gnp IS NOT NULL AND gnpold IS NOT NULL
 ORDER BY absdiffbetweengnp;
 
 -- 17. The average population of cities in each country (hint:use city.countrycode) ordered from highest to lowest. (highest avg population: 4017733.0000, "SGP")
-
+SELECT round(AVG(population), 4) AS avgpop, countrycode
+FROM city
+GROUP BY city.countrycode
+ORDER BY avgpop DESC;
 	
 -- 18. The count of cities in each state in the USA, ordered by state name. (45 rows)
-
+SELECT district, COUNT(name)
+FROM city
+WHERE countrycode = 'USA'
+GROUP BY city.district
+ORDER BY district;
 	
 -- 19. The count of countries on each continent, ordered from highest to lowest. (highest count: 58, "Africa")
-
+SELECT continent, COUNT(name) AS countofcountries
+FROM country
+GROUP BY country.continent
+ORDER BY countofcountries DESC;
 	
 -- 20. The count of cities in each country ordered from highest to lowest. (largest number of  cities ib a country: 363, "CHN")
-
+SELECT countrycode, COUNT(name) AS countofcities
+FROM city
+GROUP BY city.countrycode
+ORDER BY countofcities DESC;
 	
 -- 21. The population of the largest city in each country ordered from highest to lowest. (largest city population in world: 10500000, "IND")
-
+SELECT countrycode, MAX(population) AS maxpop
+FROM city
+GROUP BY city.countrycode
+ORDER BY maxpop DESC;
 
 -- 22. The average, minimum, and maximum non-null life expectancy of each continent ordered from lowest to highest average life expectancy. 
 -- (lowest average life expectancy: 52.5719, 37.2, 76.8, "Africa")
-
+SELECT round(AVG(lifeexpectancy)::decimal, 4) AS avglife, MIN(lifeexpectancy) AS minlife, MAX(lifeexpectancy) AS maxlife, continent
+FROM country
+WHERE lifeexpectancy IS NOT NULL
+GROUP BY country.continent
+ORDER BY avglife ASC;
