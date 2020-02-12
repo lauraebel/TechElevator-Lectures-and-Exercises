@@ -2,12 +2,27 @@
 
 -- 1. All of the films that Nick Stallone has appeared in
 -- (30 rows)
+SELECT film.title AS nickstallone
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE actor.first_name = 'NICK' AND actor.last_name = 'STALLONE';
 
 -- 2. All of the films that Rita Reynolds has appeared in
 -- (20 rows)
+SELECT film.title AS ritareynolds
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE actor.first_name = 'RITA' AND actor.last_name = 'REYNOLDS';
 
 -- 3. All of the films that Judy Dean or River Dean have appeared in
 -- (46 rows)
+SELECT film.title AS judy_or_river_dean
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE actor.first_name = 'RITA' AND actor.last_name = 'REYNOLDS';
 
 -- 4. All of the the ‘Documentary’ films
 -- (68 rows)
@@ -51,6 +66,15 @@
 
 -- 17. The top five film categories by number of rentals 
 -- (#1 should be “Sports” with 1179 rentals and #5 should be “Family” with 1096 rentals)
+SELECT category.name, COUNT(rental.rental_id) AS rental_count
+FROM film
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id
+JOIN film_category ON film.film_id = film_category.film_id
+JOIN category ON film_category.category_id = category.category_id
+GROUP BY category.name
+ORDER by rental_count DESC
+LIMIT 5;
 
 -- 18. The top five Action film titles by number of rentals 
 -- (#1 should have 30 rentals and #5 should have 28 rentals)
