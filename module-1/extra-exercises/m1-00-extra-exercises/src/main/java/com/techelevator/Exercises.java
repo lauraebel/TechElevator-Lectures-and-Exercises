@@ -1,7 +1,9 @@
 package com.techelevator;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class Exercises {
 
@@ -12,7 +14,13 @@ public class Exercises {
     arrayDeduplication([1, 1, 1]) → [1]
     */
     public int[] arrayDeduplication(int[] nums) {
-        return null;
+    Set<Integer> numbers = new HashSet<Integer>();
+     for(int i = 0; i < nums.length; i++) {
+    	 numbers.add(nums[i]);
+    	 numbers.toArray(); //outside for loop
+    	 return nums;
+     } //make new array
+     return null;
     }
     
     /*
@@ -33,6 +41,7 @@ public class Exercises {
     arraySort([8, 13, 9, 12]) → [8, 9, 12, 13]        
     */
     public int[] arraySort(int[] nums) {
+    	
         return null;
     }
 

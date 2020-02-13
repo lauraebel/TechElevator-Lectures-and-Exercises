@@ -9,16 +9,27 @@ public class Exercises {
 	 arrayCount9([1, 9, 9, 3, 9]) → 3
 	 */
 	public int arrayCount9(int[] nums) {
-		return 0;
+		int count = 0;
+		for (int i=0; i < nums.length; i++) {
+			if (nums[i] == 9) {
+				count += 1;
+			}
+		}
+		return count;
 	}
 
 	/*
-	 2. Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+	 2. Given an array of ints, return true if one of the first 4 elements in the array is a 9. 
+	 The array length may be less than 4.
 	 arrayFront9([1, 2, 9, 3, 4]) → true
 	 arrayFront9([1, 2, 3, 4, 9]) → false
 	 arrayFront9([1, 2, 3, 4, 5]) → false
 	 */
 	public boolean arrayFront9(int[] nums) {
+		if ((nums.length >= 1 && nums[0]==9) || (nums.length >= 2 && nums[1]== 9) || 
+				(nums.length >= 3 && nums[2] == 9) || (nums.length >= 4 && nums[3] == 9)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -87,7 +98,8 @@ public class Exercises {
 	}
 
 	/*
-	 9. Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
+	 9. Given an int array, return true if the array contains 2 twice, or 3 twice. 
+	 The array will be length 0, 1, or 2.
 	 double23([2, 2]) → true
 	 double23([3, 3]) → true
 	 double23([2, 3]) → false
@@ -97,7 +109,8 @@ public class Exercises {
 	}
 
 	/*
-	 10. Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. 
+	 10. Given an int array length 3, if there is a 2 in the array immediately followed by a 3, 
+	 set the 3 element to 0. 
 	 Return the changed array.
 	 fix23([1, 2, 3]) → [1, 2, 0]
 	 fix23([2, 3, 5]) → [2, 0, 5]
@@ -108,7 +121,8 @@ public class Exercises {
 	}
 
 	/*
-	 11. Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as their first element.
+	 11. Start with 2 int arrays, a and b, of any length. Return how many of the arrays 
+	 have 1 as their first element.
 	 start1([1, 2, 3], [1, 3]) → 2
 	 start1([7, 2, 3], [1]) → 1
 	 start1([1, 2], []) → 1
@@ -118,8 +132,8 @@ public class Exercises {
 	}
 
 	/*
-	 12. Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array. Return the 
-	 array which has the largest sum. In event of a tie, return a.
+	 12. Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array. 
+	 Return the array which has the largest sum. In event of a tie, return a.
 	 biggerTwo([1, 2], [3, 4]) → [3, 4]
 	 biggerTwo([3, 4], [1, 2]) → [3, 4]
 	 biggerTwo([1, 1], [1, 2]) → [1, 2]
@@ -129,8 +143,8 @@ public class Exercises {
 	}
 	
 	/*
-	 13. Given an array of ints of even length, return a new array length 2 containing the middle two elements from 
-	 the original array. The original array will be length 2 or more.
+	 13. Given an array of ints of even length, return a new array length 2 containing the middle two 
+	 elements from the original array. The original array will be length 2 or more.
 	 makeMiddle([1, 2, 3, 4]) → [2, 3]
 	 makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
 	 makeMiddle([1, 2]) → [1, 2]
@@ -150,8 +164,8 @@ public class Exercises {
 	}
 
 	/*
-	 15. Given an array of ints, swap the first and last elements in the array. Return the modified array. The array 
-	 length will be at least 1.
+	 15. Given an array of ints, swap the first and last elements in the array. Return the modified array. 
+	 The array length will be at least 1.
 	 swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1]
 	 swapEnds([1, 2, 3]) → [3, 2, 1]
 	 swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
@@ -171,10 +185,10 @@ public class Exercises {
 	}
 
 	/*
-	 17. Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, ... n-1. 
-	 The given n may be 0, in which case just return a length 0 array. You do not need a separate if-statement for 
-	 the length-0 case; the for-loop should naturally execute 0 times in that case, so it just works. The syntax to 
-	 make a new int array is: new int[desired_length]
+	 17. Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2...n-1. 
+	 The given n may be 0, in which case just return a length 0 array. You do not need a separate 
+	 if-statement for the length-0 case; the for-loop should naturally execute 0 times in that case, 
+	 so it just works. The syntax to make a new int array is: new int[desired_length]
 	 fizzArray(4) → [0, 1, 2, 3]
 	 fizzArray(1) → [0]
 	 fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -214,9 +228,9 @@ public class Exercises {
 	}
 
 	/*
-	 21. Given start and end numbers, return a new array containing the sequence of integers from start up to but 
-	 not including end, so start=5 and end=10 yields {5, 6, 7, 8, 9}. The end number will be greater or equal 
-	 to the start number. Note that a length-0 array is valid. (See also: FizzBuzz Code)
+	 21. Given start and end numbers, return a new array containing the sequence of integers from start up to 
+	 but not including end, so start=5 and end=10 yields {5, 6, 7, 8, 9}. The end number will be greater 
+	 or equal to the start number. Note that a length-0 array is valid. (See also: FizzBuzz Code)
 	 fizzArray3(5, 10) → [5, 6, 7, 8, 9]
 	 fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
 	 fizzArray3(1, 3) → [1, 2]
@@ -236,9 +250,9 @@ public class Exercises {
 	}
 
 	/*
-	 23. You have a green lottery ticket, with ints a, b, and c on it. If the numbers are all different from each other, 
-	 the result is 0. If all of the numbers are the same, the result is 20. If two of the numbers are the same, the 
-	 result is 10.
+	 23. You have a green lottery ticket, with ints a, b, and c on it. If the numbers are all different from 
+	 each other, the result is 0. If all of the numbers are the same, the result is 20. If two of the 
+	 numbers are the same, the result is 10.
 	 greenTicket(1, 2, 3) → 0
 	 greenTicket(2, 2, 2) → 20
 	 greenTicket(1, 1, 2) → 10
@@ -248,8 +262,8 @@ public class Exercises {
 	}
 	
 	/*
-	 24. Given 2 int values greater than 0, return whichever value is nearest to 21 without going over. Return 0 if they both 
-	 go over.
+	 24. Given 2 int values greater than 0, return whichever value is nearest to 21 without going over.
+	 Return 0 if they both go over.
 	 blackjack(19, 21) → 21
 	 blackjack(21, 19) → 21
 	 blackjack(19, 22) → 19
@@ -259,8 +273,9 @@ public class Exercises {
 	}
 
 	/*
-	 25. Given three ints, a b c, one of them is small, one is medium and one is large. Return true if the three values are evenly 
-	 spaced, so the difference between small and medium is the same as the difference between medium and large.
+	 25. Given three ints, a b c, one of them is small, one is medium and one is large. Return true if the 
+	 three values are evenly spaced, so the difference between small and medium is the same as the 
+	 difference between medium and large.
 	 evenlySpaced(2, 4, 6) → true
 	 evenlySpaced(4, 6, 2) → true
 	 evenlySpaced(4, 6, 3) → false
