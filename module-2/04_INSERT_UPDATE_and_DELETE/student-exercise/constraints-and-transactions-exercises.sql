@@ -68,6 +68,10 @@ WHERE category_id = 17;
 
 -- 11. Retry deleting Mathmagical from the category table, followed by retrying to delete "Euclidean PI".
 -- (Did either deletes succeed? Why?)
+DELETE FROM category
+WHERE name = 'Mathmagical';
+--SUCCEEDED- the category_id for Mathmagical is not assigned to anything else so can be deleted without causing orphan data
+
 DELETE FROM film
 WHERE title = 'EUCLIDEAN PI';
 --FAILED- violates foreign key constraint because its film_id is still used on film_actor
