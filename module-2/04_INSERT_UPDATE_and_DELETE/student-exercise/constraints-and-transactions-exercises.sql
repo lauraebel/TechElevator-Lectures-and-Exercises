@@ -39,24 +39,38 @@ SELECT * FROM film_category WHERE category_id = 17;
 
 -- 6. Mathmagical films always have a "G" rating, adjust all Mathmagical films accordingly.
 -- (5 rows affected)
-
+START TRANSACTION;
+COMMIT;
+UPDATE film
+SET rating = 'G'
+WHERE film_id IN (SELECT film_id FROM film_category WHERE category_id = 17);
 
 -- 7. Add a copy of "Euclidean PI" to all the stores.
-
+INSERT INTO inventory (film_id, store_id) VALUES (1001, 1);
+INSERT INTO inventory (film_id, store_id) VALUES (1001, 2);
 
 -- 8. The Feds have stepped in and have impounded all copies of the pirated film, "Euclidean PI". The film has been 
 -- seized from all stores, and needs to be deleted from the film table. Delete "Euclidean PI" from the film table.
 -- (Did it succeed? Why?)
-
+DELETE FROM film
+WHERE title = 'EUCLIDEAN PI';
+--FAILED- violates foreign key constraint because its film_id is used on film_actor
 
 -- 9. Delete Mathmagical from the category table. (Did it succeed? Why?)
+DELETE FROM category
+WHERE name = 'Mathmagical';
+--FAILED- violates foreign key constraint because its category_id is used on film_category
 
-
--- 10. Delete all links to Mathmagical in the film_category tale. (Did it succeed? Why?)
-
+-- 10. Delete all links to Mathmagical in the film_category table. (Did it succeed? Why?)
+DELETE FROM film_category
+WHERE category_id = 17;
+-- SUCCEEDED- the category_id still exists but is not currently assigned to any film_id
 
 -- 11. Retry deleting Mathmagical from the category table, followed by retrying to delete "Euclidean PI".
 -- (Did either deletes succeed? Why?)
+DELETE FROM film
+WHERE title = 'EUCLIDEAN PI';
+--FAILED- violates foreign key constraint because its film_id is still used on film_actor
 
 
 
