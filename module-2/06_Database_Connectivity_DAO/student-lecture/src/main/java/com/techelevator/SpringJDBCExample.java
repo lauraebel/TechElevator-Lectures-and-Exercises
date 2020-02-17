@@ -17,10 +17,12 @@ public class SpringJDBCExample {
 		 * we provide the information required to make database connections
 		 */
 		BasicDataSource dvdstoreDataSource = new BasicDataSource();
-		dvdstoreDataSource.setUrl("jdbc:postgresql://localhost:5432/dvdstore");
+		dvdstoreDataSource.setUrl("jdbc:postgresql://localhost:5432/dvdstore"); //Connection String
+								//^protocol        //^host    //^port//^database to connect to
 		dvdstoreDataSource.setUsername("postgres");
 		dvdstoreDataSource.setPassword("postgres1");
-
+		//^Credentials
+		
 		/*
 		 * The JdbcTemplate is the main interface we use to interact with databases
 		 * using Spring JDBC.
@@ -29,9 +31,10 @@ public class SpringJDBCExample {
 
 		/* The JdbcTemplate can be used to execute parameterized SQL statements */
 		String sqlFilmsByCategory = "SELECT film.title, film.release_year "
-				+ "FROM film JOIN film_category ON film.film_id = film_category.film_id "
-				+ "JOIN category ON category.category_id = film_category.category_id " + "WHERE category.name = ?";
-
+			+ "FROM film JOIN film_category ON film.film_id = film_category.film_id "
+			+ "JOIN category ON category.category_id = film_category.category_id " + "WHERE category.name = ?";
+		//^SQL query all in the String datatype
+		
 		/*
 		 * The first parameter to the "queryForRowSet" method is a String containing a
 		 * parameterized SQL statement Any following parameters are used to replace
@@ -39,11 +42,11 @@ public class SpringJDBCExample {
 		 */
 		String category = "Comedy";
 		SqlRowSet results = dvdstoreJdbcTemplate.queryForRowSet(sqlFilmsByCategory, category);
-
+	//^Sending the query to the database and replaces the ? (parameterized) with the variable called category
 		System.out.println(category + " Films:");
 
 		/*
-		 * The "next" method advances the cursor to the next row. If a row exists, it
+		 * The "next" method advances the cursor to the next row if a row exists
 		 */
 		while (results.next()) {
 			// this is the title column from the SELECT statement above
@@ -53,8 +56,10 @@ public class SpringJDBCExample {
 		}
 
 		// use the "update" method to run INSERT, UPDATE, and DELETE statements
+		
 		String sqlCreateActor = "INSERT INTO actor(actor_id, first_name, last_name) " + "VALUES (?, ?, ?)";
-
+		//^will add a row to our actor table
+		
 		dvdstoreJdbcTemplate.update(sqlCreateActor, 1000, "Craig", "Castelaz");
 
 		/*
@@ -74,13 +79,16 @@ public class SpringJDBCExample {
 
 		/*
 		 * Sequences are often used to generate a unique Id value prior to inserting a
-		 * new record.
+		 * new record. (***like a serial primary key)
 		 */
 		String sqlGetNextId = "SELECT nextval('seq_city_id')";
 		results = worldJdbcTemplate.queryForRowSet(sqlGetNextId);
+		
 		// advances to the first row
 		results.next();
+		
 		// returns the integer value of the first column (i.e. index 1)
+		//* DOES NOT START AT 0 IN SQLROWSET LIKE OTHER THINGS IN JAVA!
 		int id = results.getInt(1);
 		System.out.println("New city id: " + id);
 
