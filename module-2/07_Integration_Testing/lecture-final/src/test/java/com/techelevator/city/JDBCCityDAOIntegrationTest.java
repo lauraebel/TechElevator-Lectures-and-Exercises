@@ -47,6 +47,7 @@ public class JDBCCityDAOIntegrationTest {
 
 	@Before
 	public void setup() {
+		// Inserting a country so we can use the countryCode to insert a City without violating the Referential Integrity (RI)
 		String sqlInsertCountry = "INSERT INTO country (code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, governmentform, headofstate, capital, code2) VALUES (?, 'Afghanistan', 'Asia', 'Southern and Central Asia', 652090, 1919, 22720000, 45.9000015, 5976.00, NULL, 'Afganistan/Afqanestan', 'Islamic Emirate', 'Mohammad Omar', 1, 'AF')";
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		jdbcTemplate.update(sqlInsertCountry, TEST_COUNTRY);
@@ -62,7 +63,7 @@ public class JDBCCityDAOIntegrationTest {
 
 	@Test
 	public void save_new_city_and_read_it_back() throws SQLException {
-		City theCity = getCity("SQL Station", "South Dakota", "USA", 65535);
+		City theCity = getCity("SQL Station", "South Dakota", TEST_COUNTRY, 65535);
 
 		dao.save(theCity);
 		City savedCity = dao.findCityById(theCity.getId());
