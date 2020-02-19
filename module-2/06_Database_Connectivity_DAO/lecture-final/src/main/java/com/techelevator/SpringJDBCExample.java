@@ -30,7 +30,7 @@ public class SpringJDBCExample {
 		/* The JdbcTemplate can be used to execute parameterized SQL statements */
 		String sqlFilmsByCategory = "SELECT film.title, film.release_year "
 				+ "FROM film JOIN film_category ON film.film_id = film_category.film_id "
-				+ "JOIN category ON category.category_id = film_category.category_id " + "WHERE category.name = ?";
+				+ "JOIN category ON category.category_id = film_category.category_id WHERE category.name = ?";
 
 		/*
 		 * The first parameter to the "queryForRowSet" method is a String containing a
@@ -53,7 +53,7 @@ public class SpringJDBCExample {
 		}
 
 		// use the "update" method to run INSERT, UPDATE, and DELETE statements
-		String sqlCreateActor = "INSERT INTO actor(actor_id, first_name, last_name) " + "VALUES (?, ?, ?)";
+		String sqlCreateActor = "INSERT INTO actor(actor_id, first_name, last_name) VALUES (?, ?, ?)";
 
 		dvdstoreJdbcTemplate.update(sqlCreateActor, 1000, "Craig", "Castelaz");
 

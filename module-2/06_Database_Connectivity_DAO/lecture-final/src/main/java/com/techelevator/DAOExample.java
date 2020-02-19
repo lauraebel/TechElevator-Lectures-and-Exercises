@@ -1,10 +1,15 @@
 package com.techelevator;
 
+import java.util.List;
+
 import org.apache.commons.dbcp2.BasicDataSource;
 
 import com.techelevator.city.City;
 import com.techelevator.city.CityDAO;
 import com.techelevator.city.JDBCCityDAO;
+import com.techelevator.country.Country;
+import com.techelevator.country.CountryDAO;
+import com.techelevator.country.JDBCCountryDAO;
 
 public class DAOExample {
 
@@ -55,5 +60,18 @@ public class DAOExample {
 		// type.) However, because the save method is setting the id on the object we
 		// pass in, the id is updated in this class as well.
 		City theCity = dao.findCityById(smallville.getId());
+
+		CountryDAO countryDao = new JDBCCountryDAO(worldDataSource);
+
+		List<Country> countries = countryDao.findCountriesByHeadOfState("Elisabeth II");
+
+		for (Country country : countries) {
+			System.out.println(country.getName() + " (" + country.getCode() + ")");
+		}
+
+		countries = countryDao.findCountriesByContinent("America");
+		for (Country country : countries) {
+			System.out.println(country.getName() + " (" + country.getCode() + ")");
+		}
 	}
 }

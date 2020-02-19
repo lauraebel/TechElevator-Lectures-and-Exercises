@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DROP TABLE IF EXISTS employee_project;
 DROP TABLE IF EXISTS employee_department;
 DROP TABLE IF EXISTS employee;
@@ -191,3 +192,6 @@ INSERT INTO employee_project VALUES ((SELECT employee_id FROM employee WHERE fir
         (SELECT project_id FROM project WHERE project_name = 'The Timothy Street Project'));
 INSERT INTO employee_project VALUES ((SELECT employee_id FROM employee WHERE first_name = 'Natasha'), 
         (SELECT project_id FROM project WHERE project_name = 'The Timothy Street Project'));
+=======
+-- employee-projects
+>>>>>>> cc5989eaa7cf6db3a7afb88a2629308652d27d8e
