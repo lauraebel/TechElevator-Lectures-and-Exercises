@@ -66,13 +66,11 @@ public class JDBCCityDAO implements CityDAO {
 
 	@Override
 	public void update(City city) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void delete(long id) {
-		// TODO Auto-generated method stub
 
 	}
 

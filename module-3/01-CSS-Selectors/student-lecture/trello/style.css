@@ -1,0 +1,117 @@
+/* THIS IS ALL VISUAL! Anything really interactive would be coded with Javascript */
+
+html {
+    height: 100%;
+    
+    /* define the default size */
+    font-size: 16 px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    /* Uses raleway if it's there and sans-serif or not. Raleway was imported via url in HTML */
+
+    /* Gradient background image - Makes the color darker at the top of the page and lighter at bottom */
+    background-image: linear-gradient(to bottom, #858c90, #BBB); /* color codes can be googled */
+
+    /* Do not repeat background - stretch it */
+    background-repeat: no-repeat;
+
+    /* Do not scroll background */
+    background-attachment: fixed;
+
+    /* Set elements to not wrap, instead force horizontal scrolling */
+    white-space: nowrap;
+}
+/* need to link our CSS to HTML for the page -> <link href="style.css" rel="stylesheet" /> */
+div.trello-list {
+    /* Create multiple columns */
+    display: inline-block;
+
+    width: 300px;
+
+    background-color: #DDD;
+
+    /* Rounding the corners */
+    border-radius: 2px 3px;
+
+    vertical-align: top;
+
+    margin-right: 10px;
+}
+
+div.trello-list h2 {
+
+    /* move font away from sides of box */
+    margin: 8px;
+
+    /* REM: Keep it the same font size related to the base-size for different screens */
+    font-size: 1.0rem;
+
+    font-weight: bold;
+
+    /* Make titles all uppercase */
+    text-transform: uppercase;
+}
+
+div.trello-list ol {
+    margin: 0;
+    padding: 0;
+}
+
+div.trello-list li {
+    /* removes the numbers from the list */
+    list-style: none;
+
+    /* multiple ways to show color, words, rgb, numbers with #(hex), etc. */
+    background-color: rgb(255, 255, 255);
+
+    font-size: .9rem;
+
+    border-radius: 1px;
+
+    margin-bottom: 10px;
+    padding: 8px;
+
+    /* Override the precedence of the page default and allow text to wrap */
+    white-space: normal;
+}
+
+div.trello-list li:hover {
+    /* pseudo class^ of hover - changes color when mouse is hovered over an item */
+
+    background-color: cornflowerblue;
+
+    /* azure is the text color */
+    color: azure;
+}
+
+div.trello-list li:last-child {
+    /*pseudo class^ of last child */
+    margin-bottom: 0px;
+}
+
+div.trello-list a {
+    /* selects the link of "add another card" */
+
+    display: block;
+    /* makes it go below other items */
+
+    text-decoration: none;
+
+    color: #888;
+
+    /* Spacing: top -> right -> bottom -> left */
+    padding: 8px 0px 8px 5px;
+
+    font-size: .85rem;
+}
+
+div.trello-list a:hover {
+    background-color: rgba(9, 45, 66, .1);
+    /* a = alpha which sets transparency -> 1 is full opaque */
+}

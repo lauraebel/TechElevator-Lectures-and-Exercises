@@ -1,4 +1,6 @@
 :root {
+
+  /* Variables to make things reusable */
     --top-row-height: 120px;
     --gutter: 20px;
     --blue: #00adee;
@@ -14,4 +16,125 @@
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
   
+  header {
+    height: var(--top-row-height)
+  }
+
+  header > img {
+    width: 200px;
+    text-align: center;
+  }
+
+  aside {
+    position: fixed;
+  }
+
+  aside img {
+    width: 180px;
   
+  }
+
+  main {
+    display: inline;
+  }
+
+  nav ul {
+    display: inline-block;
+    text-align: center;
+  }
+
+ nav li {
+  list-style: none;
+ }
+
+aside li {
+padding: 10px 0px;
+}
+
+ nav a {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+ }
+ 
+ section h2 {
+   color: var(--green);
+   padding: 5px 0px;
+ }
+
+ header + img {
+   width: 85%;
+   margin-left: 200px;
+   padding-left: 10px;
+   border-left: solid;
+   border-color: var(--blue);
+ }
+
+ footer img {
+   width: 50px;
+ }
+
+ i.fa-star-of-life {
+  margin-right: 10px;
+ }
+
+ i.fa-pencil-alt {
+  margin-right: 10px;
+ }
+
+ i.fa-envelope {
+   margin-right: 10px;;
+ }
+
+ main li {
+  display: flexbox;
+  justify-content: flex-start;
+  text-align: center;
+ }
+
+section div {
+   display: inline-block;
+   width: 33%;
+ }
+
+ section #what-we-do {
+   border-right: solid;
+   border-color: var(--green);
+   padding-right: 25px;
+   padding-left: 25px;
+ }
+
+ section #our-work {
+  border-right: solid;
+  border-color: var(--green);
+  padding-right: 10px;
+  padding-left: 25px;
+ }
+
+ section #contact-us {
+  padding-right: 10px;
+  padding-left: 25px;
+ }
+ 
+ section {
+   margin-left: 200px;
+   border-left: solid;
+   border-color: var(--blue);
+ }
+ 
+ footer {
+   margin-left: 200px;
+   padding-left: 10px;
+   border-left: solid;
+   border-color: var(--blue);
+ }
+
+ header {
+   margin-left: 200px;   
+   padding-left: 10px;
+   border-left: solid;
+   border-color: var(--blue);
+ }
+
+

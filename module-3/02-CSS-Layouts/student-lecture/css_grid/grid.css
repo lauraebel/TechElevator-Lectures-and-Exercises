@@ -1,4 +1,41 @@
 
+div.container {
+    display: grid;
+
+    grid-template-columns: 4fr 1fr 2fr;
+    grid-template-areas: 
+        "header header header"
+        "main     .   sidebar"
+        "footer footer copyright";
+
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    padding: 10px;
+}
+
+.item-a {
+    grid-area: header;
+}
+
+.item-b {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-c {
+    grid-area: sidebar;
+}
+
+.item-d {
+    grid-area: footer;
+}
+
+.item-e {
+    grid-area: copyright;
+}
+
 #grid-example {
     width: 75%;
     height: 50%;

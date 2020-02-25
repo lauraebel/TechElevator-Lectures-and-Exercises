@@ -2,12 +2,15 @@
 div {
     background-color: red;
 }
+
 * {
     background-color: green;
 }
+
 .descendentOne {
     background-color: yellow;
 }
+
 #idExample {
     background-color: gray;
 }

@@ -7,11 +7,13 @@ section#flex-example {
     width: 75%;
     background-color: gray;
     margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
 }
-
-
-
-
 
 #flex-example div {
     width: 100px;
@@ -36,9 +38,7 @@ div#two {
 
 div#three {
     background-color: blue;
-
 }
-
 
 #flex-description {
     position: relative;
@@ -51,12 +51,12 @@ div#three {
 #flex-description  div  img {
     width: 100%;
     display: block;
-
 }
 
 #flex-description div {
     width: 50%;
 }
+
 #flex-description div:first-child {
     margin-right: 50px;
 }
