@@ -6,9 +6,14 @@ div {
     background-color: green;
 }
 .descendentOne {
-    background-color: yellow;
+    background-color: Yellow;
 }
-#idExample {
+/* descendent selection
+#idExample .descendentOne {
+    background-color: gray;
+}
+*/
+#idExample .descendentOne {
     background-color: gray;
 }
 
@@ -27,5 +32,25 @@ span {
     margin: 10px;
     padding: 10px;
 }
+
+/* Child selector */
+/*
+#divThree > span {
+    background-color: brown;
+}
+*/
+/* Adjacent Sibling selector */
+/*
+.spanTwo + span {
+    background-color: blue;
+}
+*/
+
+/* General Sibling sector */
+.spanOne ~ span {
+    background-color: blue;
+}
+
+
 
 
