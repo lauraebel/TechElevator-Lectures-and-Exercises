@@ -1,0 +1,45 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    background-color: lightgray;
+    color: #000000;
+}
+
+
+ul#fibonacci li:first-child {
+    color: #228b22;
+    font-weight: bold;
+}
+
+ul#fibonacci li:last-child {
+    color: #b71b1b;
+    font-weight: bold;
+}
+
+
+ul#fizzbuzz li.fizz {
+    color: blue;    
+}
+
+ul#fizzbuzz li.fizzbuzz {
+    color: #228b22;
+    font-size: 2rem;
+}
+
+ul#fizzbuzz li.buzz {
+    color: red;
+}
