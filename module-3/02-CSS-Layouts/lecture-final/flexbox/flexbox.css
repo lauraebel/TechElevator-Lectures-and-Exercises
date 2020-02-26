@@ -7,6 +7,12 @@ section#flex-example {
     width: 75%;
     background-color: gray;
     margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 
@@ -25,13 +31,13 @@ section#flex-example {
 div#one {
     background-color: red;
     /* height: 75px;
-    line-height: 50px; */
+    line-height: 50px;  */
 }
 
 div#two {
     background-color: green;
     /* height: 150px;
-    line-height: 150px; */
+    line-height: 150px;  */
 }
 
 div#three {

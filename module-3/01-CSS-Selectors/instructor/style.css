@@ -14,4 +14,11 @@
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
   
+  header {
+    height: var(--top-row-height);
+  }
+
+  header > img {
+    width: 200px;
+  }
   
