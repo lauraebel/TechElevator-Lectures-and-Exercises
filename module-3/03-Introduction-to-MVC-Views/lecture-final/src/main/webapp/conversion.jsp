@@ -52,7 +52,7 @@ library --%>
 		     loop below iterates over the numbers from 1-12 inclusive and 
 		     assigns the next number to the scoped variable named "inches" 
 		     with each iteration --%>
-			<c:forEach begin="1" end="12" var="inches">
+			<c:forEach begin="1" end="10" var="inches">
 				<tr>
 					<%-- These are JSP EL expressions.  Anything between the
 				    curly braces will be evaluated as an EL expression
