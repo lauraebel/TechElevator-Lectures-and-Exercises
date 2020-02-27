@@ -37,8 +37,16 @@
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+<ul>
+<c:set var="fontSize" value="${param.count}" />
+<c:set var="counter" value="0" />
+<c:forEach begin="0" end="${param.count}">
+<c:if test="${counter < param.count}">
+ <li style="font-size: ${fontSize}px;">${param.word}</li>
+<c:set var="counter" value="${counter+1}" />
+<c:set var="fontSize" value="${fontSize-1}" />
+</c:if>
+</c:forEach>
+</ul>
 
 <c:import url="common/footer.jsp"></c:import>
