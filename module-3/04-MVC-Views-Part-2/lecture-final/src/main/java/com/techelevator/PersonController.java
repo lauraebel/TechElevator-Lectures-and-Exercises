@@ -22,6 +22,14 @@ public class PersonController {
 
 		request.setAttribute("personList", personList);
 		
+		Person doug = new Person("Doug", "Rogers", 45);
+		Address dougAddress = new Address("123 Some Street", "Columbus", "Ohio", "43220");
+		doug.setAddress(dougAddress);
+		
+		request.setAttribute("doug", doug);
+		
+		
+		
 		return "personList";
 	}
 }

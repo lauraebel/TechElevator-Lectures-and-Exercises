@@ -7,11 +7,20 @@
 	</head>
 	<body>
 		<ol>
-			<c:forEach var="name" items="${requestScope.nameList}">
+			<c:forEach var="name" items="${requestScope.listOfNames}">
 				<li>${name}</li>
 			</c:forEach>
 		</ol>	
 		
+		<h1>${listOfNames[1]} is the second name in the list</h1>
+	
+		${herds.Lion}
+		${herds.Crow}
 		
+		<br />
+		<c:forEach items="${herds}" var="entry">
+			${entry.key} - ${entry.value}
+		</c:forEach>
+	
 	</body>
 </html>

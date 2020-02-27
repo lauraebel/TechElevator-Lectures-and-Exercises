@@ -1,7 +1,9 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -26,7 +28,14 @@ public class NameController {
 		/* This line adds a request attribute with the name "studentList"
 		 * that contains our list of student names. This will later be
 		 * used by the View (i.e. JSP) to display student names in HTML */
-		request.setAttribute("nameList", names);
+		request.setAttribute("listOfNames", names);
+		
+		Map<String, String> animal2Herd = new HashMap<String, String>();
+		animal2Herd.put("Lion", "Pride");
+		animal2Herd.put("Rhino", "Crash");
+		animal2Herd.put("Crow", "Murder");
+		
+		request.setAttribute("herds", animal2Herd);
 		
 		/* This line forwards the request to the JSP */
 		return "nameList";
