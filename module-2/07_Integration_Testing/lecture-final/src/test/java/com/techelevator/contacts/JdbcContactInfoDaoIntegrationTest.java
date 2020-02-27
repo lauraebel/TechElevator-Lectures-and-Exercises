@@ -49,13 +49,13 @@ public class JdbcContactInfoDaoIntegrationTest {
 	
 	@Test // Insert
 	public void insert_contact() {
-		// Arrange
+		// Arrange - create a contact 
 		ContactInfo contact = new ContactInfo();
 		contact.setContact("email@somewhere.com");
 		contact.setContactMethod("Email");
 		contact.setContactType("Home");
 		
-		// Act
+		// Act - save it into the database using the DAO
 		dao.save(contact, personId);
 		
 		// Assert
@@ -70,7 +70,6 @@ public class JdbcContactInfoDaoIntegrationTest {
 		String sql = "SELECT * FROM person_contact_info WHERE person_id = ? AND contact_id = ?";
 		SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, personId, contact.getContactId() );
 		Assert.assertTrue( rows.next() );
-		
 		
 	}
 	
