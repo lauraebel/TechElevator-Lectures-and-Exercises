@@ -24,7 +24,7 @@
     		<ul>
     			<li><a href="${homePageURL}">Home</a></li>
     			<li><a href="${aboutUsURL}">About Us</a></li>
-    			<li><a href="#">Another Link</a></li>
+    			<li><a href="<c:url value="/planetDetail" />">Planet Detail</a></li>
     		</ul>
     </nav>
     
