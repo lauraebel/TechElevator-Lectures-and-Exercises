@@ -10,7 +10,6 @@ public class Planet {
 	public Planet() {
 		
 	}
-	
 	public Planet(String name, String imageName, double auFromSon, long numberOfMoons) {
 		this.name = name;
 		this.imageName = imageName;

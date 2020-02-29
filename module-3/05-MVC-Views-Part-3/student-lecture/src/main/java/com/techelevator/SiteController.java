@@ -62,8 +62,6 @@ public class SiteController {
 		return "planetDescription";
 	}
 	
-	
-	
 	private Planet getPlanetByName(String name) {
 		List<Planet> planets = getListOfPlanets();
 		
