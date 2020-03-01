@@ -36,27 +36,32 @@
 			For purposes of demonstration we've written it out so you can see it when you load the page up. 
 			-->
 
-			<!-- Standard Product -->
-			<div class="tile ">
-				<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-				<a class="product-image" href="#"> 
-					<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
-				</a>
-				<div class="details">
-					<p class="name">Grey Sofa</p>
-
-					<!-- .filled will make the star solid -->
-					<div class="rating">
-						<span class="filled">&#9734;</span> 
-						<span class="filled">&#9734;</span>
-						<span>&#9734;</span> 
-						<span>&#9734;</span> 
-						<span>&#9734;</span>
+			<c:forEach items="${products}" var="product">
+				<!-- Standard Product -->
+				<div class="tile ">
+				
+					<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+					<a class="product-image" href="#"> 
+						<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
+					</a>
+					<div class="details">
+						<p class="name">Grey Sofa</p>
+	
+						<!-- .filled will make the star solid -->
+						<div class="rating">
+							<span class="filled">&#9734;</span> 
+							<span class="filled">&#9734;</span>
+							<span>&#9734;</span> 
+							<span>&#9734;</span> 
+							<span>&#9734;</span>
+						</div>
+	
+						<p class="price">$939.00</p>
 					</div>
-
-					<p class="price">$939.00</p>
 				</div>
-			</div>
+			</c:forEach>
+
+	
 
 			<div class="tile ">
 				<!-- Include this if the product is considered a Top Seller -->
