@@ -7,8 +7,7 @@
 
 <div id="card-page">
 	<c:import url="/WEB-INF/jsp/common/filters.jsp">
-		<%-- Modify the baseRoute to apply filters to the current route. --%>
-		<c:param name="baseRoute" value="#" />
+		<c:param name="baseRoute" value="/products" />
 	</c:import>
 
 	<div class="main-content">
@@ -21,9 +20,9 @@
 		<div id="sorting-options">
 			<h3>Sort By</h3>
 			<ul>
-				<li><a href="#">Price - Low to High</a></li>
-				<li><a href="#">Price - High to Low</a></li>
-				<li><a href="#">Rating - High to Low</a></li>
+				<li><a href="${baseRoute}?sortOrder=PriceLowToHigh">Price - Low to High</a></li>
+				<li><a href="${baseRoute}?sortOrder=PriceHighToLow">Price - High to Low</a></li>
+				<li><a href="${baseRoute}?sortOrder=RatingHighToLow">Rating - High to Low</a></li>
 			</ul>
 		</div>
 

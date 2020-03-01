@@ -7,8 +7,7 @@
 
 <div id="masonry-page">
 	<c:import url="/WEB-INF/jsp/common/filters.jsp">
-		<%-- Modify the baseRoute to apply filters to the current route. --%>
-		<c:param name="baseRoute" value="#" />
+		<c:param name="baseRoute" value="/products/tiles" />
 	</c:import>
 
 	
@@ -42,8 +41,9 @@
 				</a>
 			
 			<div class="details">
+			
 				<p class="name">
-					<a href="#">${product.name}</a>	
+					<a href="${baseRoute}?id=${product.id}">${product.name}</a>	
 				</p>
 				
 				<c:if test="${product.remainingStock == 0}">
