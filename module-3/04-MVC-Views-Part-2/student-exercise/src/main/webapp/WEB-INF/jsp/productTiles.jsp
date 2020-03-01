@@ -32,12 +32,15 @@
 				
 			<div class="${cssClass}">
 				
-			
-				<a class="product-image" href="#"> 
-					<c:url var="imgUrl" value="/images/product-images/${product.imageName}" /> 
-						<img src="${imgUrl}" ></img>
+				<c:url var="productDetailUrl" value="/products/detail" >
+					<c:param name="id" value="${product.id}" />
+				</c:url>
+					
+				<a class="product-image" href="${productDetailUrl}"> <c:url var="imgUrl"
+						value="/images/product-images/${product.imageName}" /> <img
+					src="${imgUrl}"></img>
 				</a>
-				
+			
 			<div class="details">
 				<p class="name">
 					<a href="#">${product.name}</a>	
