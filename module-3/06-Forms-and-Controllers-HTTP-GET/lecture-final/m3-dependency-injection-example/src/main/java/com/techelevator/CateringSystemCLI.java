@@ -53,8 +53,10 @@ public class CateringSystemCLI {
 	public static void main(String[] args) throws InventoryReaderException {
 		Menu menu = new Menu();
 		
-		InventoryReader reader = new CsvInventoryReader(getInventoryFile() );
+		//InventoryReader reader = new CsvInventoryReader(getInventoryFile() );
 	
+		InventoryReader reader = new JdbcInventoryReader( getDataSource() );
+		
 		Inventory inventory = new Inventory(reader);
 		CateringSystem cateringSystem = new CateringSystem(inventory);
 		
