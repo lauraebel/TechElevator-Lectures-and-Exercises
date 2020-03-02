@@ -66,7 +66,7 @@
 		</ul>
 		
 		<h2>Arrays, Lists, and Maps</h2>
-		<c:set var="stringList" value="${['Three', 'Blind', 'Mice']}" />
+		<%-- <c:set var="stringList" value="${['Three', 'Blind', 'Mice']}" /> --%>
 		
 		<p>Array elements are referenced in JSP EL in the same way as Java.  However, one difference
 		   is that Lists can also be referenced using the same syntax as arrays</p>

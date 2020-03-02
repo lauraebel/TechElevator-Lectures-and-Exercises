@@ -3,9 +3,6 @@ package com.techelevator.dao;
 import com.techelevator.dao.model.Film;
 import java.util.List;
 
-/**
- * FilmDao
- */
 public interface FilmDao {
     /**
      * Pass in a genre and a min movie length and a max movie length to get back a list of
