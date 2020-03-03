@@ -7,16 +7,20 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import com.techelevator.excelsior.model.Reservation;
 import com.techelevator.excelsior.model.dao.ReservationDAO;
 
+@Component
 public class JDBCReservationDAO implements ReservationDAO {
 
 	private JdbcTemplate jdbcTemplate;
 
+	@Autowired
 	public JDBCReservationDAO(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}

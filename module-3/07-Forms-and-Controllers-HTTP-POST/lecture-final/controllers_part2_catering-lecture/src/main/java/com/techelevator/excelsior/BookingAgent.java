@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.techelevator.excelsior.model.Reservation;
 import com.techelevator.excelsior.model.Space;
 import com.techelevator.excelsior.model.Venue;
@@ -13,15 +16,27 @@ import com.techelevator.excelsior.model.dao.jdbc.JDBCReservationDAO;
 import com.techelevator.excelsior.model.dao.jdbc.JDBCSpaceDAO;
 import com.techelevator.excelsior.model.dao.jdbc.JDBCVenueDAO;
 
+@Component
 public class BookingAgent {
 
+	@Autowired
 	JDBCVenueDAO jdbcVenueDAO;
+	
+	@Autowired
 	JDBCSpaceDAO jdbcSpaceDAO;
+	
+	@Autowired
 	JDBCReservationDAO jdbcReservationDAO;
+	
+	@Autowired
 	JDBCCategoryDAO jdbcCategoryDAO;
 
 	List<Venue> venues = null;
 
+	public BookingAgent() {
+		
+	}
+	
 	public BookingAgent(DataSource datasource) {
 		jdbcVenueDAO = new JDBCVenueDAO(datasource);
 		jdbcSpaceDAO = new JDBCSpaceDAO(datasource);

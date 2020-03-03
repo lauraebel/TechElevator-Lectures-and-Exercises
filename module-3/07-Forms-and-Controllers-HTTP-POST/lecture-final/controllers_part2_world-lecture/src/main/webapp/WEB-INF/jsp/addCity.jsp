@@ -19,7 +19,7 @@
 <!-- form action="${addCityWithPostAndRedirectUrl}" method="POST" -->
 
 
-<form action="${addCityUrl}" method="GET">
+<form action="${addCityWithPostAndRedirectUrl}" method="POST">
 	<label for="name">Name:</label>
 	<input type="text" name="name" /><br />
 	<label for="district">District:</label>
