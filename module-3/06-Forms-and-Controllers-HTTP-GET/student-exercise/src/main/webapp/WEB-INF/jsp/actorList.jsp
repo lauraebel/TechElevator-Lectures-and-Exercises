@@ -16,7 +16,7 @@
 </tr>
 <c:forEach items="${actors}" var="actor">
 <tr>
-<li><c:out value="${actor.firstName} ${actor.lastName}"></c:out></li>
+<td><c:out value="${actor.firstName} ${actor.lastName}"></c:out></td>
 </tr>
 </c:forEach>
 </table>
