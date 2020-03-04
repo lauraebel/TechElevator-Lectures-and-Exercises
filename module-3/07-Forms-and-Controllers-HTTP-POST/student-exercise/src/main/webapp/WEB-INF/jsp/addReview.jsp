@@ -9,9 +9,10 @@
 	<body>
 		<div id="main_content">
 		
-			<h1>Want to post your own review? Enter your username below!</h1>
+			<h1>Want to post your own review? Enter your information below!</h1>
 			
 			<form action="<c:url value="/reviewInput" />" method="POST">
+			
 					<label for="username">Username: </label>
 					<input type="text" name="username" id="userName" />
 
