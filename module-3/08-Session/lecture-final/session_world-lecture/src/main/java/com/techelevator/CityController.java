@@ -23,6 +23,8 @@ import com.techelevator.dao.model.User;
  */
 
 @Controller
+//@SessionAttributes("user")   - Example of 1 session variable
+@SessionAttributes( { "user", "bgClass" }  )   // - Example of an array of session variables
 public class CityController {
 
 	@Autowired
@@ -105,7 +107,7 @@ public class CityController {
 	@RequestMapping(path="/changeBackground", method=RequestMethod.POST)
 	public String changeBackgroundColor(@RequestParam(name="bgColor") String backgroundColor, ModelMap map) {
 		map.addAttribute("bgClass", backgroundColor);
-		return "selectBackgroundColor";   
+		return "redirect:/selectBackgroundColor";   
 	}
 	
 	
