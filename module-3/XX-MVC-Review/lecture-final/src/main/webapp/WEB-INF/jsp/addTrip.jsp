@@ -2,6 +2,8 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 	
+	
+	<form action="<c:url value="/addTrip" />" method="POST">
 		<div>
 			<label for="name">Name:</label>
 			<input type="text" name="name" />
@@ -29,6 +31,6 @@
 		<div>
 			<input type="submit" value="Add Trip" />
 		</div>
-	
+	</form>
 		
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
