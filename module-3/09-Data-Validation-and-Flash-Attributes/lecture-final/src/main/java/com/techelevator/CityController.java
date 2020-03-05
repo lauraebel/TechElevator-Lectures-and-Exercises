@@ -51,6 +51,15 @@ public class CityController {
 			return "redirect:/login";
 		}
 
+		if ( !map.containsKey("newCity") ) {
+			
+			City newCity = new City();
+			newCity.setPopulation(100);
+			newCity.setName("Somewhere");
+			
+			map.addAttribute("newCity", newCity );
+		}
+		
 		return "addCity";  
 	}
 	
@@ -59,10 +68,16 @@ public class CityController {
 	 * access Flash Scope
 	 */
 	@RequestMapping(path="/addCity", method=RequestMethod.POST)
-	public String addNewCity(City newCity) {
+	public String addNewCity(@Valid @ModelAttribute("newCity") City newCity, BindingResult result, RedirectAttributes attr) {
 	
+		if ( result.hasErrors() ) {
+			return "addCity";
+		}
+		
 		newCity.setCountryCode("USA");	
 		cityDao.save(newCity);
+		
+		attr.addFlashAttribute("city", newCity);
 
 		return "redirect:/addCityResult";  
 	}
@@ -70,6 +85,11 @@ public class CityController {
 	
 	@RequestMapping(path="/addCityResult", method=RequestMethod.GET)
 	public String showAddCityResult(ModelMap map) {	
+		
+		if ( map.containsKey("city") ) {
+			City city = (City) map.get("city");
+			map.addAttribute("comment", "CityId=" + city.getId());
+		}
 		
 		
 		return "cityConfirm";  

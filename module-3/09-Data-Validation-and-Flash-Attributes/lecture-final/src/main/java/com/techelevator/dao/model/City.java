@@ -1,11 +1,21 @@
 package com.techelevator.dao.model;
 
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 public class City {
 	
 	private Long id;
+	
+	@NotBlank(message="City Name is Required")
 	private String name;
 	private String countryCode;	
+	
+	@NotBlank(message="State is Required")
 	private String district;
+	
+	@Min(value=1, message="Must have a population of at least 1")
 	private int population;
 
 	public Long getId() {

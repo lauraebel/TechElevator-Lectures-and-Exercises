@@ -11,11 +11,11 @@
 
 <form:form action="${mailingListSignUpUrl}" method="POST" modelAttribute="signup">
 		
-		<%-- 
-	    <div>
+		
+	  <div>
 			<form:errors path="*" cssClass="error"/>
 		</div>
-		--%>
+		
 		
         <div>
         		<label for="name">Name</label>
@@ -61,7 +61,7 @@
             <input type="submit" value="Sign Me Up!"/>
         </div>
         
-     
+       
 </form:form>
 </section>
 <%@include file="../common/footer.jspf"%>
