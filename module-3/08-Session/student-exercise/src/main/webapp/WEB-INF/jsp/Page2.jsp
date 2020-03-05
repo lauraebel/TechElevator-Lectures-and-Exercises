@@ -9,11 +9,11 @@
 	<body>
 		<div id="main_content">
 			<h1>Favorite Things Survey</h1>
-			<h2>What is your favorite animal?</h2>
+			<h2>What is your favorite car?</h2>
 			
-			<form action="<c:url value="/FavoriteThings/Page1" />" method="POST">
+			<form action="<c:url value="/FavoriteThings/Page2" />" method="POST">
 			
-					<input type="text" name="animal" id="animal" />
+					<input type="text" name="car" id="car" />
 
 					<input type="submit" value="Next ->" />
 			</form>

@@ -9,13 +9,24 @@
 	<body>
 		<div id="main_content">
 			<h1>Favorite Things Survey</h1>
-			<h2>What is your favorite animal?</h2>
-			
-			<form action="<c:url value="/FavoriteThings/Page1" />" method="POST">
-			
-					<input type="text" name="animal" id="animal" />
+			<h2>Here are your Favorite Things!</h2>
+						
+<table>
+	<tr>
+		<td>Animal:</td>
+		<td><c:out value="${animal}" /></td>
+	</tr>
+	<tr>
+		<td>Car:</td>
+		<td><c:out value="${car}" /></td>
+	</tr>
+	<tr>
+		<td>Dance:</td>
+		<td><c:out value="${dance}" /></td>
+	</tr>
 
-					<input type="submit" value="Next ->" />
+</table>
+				    
 			</form>
 		</div>
 	</body>
