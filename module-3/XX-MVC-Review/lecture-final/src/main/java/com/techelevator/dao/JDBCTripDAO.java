@@ -5,15 +5,19 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import com.techelevator.dao.model.Trip;
 
+@Component
 public class JDBCTripDAO implements TripDAO
 {
 	private JdbcTemplate db;
 	
+	@Autowired
 	public JDBCTripDAO(DataSource dataSource) {
 		this.db = new JdbcTemplate(dataSource);
 	}
