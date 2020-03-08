@@ -16,5 +16,14 @@ textarea {
     max-width: 280px;
 }
 
+.errors {
+	color: red;
+}
+
+.red {
+	background-color: red;
+}
+
+
 
 

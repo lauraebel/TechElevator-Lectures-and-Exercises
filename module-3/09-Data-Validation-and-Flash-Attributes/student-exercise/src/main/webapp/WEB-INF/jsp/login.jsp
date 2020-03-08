@@ -7,6 +7,7 @@
 <c:url var="loginUrl" value="/login" />
 
 <form:form action="${loginUrl}" method="POST" modelAttribute="login">
+
 <label for="email">Email Address:</label>
 <form:input path="email" />
 <form:errors path="email" cssClass="errors" />
