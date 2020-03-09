@@ -2,12 +2,16 @@ package com.techelevator.dao.model;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Trip {
 
 	private int id;
 	private String name;
 	private String description;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate startDate;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate endDate;
 	private int miles;
 	private String type;
