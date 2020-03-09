@@ -1,5 +1,6 @@
 package com.techelevator.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import com.techelevator.authentication.AuthProvider;
@@ -40,9 +41,11 @@ public class AccountController {
     public String login(
         @RequestParam String username,
         @RequestParam String password,
-        RedirectAttributes flash
+        RedirectAttributes flash, HttpSession session
     ) {
+    	//session.invalidate();
         if(auth.signIn(username, password)) {
+ 
             return "redirect:/";
         } else {
             flash.addFlashAttribute("message", "Login Invalid");
