@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Oatmeal",
+    "completed": false
+  },
+  {
+    "id": "2",
+    "name": "Milk",
+    "completed": false
+  },
+  {
+    "id": "3",
+    "name": "Banana",
+    "completed": false
+  },
+  {
+    "id": "4",
+    "name": "Strawberries",
+    "completed": false
+  },
+  {
+    "id": "5",
+    "name": "Lunch Meat",
+    "completed": false
+  },
+  {
+    "id": "6",
+    "name": "Bread",
+    "completed": false
+  },
+  {
+    "id": "7",
+    "name": "Grapes",
+    "completed": false
+  },
+  {
+    "id": "8",
+    "name": "Steak",
+    "completed": false
+  },
+  {
+    "id": "9",
+    "name": "Salad",
+    "completed": false
+  },
+  {
+    "id": "10",
+    "name": "Cookies",
+    "completed": false
+  }
+]
