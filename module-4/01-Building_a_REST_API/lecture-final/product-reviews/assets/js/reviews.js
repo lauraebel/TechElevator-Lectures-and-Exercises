@@ -1,6 +1,6 @@
 /* SET YOUR API ENDPOINT HERE */
 //const API_URL = 'http://5ddbefaa041ac10014de18e9.mockapi.io/api/reviews'
-const API_URL = 'http://localhost:8080/product-reviews-api/api/reviews'
+const API_URL = 'http://localhost:8080/m4-product-reviews-api-final/api/reviews'
 
 let reviews = [];
 let workingReview = null; 
