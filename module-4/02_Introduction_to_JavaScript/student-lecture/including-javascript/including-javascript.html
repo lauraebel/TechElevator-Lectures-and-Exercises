@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!-- Anywhere a Script file can be included it can use
+             src="" to include a JavaScript file. 
+            
+             The <Script> tag is NOT self closing, so </script>
+            must always be included.
+
+            The order of the Script tags matters, as methods defined it
+            can only be called if that script has been loaded before it.
+        -->
+        <script src="including-javascript.js" ></script>
+
+        <!-- JavaScript can be included directly in a Script tag in the 
+             the head of the document
+        -->
+        <script>
+            console.log("Hello from the Head Script tag");
+
+            // JavaScript has single line comments like Java
+            /*
+                JavaScript also has multi-line comments similar to 
+                Java multi-line comments
+            */
+
+            /*
+             *  Methods can be declared in one script and called in the other
+            */
+            function hello() {
+                console.log("Hello from the Head Function called from the body");
+                console.log(message);
+            }
+
+            // Call the method from the Script file
+            showHello();
+
+        </script>
+    </head>
+    <body>
+        <!-- JavaScript can be included directly in a Script tag in the 
+             the body of the document
+        -->
+        <script>
+                /*
+                 *  Variables that are declared with values hoist, meaning
+                 *  they are moved to the top when run and available anywhere, 
+                 *  regardless of where they are defined, as long as they are 
+                 *  in the global scope.
+                */
+                let message = "Variables that have been defiend hoist";
+                console.log("Hello from the Body Script tag");
+
+                // Methods declared above this can be called, including those in 
+                // declared in the body
+                hello();
+        </script>
+
+        <!-- 
+            It is common to include JavaScript libraries at the bottom of the body
+            to allow them to load after the HTML and CSS.  This allows larger JS
+            files to load while the user reviews the initial page.  Otherwise, a large
+            JS file may cause the page to appear to have a slow load time. 
+
+            Order is still important so if the script is loaded here, its methods
+            are not available to code in the head or body, but it is to other JS
+            loaded after it here at the bottom of the file.
+        -->
+    </body>
+</html>
