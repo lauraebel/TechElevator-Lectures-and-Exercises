@@ -1,3 +1,5 @@
+greeting(name);
+
 /**
  * All named functions will have the function keyword and
  * a name followed by parentheses.
@@ -25,6 +27,10 @@ function printToConsole(value) {
  * @param {number} firstParameter the first parameter to multiply
  * @param {number} secondParameter the second parameter to multiply
  */
+function multiplyTogether( firstParameter, secondParameter) {
+  return firstParameter * secondParameter;
+}
+
 
 /**
  * This version makes sure that no parameters are ever missing. If
@@ -36,6 +42,9 @@ function printToConsole(value) {
  * @param {number} [firstParameter=0] the first parameter to multiply
  * @param {number} [secondParameter=0] the second parameter to multiply
  */
+function multiplyNoUndefined( firstParameter=0, secondParameter=0) {
+  return firstParameter * secondParameter;
+}
 
 /**
  * Scope is defined as where a variable is available to be used.
@@ -60,6 +69,17 @@ function scopeTest() {
   }
 }
 
+/**
+ * Takes the details of a person and creates an English readable sentence that
+ * uses that information to describe them.   Quirks are added and joined by 
+ * the separator
+ * 
+ * @param {string} name  the name of the person being described
+ * @param {number} age the age of the person 
+ * @param {string[]} [listOfQuirks] a list of funny quirks to the listed out 
+ * @param {string} [separator = ', '] the string to separate the quirks
+ * @returns {string} the full descriptive string
+ */
 function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') {
   let description = `${name} is currently ${age} years old. Their quirks are: `;
   return description + listOfQuirks.join(separator);
@@ -73,7 +93,9 @@ function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') 
  * @returns {number} sum of all the numbers
  */
 function sumAllNumbers(numbersToSum) {
-  return numbersToSum.reduce();
+  return numbersToSum.reduce( (sum, currentValue) => {
+    return sum + currentValue;
+  });
 }
 
 /**
