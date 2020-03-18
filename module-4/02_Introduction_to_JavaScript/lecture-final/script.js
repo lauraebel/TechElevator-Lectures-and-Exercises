@@ -11,7 +11,7 @@
 function variables() {
   // Declares a variable where the value cannot be changed
   const neverChanges = 'test';
-  // Declares a variable those value can be changed
+  // Declares a variable whose value can be changed
   let canBeChanged = 'changeMe';
   // Declares a variable that will always be an array
   const alwaysAnArrays = [];
@@ -21,7 +21,7 @@ function variables() {
     let y;
 
     var x;  // this is OK, since var allows redefinition in the same scope
-    //let y; // this is an error, because let does not allow redefinition in the same scope
+    // *** let y; // this is an error, because let does not allow redefinition in the same scope
   }
   // x is available here
   // y is not available here
@@ -98,7 +98,6 @@ function objects() {
   console.table(person);
   // Log the first and last name
   console.log(`${person.firstName} ${person.lastName}`);
-  
   // Log each employee
   for (let i = 0; i < person.employees.length; i++) {
     console.log(`Employee ${i + 1} is ${person.employees[i]}` );
@@ -118,8 +117,6 @@ Function Overloading is not available in Javascript. If you declare a
 function with the same name, more than one time in a script file, the
 earlier ones are overriden and the most recent one will be used.
 */
-
-
 function Add(num1, num2) {
   return num1 + num2;
 }
@@ -127,8 +124,6 @@ function Add(num1, num2) {
 function Add(num1, num2, num3) {
   return num1 + num2 + num3;
 }
-
-
 
 /*
 ########################
@@ -150,15 +145,13 @@ function mathFunctions() {
 function numericFunctions() {
   console.log(1.5 + 5);
   console.log('1.5' + 5);
-  console.log( parseFloat('1.5') + 5 );
-  console.log( parseInt('8') );
-  console.log( parseInt('8.5') );  // truncates to whole number
+  console.log(parseFloat('1.5') + 5 );
+  console.log(parseInt('8') );
+  console.log(parseInt('8.5') );  // truncates to whole number
 
-  console.log( isNaN(1) );  // isNaN() returns True if Not A Number and false if it is a number
+  console.log(isNaN(1) );  // isNaN() returns True if Not A Number and false if it is a number
 
 }
-
-
 
 /*
 ########################
