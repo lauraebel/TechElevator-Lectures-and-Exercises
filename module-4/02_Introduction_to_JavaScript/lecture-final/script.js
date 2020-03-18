@@ -10,8 +10,21 @@
  */
 function variables() {
   // Declares a variable where the value cannot be changed
+  const neverChanges = 'test';
   // Declares a variable those value can be changed
+  let canBeChanged = 'changeMe';
   // Declares a variable that will always be an array
+  const alwaysAnArrays = [];
+  {
+    // sub-block
+    var x;
+    let y;
+
+    var x;  // this is OK, since var allows redefinition in the same scope
+    //let y; // this is an error, because let does not allow redefinition in the same scope
+  }
+  // x is available here
+  // y is not available here
 }
 
 /**
@@ -33,6 +46,11 @@ function printParameters(param1, param2) {
  * @param {Object} y
  */
 function equality(x, y) {
+
+  if (typeof x == 'number') {
+    console.log("X is a number");
+  }
+
   console.log(`x is ${typeof x}`);
   console.log(`y is ${typeof y}`);
 
@@ -70,14 +88,25 @@ function objects() {
       "Milton Waddams",
       "Samir Nagheenanajar",
       "Michael Bolton"
-    ]
+    ],
+    toString: function() {
+      return `${this.lastName}, ${this.firstName} (${this.age})`;
+    }
   };
 
   // Log the object
-
+  console.table(person);
   // Log the first and last name
-
+  console.log(`${person.firstName} ${person.lastName}`);
+  
   // Log each employee
+  for (let i = 0; i < person.employees.length; i++) {
+    console.log(`Employee ${i + 1} is ${person.employees[i]}` );
+  }
+
+  console.log(person.toString());
+  console.log(person.toString);
+
 }
 
 /*
@@ -90,6 +119,7 @@ function with the same name, more than one time in a script file, the
 earlier ones are overriden and the most recent one will be used.
 */
 
+
 function Add(num1, num2) {
   return num1 + num2;
 }
@@ -97,6 +127,8 @@ function Add(num1, num2) {
 function Add(num1, num2, num3) {
   return num1 + num2 + num3;
 }
+
+
 
 /*
 ########################
@@ -115,6 +147,19 @@ function mathFunctions() {
   console.log("Math.random() : " + Math.random());
 }
 
+function numericFunctions() {
+  console.log(1.5 + 5);
+  console.log('1.5' + 5);
+  console.log( parseFloat('1.5') + 5 );
+  console.log( parseInt('8') );
+  console.log( parseInt('8.5') );  // truncates to whole number
+
+  console.log( isNaN(1) );  // isNaN() returns True if Not A Number and false if it is a number
+
+}
+
+
+
 /*
 ########################
 String Methods
@@ -128,6 +173,12 @@ function stringFunctions(value) {
   console.log(`.endsWith('World') - ${value.endsWith("World")}`);
   console.log(`.startsWith('Hello') - ${value.startsWith("Hello")}`);
   console.log(`.indexOf('Hello') - ${value.indexOf("Hello")}`);
+
+  // substr (starting index, # of characters)
+  console.log(`.substr(1,4) - ${value.substr(1,4)}`);
+
+  // substring (starting index (inclusive), ending index (exclusive))
+  console.log(`.substring(1,4) - ${value.substring(1,4)}`);
 
   /*
     Other Methods
