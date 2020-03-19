@@ -105,17 +105,11 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  * @returns {number} the sum of all the parameters (or arguments)
  */
 
- function addAll(...num) {
-   return num.reduce(function(sum, value){
-     if(num.length > 0) {
-    return sum + value;
-     } else {
-      return sum + value;
-     }
-    })
+ function addAll() {
+   return Array.from(arguments).reduce((sum, value) => {  
+    return sum + value; 
+    },0)
   }
-
-   
     
 /*
  * Write and document a function called makeHappy that takes
@@ -124,12 +118,13 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  */
 /**
  * @param {string[]} stringArray strings to add 'Happy' to
- *  
+ * @returns
  */
-let happy = 'Happy ';
+
  function makeHappy(stringArray) {
-  stringArray.map(function(happy) {
-      return happy + stringArray;
+  let happy = 'Happy ';
+  return stringArray.map((element) => {
+      return happy + element;
    })
  }
 
@@ -151,18 +146,18 @@ let happy = 'Happy ';
  * Use `map` and an anonymous function.
  */
 /**
- * @param {string[]} [addresses = streetNumber, streetName, streetType, city, state, zip] string array of full addresses
- * @param {number} streetNumber the street number of the address being listed
- * @param {string} streetName the name of the street of the address being listed
- * @param {string} streetType the type of street of the address being listed
- * @param {string} city the city where the address is located
- * @param {string} state the state where the address is located
- * @param {number} zip the postal code where the address is located
+ * @param {object[]} addresses string array of full addresses
+ * @param {string|number} addresses[].streetNumber the street number of the address being listed
+ * @param {string} addresses[].streetName the name of the street of the address being listed
+ * @param {string} addresses[].streetType the type of street of the address being listed
+ * @param {string} addresses[].city the city where the address is located
+ * @param {string} addresses[].state the state where the address is located
+ * @param {string} addresses[].zip the postal code where the address is located
  * @returns {string[]} the full addresses
  */
  function getFullAddressesOfProperties(addresses) {
-  return addresses.map(function(address) {
-    return address.streetNumber + address.streetName + address.streetType + address.city + address.state + address.zip;
+  return addresses.map((address) => {
+    return [address.streetNumber, address.streetName, address.streetType, address.city, address.state, address.zip].join(' ');
   })
 }
 
@@ -172,14 +167,20 @@ let happy = 'Happy ';
  * Using `forEach`, find the largest element in an array.
  * It should work for strings and numbers.
  */
+/**
+ * 
+ * @param {string[]|number[]} arr 
+ * @returns {string|number} largest
+ */
 function findLargest(arr) {
-  let largest = arr[0];
-  arr.forEach(findLargest)
-    if (arr[num] > largest) {
-      largest = arr[num];
+  let largest = '';
+  arr.forEach((element) => {
+    if (element > largest) {
+      largest = element;
     }
-    return largest;
-  }
+  })
+  return largest;
+}
  
 
 /*
