@@ -13,38 +13,41 @@
             .redBackground {
                 background-color: red;
             }
+            .blueBackground {
+                background-color: blue;
+            }
         </style>
     </head>
     <body>
         <div id="divOne">
             Div One Text
             <h3>Child One</h3>
-            <h3>Child Two</d3>
-            <h3>Child Three</d3>
+            <h3>Child Two</h3>
+            <h3>Child Three</h3>
         </div>
 
 
         <script>
             let value = "";
             // Text is not stored as text, it is a Text node, so we get nodeValue
-            //value = document.getElementById('divOne').firstChild.nodeValue;
+            value = document.getElementById('divOne').firstChild.nodeValue;
 
             // The first Child is the Text.  We can get a list of the children and access them by index
             // nodeName returns the tagName
-            //value = document.getElementById('divOne').childNodes[1].nodeName;
+            value = document.getElementById('divOne').childNodes[1].nodeName;
 
             // We can chain selectors to move around the node, and use setAttribute to add attributes like classes
-            //document.getElementById("divOne").firstChild.nextSibling.setAttribute('class', 'redBackground');
+            document.getElementById("divOne").firstChild.nextSibling.setAttribute('class', 'redBackground');
 
             // hasAttribute on a node allows us to check if it has an attribute
-            //value = document.getElementById("divOne").firstChild.nextSibling.hasAttributes('class');
-            //document.getElementById("divOne").lastChild.previousSibling.setAttribute('class', 'redBackground');
+            value = document.getElementById("divOne").firstChild.nextSibling.hasAttributes('class');
+            document.getElementById("divOne").lastChild.previousSibling.setAttribute('class', 'blueBackground');
             
             // Set can select the parent of our node
-            //document.querySelector("h3").parentNode.setAttribute('class', 'redBackground');
+            document.querySelector("h3").parentNode.setAttribute('class', 'redBackground');
     
             // We can remove a node using remove()
-            //document.getElementById('divOne').lastChild.remove();
+            document.getElementById('divOne').lastChild.remove();
 
             // We can also insert a node, but that is demonstrated in the next part (index.html)
 
