@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Demo</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+      #userinputdiv {
+          margin-bottom: 20px;
+          width: 300px;
+      }
+      input {
+          margin-bottom: 10px;
+      }
+      .red-background {
+        background-color: red;
+      }
+      .green-background {
+        background-color: green;
+      }
+      .thick-border {
+        border: 5px black solid;
+      }
+      #container {
+          margin-top: 20px;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          border: 1px gray dotted;
+          width: 50%;
+
+      }
+      .box {
+        border: 1px solid black;
+        padding: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Event Demo</h1>
+    <form action="somewhere" method="GET">
+        <div id="userinputdiv">
+            <input type="text" id="userinput" />
+            <h2></h2>
+            <select>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        </div>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <div id="container">
+        <div class="box boxW">W</div>
+        <div class="box boxA">A</div>
+        <div class="box boxS">S</div>
+        <div class="box boxD">D</div>
+    </div>
+
+    <script src="events.js"></script>
+  </body>
+</html>
