@@ -118,7 +118,7 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  */
 /**
  * @param {string[]} stringArray strings to add 'Happy' to
- * @returns
+ * @returns {string[]} new array with happy in front of each element
  */
 
  function makeHappy(stringArray) {
