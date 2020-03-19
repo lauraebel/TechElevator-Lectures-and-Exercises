@@ -45,13 +45,7 @@
 // 		lastDigit(3, 113) → true
 // */
 		function lastDigit(x, y) {
-			let xLast = x.endsWith;
-			let yLast = y.endsWith;
-			if (xLast == yLast) {
-				return true;
-			} else {
-				return false;
-			}
+			return (x%10 == y%10);
 		}
 
 // /*
@@ -80,15 +74,12 @@
 // 		oddOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) → [1, 3, 5, 7, 9, 11];
 // 		oddOnly([2, 4, 8, 32, 256]); → []
 // */
-		// function oddOnly() {
-		// 	const array = [];
-		// 	for(let i = 0; i < array.length; i++) {
-		// 		if(i%2 == 1) {
-		// 			array.push(i);
-		// 			return array;
-		// 		}	
-		// 	}
-		// }
+function oddOnly(arr) {
+	return arr.filter(function(nums) {
+		return nums%2 === 1;
+	});
+
+}
 
 // /*
 // 6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
@@ -161,10 +152,11 @@
 		filterEvens([2, 4, 6]) → [2, 4, 6]
 		filterEvens([100, 8, 21, 24, 62, 9, 7]) → [100, 8, 24, 62]
 */
-		// function filterEvens([]) {
-		// 	let array =[];
-		// 	for(let i = 0)
-		// }
+		function filterEvens(arr) {
+			return arr.filter(function(nums) {
+				return nums%2 === 0;
+			})
+		}
 /*
 10. **filterBigNumbers** Write a function that filters numbers greater than or equal to 100.
 
@@ -172,13 +164,11 @@
 		filterBigNumbers([3, 2, 7, 1, -100, -120]) → []
 		filterBigNumbers([]) → []
 */
-		function filterBigNumbers([]) {
-			for (let i = 0; i < [].length; i++) {
-				if (i >= 100) {
-					
-			}
+		function filterBigNumbers(arr) {
+			return arr.filter(function (nums){
+				return nums >= 100;
+			})
 		}
-	}
 
 /*
 11. **filterMultiplesOfX** Write a function to filter numbers that are a multiple of a 
@@ -187,18 +177,24 @@ parameter, `x` passed in.
 	filterMultiplesOfX([3, 5, 1, 9, 18, 21, 42, 67], 3) → [3, 9, 18, 21, 42]
 	filterMultiplesOfX([3, 5, 10, 20, 18, 21, 42, 67], 5) → [5, 10, 20]
 */
-
+		function filterMultiplesOfX(arr, x) {
+			return arr.filter(function (nums) {
+				return nums%x === 0;
+			})
+		}
 /*
 12. **createObject** Write a function that creates an object with a property called 
 firstName, lastName, and age. Populate the properties with your values.
 */
 
-// createObject() ;
-// 	const person = {
-// 		firstName: "Laura",
-// 		lastName: "Ebel",
-// 		age: 28,
-// 	}
-
+		function createObject() {
+			const person = {
+			firstName: "Laura",
+		    lastName: "Ebel",
+			age: 28,
+			
+	}
+	return person;
+		}
 
 
