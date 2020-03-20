@@ -60,12 +60,53 @@ function displayReview(review) {
 
 // LECTURE STARTS HERE ---------------------------------------------------------------
 
-// set the product reviews page title
-setPageTitle();
-// set the product reviews page description
-setPageDescription();
-// display all of the product reviews on our page
-displayReviews();
+document.addEventListener('DOMContentLoaded', () => {
+
+  // set the product reviews page title
+  setPageTitle();
+  // set the product reviews page description
+  setPageDescription();
+  // display all of the product reviews on our page
+  displayReviews();
+
+  // Get a reference to the description field
+  const desc = document.querySelector('.description');
+  // add an event to that element
+  //  addEventListener( event_type, anonymous function to be called when the event occurs)
+  desc.addEventListener('click', (event) => {
+    // event.target -- the element the event occurred on
+    toggleDescriptionEdit( event.target );
+  });
+
+  // get a reference to the description input field
+  const inputDesc = document.getElementById('inputDesc');
+  // add an event listener to the description field for keyup
+  inputDesc.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      exitDescriptionEdit(event.target, true);
+    }
+    if (event.key === 'Escape') {
+      exitDescriptionEdit(event.target, false);
+    }
+  });
+
+  // Can add multiple event listeners to the same element
+  inputDesc.addEventListener('mouseleave', (event) => {
+    exitDescriptionEdit(event.target, false);
+  });
+
+  document.getElementById('btnToggleForm').addEventListener('click', () => {
+    showHideForm();
+  })
+
+  document.getElementById('btnSaveReview').addEventListener('click', (event) => {
+    event.preventDefault();
+    saveReview();
+  });
+
+});
+
+
 
 /**
  * Take an event on the description and swap out the description for a text box.
@@ -130,4 +171,26 @@ function resetFormValues() {
 /**
  * I will save the review that was added using the add review from
  */
-function saveReview() {}
+function saveReview() {
+  // Build a Review Object
+  const nameInput = document.getElementById('name');
+  const titleInput = document.getElementById('title');
+  const ratingInput = document.getElementById('rating');
+  const reviewInput = document.getElementById('review');
+
+  const newReview = {
+    reviewer: nameInput.value,
+    title: titleInput.value,
+    review: reviewInput.value,
+    rating: ratingInput.value
+  }
+
+  // Add the review object to the reviews array
+  reviews.push(newReview);
+
+  // call display reviews
+  displayReview(newReview);
+
+  // hide the input form
+  showHideForm();
+}
