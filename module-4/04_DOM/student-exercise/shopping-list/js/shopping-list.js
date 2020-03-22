@@ -17,7 +17,7 @@ function displayGroceries() {
 const main = document.getElementById('groceries');
 
 groceries.forEach(item => {
-  const container = document.createElement('div');
+  const container = document.createElement('li');
   container.classList.add('item');
 
   addItem(container, item);
