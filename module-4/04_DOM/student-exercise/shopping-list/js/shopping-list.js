@@ -23,9 +23,7 @@ groceries.forEach(item => {
   addItem(container, item);
 
   main.insertAdjacentElement('beforeend', container);
-}
-  )
-}
+})}
 
 function addItem(parent, item) {
   const items = document.createElement('h4');
@@ -37,7 +35,21 @@ function addItem(parent, item) {
  * This function will be called when the button is clicked. You will need to get a reference
  * to every list item and add the class completed to each one
  */
-function markCompleted() {}
+function markCompleted() {
+  const main = document.getElementById('groceries');
+  groceries.forEach(item => {
+    const container = document.createElement('li.completed');
+    container.classList.add('item');
+
+    addCompleted(container, item);
+    main.insertAdjacentElement('beforeend', container);
+  })}
+
+function addCompleted(parent, item) {
+  const items = document.createElement('li.completed');
+  items.innerText = item;
+  parent.appendChild(items);
+}
 
 setPageTitle();
 
