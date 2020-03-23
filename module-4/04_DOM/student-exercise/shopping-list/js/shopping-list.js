@@ -36,19 +36,13 @@ function addItem(parent, item) {
  * to every list item and add the class completed to each one
  */
 function markCompleted() {
-  const main = document.getElementById('groceries');
-  groceries.forEach(item => {
-    const container = document.createElement('li.completed');
-    container.classList.add('item');
-
-    addCompleted(container, item);
-    main.insertAdjacentElement('beforeend', container);
-  })}
-
-function addCompleted(parent, item) {
-  const items = document.createElement('li.completed');
-  items.innerText = item;
-  parent.appendChild(items);
+  const groceryList = document.getElementById('groceries');
+  groceries.forEach((item) => {
+    const completed = document.createElement('li');
+    completed.innerText = item;
+    completed.setAttribute('class', 'completed');
+    groceryList.appendChild(completed);
+  });
 }
 
 setPageTitle();
