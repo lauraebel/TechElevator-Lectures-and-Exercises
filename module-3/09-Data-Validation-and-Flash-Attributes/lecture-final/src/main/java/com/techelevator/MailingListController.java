@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.dao.model.SignUp;
-import com.techelevator.dao.model.User;
 
 @Controller
 /* We can set a Global RequestMapping that will be added to all RequestMappings in this Controller */
@@ -78,7 +77,7 @@ public class MailingListController {
 		 */
 		if(! map.containsAttribute("signup")) {
 			// If it does not exist, we create an empty object to avoid the NullPointerException and place
-			// that is our modelMap for the View to use. 
+			// that in our modelMap for the View to use. 
 			map.addAttribute("signup", new SignUp());
 		} 
 		

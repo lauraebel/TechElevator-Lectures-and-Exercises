@@ -27,8 +27,8 @@
         <div>
             <label for="email">Email</label>
 			<form:input path="email" />            
-        		<form:errors path="email" cssClass="error"/>
-        		<form:errors path="emailMatching" cssClass="error"/>
+        	<form:errors path="email" cssClass="error"/>
+        	<form:errors path="emailMatching" cssClass="error"/>
 
             
             
@@ -36,25 +36,25 @@
         <div>
             <label for="verifyEmail">Verify Email</label>
             <form:input path="verifyEmail" />
-                    		<form:errors path="verifyEmail" cssClass="error"/>
+            <form:errors path="verifyEmail" cssClass="error"/>
             
         </div>
         <div>
             <label for="phone">Phone Number (XXX)XXX-XXXX</label>
             <form:input path="phone" />
-                    		<form:errors path="phone" cssClass="errorPhone"/>
+            <form:errors path="phone" cssClass="errorPhone"/>
             
         </div>
         <div>
             <label for="occupation">Occupation</label>
            <form:input path="occupation" />
-                   		<form:errors path="occupation" cssClass="error"/>
+           <form:errors path="occupation" cssClass="error"/>
            
         </div>
         <div>
             <label for="age">Age</label>
             <form:input path="age" />
-                    		<form:errors path="age" cssClass="error"/>
+            <form:errors path="age" cssClass="error"/>
             
         </div>
         <div>

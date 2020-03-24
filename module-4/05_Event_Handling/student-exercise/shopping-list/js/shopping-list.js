@@ -13,6 +13,50 @@ const groceries = [
   { id: 10, name: 'Tea', completed: false }
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+  setPageTitle();
+  displayGroceries();
+
+  const items = document.querySelectorAll('li');
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      if(!item.classList.contains('completed')) {
+        item.classList.add('completed');
+        item.querySelector('i').classList.add('completed');
+      }
+    });
+
+    item.addEventListener('dblclick', () => {
+      if(item.classList.contains('completed')) {
+        item.classList.remove('completed');
+        item.querySelector('i').classList.remove('completed');
+      }
+    });
+  
+});
+
+   const items = document.querySelectorAll('li');
+   const completeAll = document.getElementById('toggleAll')
+   const incomplete = 'Mark All Incomplete'
+   const complete = 'Mark All Complete'
+
+   items.forEach((item) => {
+    completeAll.addEventListener('click', () => {
+      item.classList.add('completed');
+      item.querySelector('i').classList.add('completed');
+      toggleAll.innerText = incomplete;
+
+      if(allItemsIncomplete) {
+        completeAll.addEventListener('click', () => {
+          item.classList.remove('completed');
+          item.querySelector('i').classList.remove('completed');
+          toggleAll.innerText = complete;
+        });
+      }
+    });
+  });
+
 /**
  * This function will get a reference to the title and set its text to the value
  * of the pageTitle variable that was set above.
@@ -36,6 +80,4 @@ function displayGroceries() {
     ul.appendChild(li);
   });
 }
-
-setPageTitle();
-displayGroceries();
+})
