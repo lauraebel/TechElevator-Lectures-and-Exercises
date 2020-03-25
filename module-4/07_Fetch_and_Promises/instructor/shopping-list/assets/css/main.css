@@ -1,0 +1,64 @@
+body {
+    background: rgb(61,201,164);
+    background: radial-gradient(circle, rgba(61,201,164,1) 50%, rgba(92,133,120,1) 100%);
+}
+.shopping-list {
+    width:450px;
+    background: #fff;
+    margin: 50px auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 10px;
+}
+header {
+    background:#f2f2f2;
+    color:#5c8578;
+    text-transform: uppercase;
+    margin: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+h1 {
+    color:#5c8578;
+    font-size:24px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 0 0 10px;
+}
+
+header a {
+    float:right;
+    margin: 25px 20px 0 0;
+    color:#5c8578;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+li {
+    font-size: 24px;
+    border-bottom:1px solid #f2f2f2;
+    padding:10px 20px;
+    cursor: pointer;
+}
+li:last-child{
+    border:0px;
+}
+li.completed {
+    text-decoration: line-through;
+    color:darkgrey;
+}
+i.far.fa-check-circle { 
+    float:right;
+    color: darkgray;
+}
+
+i.far.fa-check-circle.completed {
+    color:green;
+}
+input[type="checkbox"] {
+    font-size:40px;
+    vertical-align: middle;
+    margin-top:0px;
+}

@@ -1,0 +1,11 @@
+[
+    { "name": "Oatmeal", "completed": true},
+    { "name": "Milk", "completed": true},  
+    { "name": "Banana", "completed": true},
+    { "name": "Strawberries", "completed": true},
+    { "name": "Lunch" , "completed": false},
+    { "name": "Bread", "completed": false},
+    { "name": "Grapes", "completed": false},
+    { "name": "Steak", "completed": false},
+    { "name": "Salad", "completed": false}
+]
