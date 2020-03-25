@@ -9,22 +9,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     });
 });
 
-// if('content' in document.createElement('template')) {
-//     const container = document.querySelector('ul');
-//     groceries.forEach(item => {
-//         const template = document.getElementById('shopping-list-item-template').content.cloneNode(true);
-//         template.querySelector('li').innerText = item.name;
-//         if(item.completed) {
-//         template.querySelector('i').classList.add('completed');
-//         }
-//         container.appendChild(template);
-
-//     })
-// } else {
-// console.error("The browser does not support templates");
-// } 
-// }
-
 function displayGroceries() {
     if('content' in document.createElement('template')) {
         const container = document.querySelector('ul');
