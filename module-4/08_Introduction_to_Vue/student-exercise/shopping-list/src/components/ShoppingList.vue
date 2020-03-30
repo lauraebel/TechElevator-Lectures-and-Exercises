@@ -3,14 +3,14 @@
     <h1>{{title}}</h1>
        <ul>
         <li>Bread</li>
-        <li>Milk</li>
+        <li class="completed">Milk</li>
         <li>Eggs</li>
         <li>Butter</li>
         <li>Cereal</li>
         <li>Peanut Butter</li>
         <li>La Croix</li>
         <li>Rice</li>
-        <li>Pasta</li>
+        <li class="completed">Pasta</li>
        </ul>
     </div>
 </template>
