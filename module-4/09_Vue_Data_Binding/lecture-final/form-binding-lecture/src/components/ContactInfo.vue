@@ -7,6 +7,7 @@
                 <input 
                     type="text"
                     id="name"
+                    v-model.trim="contact.name"
                 />
             </div>
             <div>
@@ -14,11 +15,12 @@
                 <input 
                     type="text"
                     id="email"
+                    v-model.trim="contact.email"
                 />
             </div>
             <div>
                 <label for="emailType">Email Type</label>
-                <select id="emailType">
+                <select id="emailType" v-model="contact.emailType">
                     <option value="" selected>Choose...</option>
                     <option value="WORK">Work</option>
                     <option value="HOME">Home</option>
@@ -30,15 +32,15 @@
         <div class="result">
             <div class="line-item">
                 Name:
-                <span class="item-text"></span>
+                <span class="item-text">{{ contact.name }}</span>
             </div>
             <div class="line-item">
                 Email:
-                <span class="item-text"></span>
+                <span class="item-text">{{ contact.email }}</span>
             </div>
             <div class="line-item">
                 Email Type:
-                <span class="item-text"></span>
+                <span class="item-text">{{ contact.emailType }}</span>
             </div>
         </div>
     </div>
