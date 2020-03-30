@@ -11,7 +11,7 @@ export default {
     data() {
         return {
             reviewName: 'Cigar Parties for Dummies',
-            description: 'Hsot and plan a perfect blah blah blah....'
+            description: 'Host and plan a perfect blah blah blah....'
         }
     }
 }

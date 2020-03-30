@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
 });
 
-   //const items = document.querySelectorAll('li');
    const completeAll = document.getElementById('toggleAll')
    const incomplete = 'Mark All Incomplete'
    const complete = 'Mark All Complete'
