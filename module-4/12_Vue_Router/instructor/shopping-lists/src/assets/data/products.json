@@ -1,0 +1,254 @@
+[{
+    "sku": "00000000040112",
+    "price": 0.25,
+    "name": "Banana",
+    "img": "produce/banana.jpeg",
+    "department": "produce",
+    "sale": true
+  }, {
+    "sku": "00033383222028",
+    "price": 3.49,
+    "name": "Produce Blueberries",
+    "img": "produce/blueberries.jpeg",
+    "department": "produce",
+    "sale": false
+  }, {
+    "sku": "00012049005106",
+    "price": 3.5,
+    "name": "Produce Strawberries",
+    "img": "produce/strawberries.jpeg",
+    "department": "produce",
+    "sale": false
+  }, {
+    "sku": "00012049007209",
+    "price": 2.5,
+    "name": "Produce Blackberries",
+    "img": "produce/blackberries.jpeg",
+    "department": "produce",
+    "sale": false
+  },
+  {
+    "sku": "00742365264474",
+    "price": 5.29,
+    "name": "Horizon Organic Whole Milk",
+    "img": "dairy/milk.jpeg",
+    "department": "dairy",
+    "sale": true
+  },
+  {
+    "sku": "00030034913182",
+    "price": 4.29,
+    "name": "Nature's Basket Large Brown Eggs",
+    "img": "dairy/eggs.jpeg",
+    "department": "dairy",
+    "sale": true
+  },
+  {
+    "sku": "00027400264993",
+    "price": 3.49,
+    "name": "Country Crock Buttery Spread Original",
+    "img": "dairy/butter.jpeg",
+    "department": "dairy",
+    "sale": false
+  },
+  {
+    "sku": "00818290011497",
+    "price": 1.25,
+    "name": "Chobani Low-Fat Greek Yogurt",
+    "img": "dairy/yogurt.jpeg",
+    "department": "dairy",
+    "sale": false
+  },
+  {
+    "sku": "00751666776050",
+    "price": 5.99,
+    "name": "NatureSweet Cherubs Tomatoes",
+    "img": "produce/tomatoes.jpeg",
+    "department": "produce",
+    "sale": true
+  },
+  {
+    "sku": "00000000045629",
+    "price": 1.19,
+    "name": "Produce Fresh Carrots",
+    "img": "produce/carrots.jpeg",
+    "department": "produce",
+    "sale": false
+  },
+  {
+    "sku": "00060207020027",
+    "price": 3.99,
+    "name": "Produce Cucumber Seedless",
+    "img": "produce/cucumber.jpeg",
+    "department": "produce",
+    "sale": false
+  },
+  {
+    "sku": "00000000040600",
+    "price": 2.50,
+    "name": "Produce Broccoli",
+    "img": "produce/broccoli.jpeg",
+    "department": "produce",
+    "sale": false
+  },
+  {
+    "sku": "00025000055423",
+    "price": 3.99,
+    "name": "Simply Orange Orange Juice - Original - Pulp Free",
+    "img": "dairy/orange-juice.jpeg",
+    "department": "dairy",
+    "sale": false
+  },
+  {
+    "sku": "00021000615414",
+    "price": 4.99,
+    "name": "KRAFT Cheese Grated - Parmesan & Romano 100%",
+    "img": "dairy/cheese.jpeg",
+    "department": "dairy",
+    "sale": false
+  },
+  {
+    "sku": "00040822011969",
+    "price": 4.56,
+    "name": "Sabra Roasted Red Pepper Hummus With Pretzel Crisps",
+    "img": "dairy/hummus.jpeg",
+    "department": "dairy",
+    "sale": false
+  },
+  {
+    "sku": "00021000122844",
+    "price": 4.29,
+    "name": "Breakstone's Cottage Cheese",
+    "img": "dairy/cottage-cheese.jpeg",
+    "department": "dairy",
+    "sale": false
+  },
+  {
+    "sku": "00253298000003",
+    "price": 10.98,
+    "name": "Bone-In Pork Loin Center Cut Rib Chops",
+    "img": "meat/pork-chops.jpeg",
+    "department": "meat",
+    "sale": false
+  },
+  {
+    "sku": "00201689000002",
+    "price": 4.99,
+    "name": "93% Lean Ground Beef - Value Pack",
+    "img": "meat/ground-beef.jpeg",
+    "department": "meat",
+    "sale": true
+  },
+  {
+    "sku": "00201183000003",
+    "price": 3.59,
+    "name": "Market District Back Ribs",
+    "img": "meat/ribs.jpeg",
+    "department": "meat",
+    "sale": false
+  },
+  {
+    "sku": "00211209000009",
+    "price": 15.99,
+    "name": "Market District Certified Angus Beef Delmonico Steak",
+    "img": "meat/steak.jpeg",
+    "department": "meat",
+    "sale": false
+  },
+  {
+    "sku": "00209672000008",
+    "price": 7.99,
+    "name": "Farmed 51/60 Cooked Shrimp",
+    "img": "meat/shrimp.jpeg",
+    "department": "meat",
+    "sale": false
+  },
+  {
+    "sku": "00670097861008",
+    "price": 7.50,
+    "name": "Cozy Harbor Lobster Tails",
+    "img": "meat/lobster-tails.jpeg",
+    "department": "meat",
+    "sale": false
+  },
+  {
+    "sku": "00208598000000",
+    "price": 9.99,
+    "name": "Seafood Farm-Raised Atlantic Salmon",
+    "img": "meat/salmon.jpeg",
+    "department": "meat",
+    "sale": true
+  },
+  {
+    "sku": "00206271000002",
+    "price": 18.99,
+    "name": "Market District Jumbo Lump Crab Cake",
+    "img": "meat/crab-cakes.jpeg",
+    "department": "meat",
+    "sale": false
+  },
+  {
+    "sku": "00014100074830",
+    "price": 4.29,
+    "name": "Pepperidge Farm® Bagels - Authentic Cinnamon Raisin",
+    "img": "bakery/bagels.jpeg",
+    "department": "bakery",
+    "sale": false
+  },
+  {
+    "sku": "00014100071112",
+    "price": 3.79,
+    "name": "Pepperidge Farm® Swirl Swirl Raisin Cinnamon Bread",
+    "img": "bakery/cinnamon-bread.jpeg",
+    "department": "bakery",
+    "sale": false
+  },
+  {
+    "sku": "00072945611900",
+    "price": 1.99,
+    "name": "Sara Lee Butter Bread 20 Oz",
+    "img": "bakery/butter-bread.jpeg",
+    "department": "bakery",
+    "sale": false
+  },
+  {
+    "sku": "00030034105730",
+    "price": 3.49,
+    "name": "Bake at Home Ciabatta Bread",
+    "img": "bakery/ciabatta-bread.jpeg",
+    "department": "bakery",
+    "sale": false
+  },
+  {
+    "sku": "00073410955840",
+    "price": 2.50,
+    "name": "Brownberry Sesame Seeded Sandwich Buns, 8 Buns",
+    "img": "bakery/sandwich-buns.jpeg",
+    "department": "bakery",
+    "sale": false
+  },
+  {
+    "sku": "00287923000007",
+    "price": 6.75,
+    "name": "8 inch Cookies & Cream Single Layer Cake",
+    "img": "bakery/cookies-cream.jpeg",
+    "department": "bakery",
+    "sale": true
+  },
+  {
+    "sku": "00072030001807",
+    "price": 3.79,
+    "name": "Entenmann's Original Recipe Chocolate Chip Cookies",
+    "img": "bakery/chocolate-chip-cookies.jpeg",
+    "department": "bakery",
+    "sale": true
+  },
+  {
+    "sku": "00000000005173",
+    "price": 4.49,
+    "name": "Half Dozen Variety Donuts",
+    "img": "bakery/donuts.jpeg",
+    "department": "bakery",
+    "sale": false
+  }
+]
