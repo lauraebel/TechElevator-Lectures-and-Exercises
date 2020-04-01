@@ -14,7 +14,8 @@ export default {
     },
     methods: {
         handleFilter() {
-            
+            // emit and event with ( 'name', value )
+            this.$emit('filter', this.searchText);
         }
     }
 }
