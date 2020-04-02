@@ -2,9 +2,10 @@
     <div class="shopping-list">
         <h1>My Shopping List</h1>
         <ul>
-            <li v-for="item in groceries" v-bind:key="item.id" v-bind:class="{ completed: item.completed }">
+            <li v-for="item in groceries" v-bind:key="item.id" :class="{ completed: item.completed }" v-on:click="changeStatus(item.id)">
+                <input type="checkbox" :checked="item.completed"/>
                 {{item.name}} 
-                <i class="far fa-check-circle" v-bind:class="{ completed: item.completed }"></i>
+                <i class="far fa-check-circle" :class="{ completed: item.completed }"></i>
             </li>
         </ul>
     </div>
@@ -15,20 +16,23 @@ export default {
     data() {
         return {
             groceries: [
-                { name: 'Oatmeal', completed: false },
-                { name: 'Milk', completed: false },
-                { name: 'Banana', completed: false },
-                { name: 'Strawberries', completed: false },
-                { name: 'Lunch Meat', completed: false },
-                { name: 'Bread', completed: false },
-                { name: 'Grapes', completed: false },
-                { name: 'Steak', completed: false },
-                { name: 'Salad', completed: false }
+                {id: 1, name: 'Oatmeal', completed: false },
+                {id: 2, name: 'Milk', completed: false },
+                {id: 3, name: 'Banana', completed: false },
+                {id: 4, name: 'Strawberries', completed: false },
+                {id: 5, name: 'Lunch Meat', completed: false },
+                {id: 6, name: 'Bread', completed: false },
+                {id: 7, name: 'Grapes', completed: false },
+                {id: 8, name: 'Steak', completed: false },
+                {id: 9, name: 'Salad', completed: false }
             ]
         }
     },
     methods: {
-
+    changeStatus(id) {
+    const arrIndex = this.groceries.findIndex((item) => item.id == id);
+    this.groceries[arrIndex].completed = !this.groceries[arrIndex].completed;
+    }
     }
 }
 </script>

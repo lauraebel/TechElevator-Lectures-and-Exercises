@@ -2,8 +2,9 @@
     <div class="todo-list">
         <h1>My Daily Routine</h1>
         <ul>
-            <li v-for="todo in todos" v-bind:key="todo.id" v-bind:class="{'todo-completed': todo.completed}">
-                {{todo.task}} <i class="far fa-check-circle" v-bind:class="{completed: todo.completed}"></i>
+            <li v-for="todo in todos" v-bind:key="todo.id" :class="{'todo-completed': todo.completed}">
+            <input type="checkbox" v-on:click="changeStatus(todo.id)"/>
+                {{todo.task}} <i class="far fa-check-circle" :class="{completed: todo.completed}"></i>
             </li>
         </ul>
     </div>
@@ -14,21 +15,27 @@ export default {
     data() {
         return {
            todos: [
-               { task: 'Wake up', completed: false },
-               { task: '5 Minute Morning Movement', completed: false },
-               { task: 'Meditate', completed: false },
-               { task: 'Brush Teeth', completed: false },
-               { task: 'Shower', completed: false },
-               { task: 'Get Dressed', completed: false },
-               { task: 'Drive to work', completed: false },
-               { task: 'Complete Work', completed: false },
-               { task: 'Drive home from work', completed: false },
-               {  task: 'Dinner', completed: false },
-               {  task: 'Brush Teeth', completed: false },
-               {  task: 'Go to bed', completed: false }
+            { id: 1, task: 'Wake up', completed: false },
+            { id: 2, task: '5 Minute Morning Movement', completed: false },
+            { id: 3, task: 'Meditate', completed: false },
+            { id: 4, task: 'Brush Teeth', completed: false },
+            { id: 5, task: 'Shower', completed: false },
+            { id: 6, task: 'Get Dressed', completed: false },
+            { id: 7, task: 'Drive to work', completed: false },
+            { id: 8, task: 'Complete Work', completed: false },
+            { id: 9, task: 'Drive home from work', completed: false },
+            { id: 10, task: 'Dinner', completed: false },
+            { id: 11, task: 'Brush Teeth', completed: false },
+            { id: 12, task: 'Go to bed', completed: false }
            ]
         }
+    },
+    methods: {
+    changeStatus(id) {
+    const arrIndex = this.todos.findIndex((todo) => todo.id == id);
+    this.todos[arrIndex].completed = !this.todos[arrIndex].completed;
     }
+}
 }
 </script>
 
