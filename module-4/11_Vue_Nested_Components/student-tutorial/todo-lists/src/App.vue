@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <todo-search></todo-search>
-    <todo-list title="My Work Todo's" v-bind:todos="work"></todo-list>
-    <todo-list title="My Personal Todo's" v-bind:todos="personal"></todo-list>
-    <todo-list title="My Household Todo's" v-bind:todos="household"></todo-list>
+    <todo-search v-on:filter-tasks="handleSearch"></todo-search>
+    <todo-list title="My Work Todos" v-bind:todos="work" v-bind:search="search" ></todo-list>
+    <todo-list title="My Personal Todos" v-bind:todos="personal" v-bind:search="search" ></todo-list>
+    <todo-list title="My Household Todos" v-bind:todos="household" v-bind:search="search" ></todo-list>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ export default {
   },
   data() {
     return {
+      search: '',
       work: [
         { id: 1, task: 'Create new presentation', completed: false },
         { id: 2, task: 'Add slides to presentation', completed: false },
@@ -35,7 +36,7 @@ export default {
         { id: 4, task: 'Get both cars washed', completed: false },
         { id: 5, task: 'Do laundry', completed: false },
         { id: 6, task: 'Plan party', completed: false },
-        { id: 7, task: 'Vacume entire house', completed: false }
+        { id: 7, task: 'Vacuum entire house', completed: false }
       ],
       household: [
         { id: 1, task: 'Clean up yard', completed: false },
@@ -49,7 +50,10 @@ export default {
     }
   },
   methods: {
-
+    handleSearch(query) {
+        console.log('Filter Tasks: ', query);
+        this.search = query;
+    }
   }
 }
 </script>

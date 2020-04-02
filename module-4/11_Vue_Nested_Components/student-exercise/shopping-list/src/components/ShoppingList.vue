@@ -18,7 +18,9 @@
 export default {
     name: 'shopping-list',
     props: {
-
+        title: String,
+        search: String,
+        data: Array
     },
     data() {
         return {
