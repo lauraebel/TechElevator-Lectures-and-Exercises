@@ -1,19 +1,15 @@
 <template>
   <div id="app">
-    <product-review></product-review>
+    <header>
+      <ul class="nav">
+        <router-link :to="{ name: 'home' }" tag="li" exact>Home</router-link> 
+        <router-link :to="{ name: 'about' }" tag="li">About the Author</router-link> 
+        <router-link :to="{ name: 'books' }" tag="li">Related Books</router-link>
+      </ul>
+    </header>
+    <router-view class="content" />
   </div>
 </template>
-
-<script>
-import ProductReview from '@/components/ProductReview.vue'
-
-export default {
-  name: 'app',
-  components: {
-    ProductReview
-  }
-}
-</script>
 
 <style>
 body {
