@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <h1>Nested Components Exercise</h1>
-    <shopping-search></shopping-search>
-    <shopping-list title="Grocery" v-bind:data="groceries" ></shopping-list>
-    <shopping-list title="Costco" v-bind:data="costco" ></shopping-list>
-    <shopping-list title="Target" v-bind:data="target" ></shopping-list>
+    <shopping-search v-on:filter-names="handleSearch"></shopping-search>
+    <shopping-list title="Grocery" v-bind:data="groceries" v-bind:search="search"></shopping-list>
+    <shopping-list title="Costco" v-bind:data="costco" v-bind:search="search"></shopping-list>
+    <shopping-list title="Target" v-bind:data="target" v-bind:search="search"></shopping-list>
   </div>
 </template>
 
@@ -41,11 +41,13 @@ export default {
             { id: 3, name: 'Aspirin', completed: false },
             { id: 4, name: 'Dish Soap', completed: false },
             { id: 5, name: 'Laundry Soap', completed: false }
-        ]
+        ],
     }
   },
   methods: {
-
+    handleSearch(query) {
+        this.search = query;
+    }
   }
 }
 </script>

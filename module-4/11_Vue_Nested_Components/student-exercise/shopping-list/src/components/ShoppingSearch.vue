@@ -1,13 +1,16 @@
 <template>
     <div class="search">
-        <input type="text" id="search" name="search" placeholder="Search Shopping List..."/>
+        <input type="text" id="search" name="search" v-on:keyup="filterNames" placeholder="Search Shopping List..."/>
     </div>
 </template>
 
 <script>
 export default {
     methods: {
-
+    filterNames() {
+    const query = document.getElementById('search').value;
+    this.$emit('filter-names', query);
+}
     }
 }
 </script>
