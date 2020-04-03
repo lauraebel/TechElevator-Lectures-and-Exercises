@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      API_URL: "YOUR_MOCK_API_REVIEWS_ENDPOINT_HERE",
+      API_URL: "http://localhost:8080/m4-product-reviews-api-final/api/reviews",
       showAddProductForm: false,
       reviewID: 0
     }
