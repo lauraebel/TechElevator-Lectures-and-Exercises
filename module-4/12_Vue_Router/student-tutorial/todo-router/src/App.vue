@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-
+<header>
+  <ul class="nav">
+    <router-link :to="{name: 'home'}" tag="li" exact>Home</router-link>
+    <router-link :to="{name: 'personal'}" tag="li">Personal</router-link>
+    <router-link :to="{name: 'work'}" tag="li">Work</router-link>
+    <router-link :to="{name: 'house'}" tag="li">House</router-link>
+  </ul>
+</header>
     <router-view/>
   </div>
 </template>

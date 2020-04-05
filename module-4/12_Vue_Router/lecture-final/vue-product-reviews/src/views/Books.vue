@@ -1,7 +1,7 @@
 <template>
     <div class="books">
         <h1>Related Books</h1>
-        <p>This is a lit of other books you might enjoy.</p>
+        <p>This is a list of other books you might enjoy.</p>
         <books-list />
     </div>
 </template>
