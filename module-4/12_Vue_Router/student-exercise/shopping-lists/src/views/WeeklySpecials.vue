@@ -11,7 +11,7 @@ import ProductsList from '@/components/ProductsList'
 
 export default {
   name: 'weekly-specials',
-  path: '/on-sale',
+  path: 'on-sale',
   components: {
     ProductsList
   },
